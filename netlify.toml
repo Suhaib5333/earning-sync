@@ -1,9 +1,19 @@
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "application/javascript; charset=UTF-8"
+[build]
+  command = "npm run build"
+  publish = "dist"
 
 [[headers]]
-  for = "/*.mjs"
+  for = "/*"
   [headers.values]
-    Content-Type = "application/javascript; charset=UTF-8"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
