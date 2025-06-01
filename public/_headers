@@ -1,6 +1,12 @@
 /*
-  Content-Type: text/html; charset=UTF-8
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
 /*.js
-  Content-Type: application/javascript; charset=UTF-8
-/*.mjs
-  Content-Type: application/javascript; charset=UTF-8
+  Content-Type: application/javascript
+
+/*.mjs  
+  Content-Type: application/javascript
+
+/*.jsx
+  Content-Type: application/javascript
