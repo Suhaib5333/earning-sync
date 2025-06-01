@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;:root{--primary-dark: #013024;--accent-green: #a7ec4f}body{@apply bg-white text-gray-900;}.btn-primary{@apply px-6 py-3 bg-[#a7ec4f] text-[#013024] font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg;}.nav-link{@apply text-gray-700 hover:text-[#a7ec4f] transition-colors duration-300;}
