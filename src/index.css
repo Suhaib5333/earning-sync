@@ -5,17 +5,116 @@
 :root {
   --primary-dark: #013024;
   --accent-green: #a7ec4f;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-dark: #333333;
 }
 
+/* Body Styling */
 body {
-  @apply bg-white text-gray-900;
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
+/* Buttons */
 .btn-primary {
-  @apply px-6 py-3 bg-[#a7ec4f] text-[#013024] font-semibold rounded-lg 
-  hover:bg-opacity-90 transition-all duration-300 shadow-lg;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: #a7ec4f;
+  color: #013024;
+  font-weight: bold;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  transition-property: all;
+  transition-duration: 300ms;
+}
+.btn-primary:hover {
+  background-color: #013024;
+  color: #a7ec4f;
 }
 
+/* Navigation Links */
 .nav-link {
-  @apply text-gray-700 hover:text-[#a7ec4f] transition-colors duration-300;
+  color: #374151; /* Tailwind's text-gray-700 */
+  transition-property: color;
+  transition-duration: 300ms;
+}
+.nav-link:hover {
+  color: #a7ec4f;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #013024;
+  color: #ffffff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hero-title {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem; /* md:text-6xl */
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem; /* text-xl */
+  margin-bottom: 2rem; /* mb-8 */
+  color: #d1d5db; /* text-gray-300 */
+}
+
+/* Features Section */
+.feature-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06);
+  background-color: #ffffff;
+  transition: box-shadow 0.3s;
+}
+.feature-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  width: 3rem; /* w-12 */
+  height: 3rem; /* h-12 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  color: #013024;
+}
+
+.feature-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 0.75rem; /* mb-3 */
+}
+
+.feature-description {
+  color: #4b5563; /* text-gray-600 */
+}
+
+/* CTA Section */
+.cta {
+  background-color: #013024; /* bg-[#013024] */
+  padding-top: 4rem; /* py-16 */
+  padding-bottom: 4rem; /* py-16 */
+  text-align: center; /* text-center */
+}
+
+.cta-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold; /* font-bold */
+  color: #ffffff; /* text-white */
+  margin-bottom: 2rem; /* mb-8 */
 }

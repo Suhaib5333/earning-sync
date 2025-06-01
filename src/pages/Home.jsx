@@ -4,9 +4,9 @@ import { FaShieldAlt, FaChartLine, FaUsers } from 'react-icons/fa';
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#013024]">
       {/* Hero Section */}
-      <section className="bg-[#013024] text-white py-20">
+      <section className="hero">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -14,15 +14,17 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="hero-title">
               Smart Copy Trading for
-              <span className="text-[#a7ec4f]"> Secure Returns</span>
+              <span className="text-[#a7ec4f] drop-shadow-lg"> Secure Returns</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-300">
+            <p className="hero-subtitle">
               Join thousands of investors earning consistent returns through our
               proven copy trading strategy
             </p>
-            <button className="btn-primary text-lg">Start Trading Now</button>
+            <button className="btn-primary text-lg shadow-xl hover:scale-105">
+              Start Trading Now
+            </button>
           </motion.div>
         </div>
       </section>
@@ -32,34 +34,32 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-center p-6 rounded-lg shadow-lg"
+              whileHover={{ scale: 1.07 }}
+              className="feature-card"
             >
-              <FaShieldAlt className="w-12 h-12 mx-auto text-[#013024] mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Safety First</h3>
-              <p className="text-gray-600">
+              <FaShieldAlt className="feature-icon" />
+              <h3 className="feature-title text-[#013024]">Safety First</h3>
+              <p className="feature-description">
                 Your investment security is our top priority
               </p>
             </motion.div>
-
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-center p-6 rounded-lg shadow-lg"
+              whileHover={{ scale: 1.07 }}
+              className="feature-card"
             >
-              <FaChartLine className="w-12 h-12 mx-auto text-[#013024] mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Proven Strategy</h3>
-              <p className="text-gray-600">
+              <FaChartLine className="feature-icon" />
+              <h3 className="feature-title text-[#013024]">Proven Strategy</h3>
+              <p className="feature-description">
                 Consistent returns through tested methods
               </p>
             </motion.div>
-
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-center p-6 rounded-lg shadow-lg"
+              whileHover={{ scale: 1.07 }}
+              className="feature-card"
             >
-              <FaUsers className="w-12 h-12 mx-auto text-[#013024] mb-4" />
-              <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
-              <p className="text-gray-600">
+              <FaUsers className="feature-icon" />
+              <h3 className="feature-title text-[#013024]">Expert Team</h3>
+              <p className="feature-description">
                 Backed by experienced trading professionals
               </p>
             </motion.div>
@@ -68,12 +68,12 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#013024] py-16">
+      <section className="cta bg-[#013024] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 className="cta-title">
             Ready to Start Your Investment Journey?
           </h2>
-          <button className="btn-primary text-lg">
+          <button className="btn-primary text-lg shadow-xl hover:scale-105">
             Open Your Trading Account
           </button>
         </div>
