@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaUserPlus, FaLink, FaChartLine, FaMoneyBillWave } from 'react-icons/fa';
 

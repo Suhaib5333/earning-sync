@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaTelegram, FaTwitter } from 'react-icons/fa';
 
