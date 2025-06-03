@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo_transparent.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +19,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -35,70 +33,62 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`navbar-container ${
-          scrolled ? "navbar-scrolled" : "navbar-transparent"
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-white/90 shadow-lg backdrop-blur"
+            : "bg-gray-50/80 backdrop-blur"
         }`}
+        style={{
+          borderBottom: "1px solid #e5e7eb",
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center"
-            >
-              <Link to="/" className="logo-container">
-                <img
-                  src={logo}
-                  alt="EarningSync Logo"
-                  className="h-16 w-16 object-contain border-none shadow-none bg-none"
-                  style={{
-                    background: "none",
-                    border: "none",
-                    boxShadow: "none",
-                  }}
-                />
-              </Link>
-            </motion.div>
+          <div className="flex justify-between items-center h-16 lg:h-20">
+            {/* Logo and Brand for all views */}
+            <Link to="/" className="flex items-center group">
+              <img
+                src={logo}
+                alt="EarningSync Logo"
+                className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
+                style={{
+                  background: "none",
+                  border: "none",
+                  boxShadow: "none",
+                }}
+              />
+              <span className="ml-2 text-xl font-extrabold text-[#013024] tracking-tight select-none">
+                EarningSync
+              </span>
+            </Link>
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-2">
               {navLinks.map((link, index) => (
-                <motion.div
+                <Link
                   key={link.name}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  to={link.path}
+                  className={`px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 ${
+                    isActivePath(link.path)
+                      ? "bg-[#a7ec4f] text-[#013024] shadow"
+                      : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
+                  }`}
                 >
-                  <Link
-                    to={link.path}
-                    className={`nav-link-new ${
-                      isActivePath(link.path) ? "nav-link-active" : ""
-                    }`}
-                  >
-                    <span className="nav-link-text">{link.name}</span>
-                    <div className="nav-link-underline"></div>
-                  </Link>
-                </motion.div>
+                  {link.name}
+                </Link>
               ))}
-            </div>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden lg:flex items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="navbar-cta-btn"
+              <Link
+                to="/get-started"
+                className="ml-4 px-6 py-2 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-base flex items-center"
               >
                 Get Started
-                <div className="btn-shine"></div>
-              </motion.button>
+              </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
               <motion.button
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsOpen(!isOpen)}
-                className="mobile-menu-btn"
+                className="p-2 rounded-full bg-white/80 hover:bg-[#a7ec4f]/20 transition"
+                aria-label="Open menu"
               >
                 <AnimatePresence mode="wait">
                   {isOpen ? (
@@ -109,7 +99,7 @@ const Navbar = () => {
                       exit={{ rotate: 90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <HiX className="h-6 w-6" />
+                      <HiX className="h-7 w-7 text-[#013024]" />
                     </motion.div>
                   ) : (
                     <motion.div
@@ -119,7 +109,7 @@ const Navbar = () => {
                       exit={{ rotate: -90, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <HiMenu className="h-6 w-6" />
+                      <HiMenu className="h-7 w-7 text-[#013024]" />
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -127,89 +117,70 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
-        {/* Mobile Navigation Menu */}
-        <AnimatePresence>
-          {isOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="mobile-backdrop"
-                onClick={() => setIsOpen(false)}
-              />
-
-              {/* Mobile Menu */}
-              <motion.div
-                initial={{ opacity: 0, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: "100%" }}
-                transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="mobile-menu"
-              >
-                <div className="mobile-menu-header">
-                  <div className="logo-container flex items-center">
-                    <img
-                      src={logo}
-                      alt="EarningSync Logo"
-                      className="h-16 w-16 object-contain border-none shadow-none bg-none"
-                      style={{
-                        background: "none",
-                        border: "none",
-                        boxShadow: "none",
-                      }}
-                    />
-                    <span className="logo-name ml-3 text-2xl font-bold text-gray-900">
-                      EarningSync
-                    </span>
-                  </div>
-                </div>
-
-                <nav className="mobile-nav-links">
-                  {navLinks.map((link, index) => (
-                    <motion.div
-                      key={link.name}
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.3 }}
-                    >
-                      <Link
-                        to={link.path}
-                        className={`mobile-nav-link ${
-                          isActivePath(link.path)
-                            ? "mobile-nav-link-active"
-                            : ""
-                        }`}
-                        onClick={() => setIsOpen(false)}
-                      >
-                        {link.name}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </nav>
-
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.3 }}
-                  className="mobile-menu-footer"
-                >
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="mobile-cta-btn"
-                  >
-                    Get Started
-                  </button>
-                </motion.div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </motion.nav>
-
+      {/* Move mobile menu OUTSIDE of nav to avoid backdrop-blur and transparency issues */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/40 z-40"
+              onClick={() => setIsOpen(false)}
+            />
+            {/* Mobile Menu */}
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 flex flex-col"
+            >
+              <div className="flex items-center px-6 py-6 border-b border-gray-200 min-w-0">
+                <img
+                  src={logo}
+                  alt="EarningSync Logo"
+                  className="h-12 w-12 object-contain flex-shrink-0"
+                  style={{
+                    background: "none",
+                    border: "none",
+                    boxShadow: "none",
+                  }}
+                />
+                <span className="ml-3 text-2xl font-extrabold text-[#013024] tracking-tight select-none flex-shrink-0">
+                  EarningSync
+                </span>
+              </div>
+              <nav className="flex-1 flex flex-col gap-2 px-6 py-8">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`px-4 py-3 rounded-lg font-semibold text-lg transition-all duration-200 ${
+                      isActivePath(link.path)
+                        ? "bg-[#a7ec4f] text-[#013024] shadow"
+                        : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <Link
+                  to="/get-started"
+                  className="mt-4 px-6 py-3 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center justify-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </nav>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
       {/* Spacer to prevent content jump */}
       <div className="h-20"></div>
     </>
