@@ -12,10 +12,11 @@ const Footer = () => {
   // Scroll to top and navigate
   const handleNavClick = (to, e) => {
     e.preventDefault();
+    navigate(to);
+    // Use a timeout to ensure scroll happens after navigation, works for both desktop and mobile
     setTimeout(() => {
-      navigate(to);
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 0);
+    }, 100);
   };
 
   return (
