@@ -1,8 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { FaHandshake, FaChartBar, FaShieldAlt } from 'react-icons/fa';
+import React from "react";
+import { motion } from "framer-motion";
+import { FaHandshake, FaChartBar, FaShieldAlt } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaArrowRight } from "react-icons/fa";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  // Scroll to top and navigate instantly
+  const handleNavClick = (to, e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate(to);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -18,7 +29,8 @@ const About = () => {
               About <span className="text-[#a7ec4f]">EarningSync</span>
             </h1>
             <p className="text-xl mb-8 text-gray-300">
-              Your trusted partner in copy trading excellence
+              Your trusted partner for safe, transparent, and real copy trading
+              results.
             </p>
           </motion.div>
         </div>
@@ -28,10 +40,13 @@ const About = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-[#013024] mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-[#013024] mb-4">
+              Our Mission
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              To provide secure and profitable copy trading solutions while maintaining
-              the highest standards of transparency and risk management.
+              To help you grow your money safely, with real results and honest
+              reporting. We always put your security first and support you every
+              step of the way.
             </p>
           </div>
 
@@ -43,7 +58,8 @@ const About = () => {
               <FaHandshake className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
               <h3 className="text-xl font-semibold mb-3 text-center">Trust</h3>
               <p className="text-gray-600 text-center">
-                Building long-term relationships through transparency and reliability
+                We build long-term relationships through transparency and
+                reliability.
               </p>
             </motion.div>
 
@@ -52,9 +68,12 @@ const About = () => {
               className="p-6 rounded-lg shadow-lg bg-white"
             >
               <FaChartBar className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">Performance</h3>
+              <h3 className="text-xl font-semibold mb-3 text-center">
+                Performance
+              </h3>
               <p className="text-gray-600 text-center">
-                Delivering consistent returns through proven strategies
+                Safe returns from proven strategies, always focused on
+                protecting your capital.
               </p>
             </motion.div>
 
@@ -63,9 +82,12 @@ const About = () => {
               className="p-6 rounded-lg shadow-lg bg-white"
             >
               <FaShieldAlt className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">Security</h3>
+              <h3 className="text-xl font-semibold mb-3 text-center">
+                Security
+              </h3>
               <p className="text-gray-600 text-center">
-                Protecting your investments with robust risk management
+                Your money's protection is prioritized with strong risk
+                management.
               </p>
             </motion.div>
           </div>
@@ -84,7 +106,8 @@ const About = () => {
                 Expert Management
               </h3>
               <p className="text-gray-600">
-                Our team of professional traders ensures optimal performance and risk management
+                Our team of professionals are dedicated to your success and
+                safety.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -92,7 +115,8 @@ const About = () => {
                 Transparent Fees
               </h3>
               <p className="text-gray-600">
-                Simple 30% performance fee structure with no hidden charges
+                We only earn a 30% fee on the profit we make for you. If you
+                don’t profit, we don’t earn.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -100,7 +124,8 @@ const About = () => {
                 Risk Management
               </h3>
               <p className="text-gray-600">
-                Advanced risk control measures to protect your investment
+                Investments with the primary focus being the protection of your
+                capital at all times.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -108,10 +133,35 @@ const About = () => {
                 Proven Track Record
               </h3>
               <p className="text-gray-600">
-                Consistent performance history on the Exness platform
+                Real, consistent results you can verify for yourself.
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-[#013024] text-white text-center relative mt-20">
+        <div className="max-w-2xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-green-100 mb-8">
+            Join our community and start your journey with EarningSync today.
+          </p>
+          <div className="flex justify-center">
+            <Link
+              to="/get-started"
+              onClick={(e) => handleNavClick("/get-started", e)}
+              className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
+            >
+              Get Started Now
+              <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+          </div>
+          <p className="mt-6 text-green-200 text-sm">
+            Start with just $100 • Stop copying & withdraw at anytime
+          </p>
         </div>
       </section>
     </div>

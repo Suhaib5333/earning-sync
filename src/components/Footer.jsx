@@ -1,11 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { FaWhatsapp, FaLinkedin, FaArrowUp, FaTelegram } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
+import { FaWhatsapp, FaLinkedin, FaArrowUp, FaGlobe } from "react-icons/fa";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  // Scroll to top and navigate
+  const handleNavClick = (to, e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    navigate(to);
+  };
+
   return (
     <footer className="bg-gray-50 border-t border-gray-200 pt-8 pb-8 mt-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
@@ -14,30 +24,35 @@ const Footer = () => {
           <Link
             to="/"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/", e)}
           >
             Home
           </Link>
           <Link
             to="/about"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/about", e)}
           >
             About
           </Link>
           <Link
             to="/get-started"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/get-started", e)}
           >
             Get Started
           </Link>
           <Link
             to="/faq"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/faq", e)}
           >
             FAQs
           </Link>
           <Link
             to="/contact"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/contact", e)}
           >
             Contact
           </Link>
@@ -46,25 +61,31 @@ const Footer = () => {
         {/* Socials */}
         <div className="flex items-center justify-center gap-8 mb-4">
           <a
-            href="#"
+            href="https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="WhatsApp"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
             <FaWhatsapp size={32} />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/earningsync"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
             <FaLinkedin size={32} />
           </a>
           <a
-            href="#"
-            aria-label="Telegram"
+            href="https://www.earningsync.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Website"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
-            <FaTelegram size={32} />
+            <FaGlobe size={32} />
           </a>
         </div>
       </div>
@@ -74,6 +95,7 @@ const Footer = () => {
         <Link
           to="/contact"
           className="px-6 py-2 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow hover:bg-[#bfff5c] transition-all text-base flex items-center"
+          onClick={(e) => handleNavClick("/contact", e)}
         >
           Contact Us
         </Link>
@@ -85,18 +107,22 @@ const Footer = () => {
           © {new Date().getFullYear()} EarningSync. All rights reserved.
         </p>
         <div className="flex items-center gap-4 md:order-2 order-1">
+          {/*
           <Link
             to="/privacy"
             className="text-xs text-gray-500 hover:text-[#a7ec4f] transition"
+            onClick={e => handleNavClick("/privacy", e)}
           >
             Privacy Policy
           </Link>
           <Link
             to="/terms"
             className="text-xs text-gray-500 hover:text-[#a7ec4f] transition"
+            onClick={e => handleNavClick("/terms", e)}
           >
             Terms
           </Link>
+          */}
         </div>
         <button
           onClick={scrollToTop}

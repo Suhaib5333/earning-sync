@@ -10,8 +10,18 @@ import {
   FaAnchor,
   FaAward,
 } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom"; // <-- useNavigate import
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  // Scroll to top and navigate instantly
+  const handleNavClick = (to, e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    navigate(to);
+  };
+
   const stats = [
     { number: "25+", label: "Years of Experience", icon: FaAward },
     {
@@ -19,7 +29,12 @@ const Home = () => {
       label: "Historical Average Monthly Profit",
       icon: FaAnchor,
     },
-    { number: "31%", label: "Maximum Drawdown", icon: FaShieldAlt },
+    {
+      number: "31%",
+      label: "Maximum Drawdown",
+      subLabel: "On Earning Sync Classic",
+      icon: FaShieldAlt,
+    },
   ];
 
   return (
@@ -44,17 +59,21 @@ const Home = () => {
             <span className="text-[#a7ec4f]">Secure Returns</span>
           </h1>
           <p className="text-lg md:text-xl text-green-100 mb-10 max-w-2xl mx-auto">
-            Join thousands of investors earning consistent returns through our
-            proven copy trading strategy with advanced risk management.
+            Join in on earning returns with us through our proven copy trading
+            strategy with advanced risk management.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group">
+            <Link
+              to="/get-started"
+              onClick={(e) => handleNavClick("/get-started", e)}
+              className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
+            >
               Get Started Now
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-            </button>
-            <button className="px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-[#013024] transition-all text-lg">
+            </Link>
+            {/* <button className="px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-[#013024] transition-all text-lg">
               View Our Live Results
-            </button>
+            </button> */}
           </div>
         </motion.div>
       </section>
@@ -74,7 +93,14 @@ const Home = () => {
                 <div className="text-3xl font-bold text-green-700 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
+                <div className="text-gray-600 font-medium text-center">
+                  {stat.label}
+                  {stat.subLabel && (
+                    <div className="text-xs italic text-gray-400 mt-1">
+                      {stat.subLabel}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -89,68 +115,70 @@ const Home = () => {
               Why Choose <span className="text-[#a7ec4f]">EarningSync</span>?
             </h2>
             <p className="text-lg text-gray-600">
-              Experience the future of copy trading with our cutting-edge
-              platform.
+              Discover what sets us apart in the world of copy trading.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
+            {/* Security First */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
                 <FaShieldAlt className="text-4xl text-green-700" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Bank-Grade Security
+                Security Before Profit
               </h3>
               <p className="text-gray-600 mb-4">
-                Your investments are protected with military-grade encryption
-                and multi-layer security protocols.
+                Protecting your money comes first. We always focus on risk
+                management before chasing profits.
               </p>
               <div className="flex gap-2">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  256-bit SSL
+                  Risk Management
                 </span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Cold Storage
+                  Secure Custody
                 </span>
               </div>
             </div>
+            {/* Transparency & Integrity */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
                 <FaChartLine className="text-4xl text-green-700" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                AI-Powered Strategy
+                Real Transparency, No Hype
               </h3>
               <p className="text-gray-600 mb-4">
-                Advanced algorithms analyze market patterns to deliver
-                consistent returns with minimal risk.
+                No fake results or hype. What you see is what you get. Real,
+                verifiable historical results.
               </p>
               <div className="flex gap-2">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  85% Win Rate
+                  Honest Reporting
                 </span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Auto-Trading
+                  Sustainable Returns
                 </span>
               </div>
             </div>
+            {/* Community & Support */}
             <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center justify-center mb-6">
                 <FaUsers className="text-4xl text-green-700" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Expert Community
+                Community & Support
               </h3>
               <p className="text-gray-600 mb-4">
-                Connect with professional traders and learn from their proven
-                strategies and insights.
+                Get updates in our WhatsApp group and reach out to our team
+                anytime with questions or concerns.
               </p>
               <div className="flex gap-2">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  10+ Years Exp
+                  WhatsApp Group
                 </span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  24/7 Support
+                  Direct Support
                 </span>
               </div>
             </div>
@@ -166,14 +194,18 @@ const Home = () => {
             <span className="text-[#a7ec4f]">Investment Journey?</span>
           </h2>
           <p className="text-lg text-green-100 mb-8">
-            Join thousands of successful traders and start earning passive
-            income today.
+            Join a community of investors and start earning passive income
+            today.
           </p>
           <div className="flex justify-center">
-            <button className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group">
+            <Link
+              to="/get-started"
+              onClick={(e) => handleNavClick("/get-started", e)}
+              className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
+            >
               Get Started Now
               <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-            </button>
+            </Link>
           </div>
           <p className="mt-6 text-green-200 text-sm">
             Start with just $100 • Stop copying & withdraw at anytime

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo_transparent.png";
@@ -8,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -27,6 +28,14 @@ const Navbar = () => {
 
   const isActivePath = (path) => location.pathname === path;
 
+  // Scroll to top and navigate
+  const handleNavClick = (to, e) => {
+    e.preventDefault();
+    window.scrollTo(0, 0);
+    setIsOpen(false);
+    navigate(to);
+  };
+
   return (
     <>
       <motion.nav
@@ -45,7 +54,11 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo and Brand for all views */}
-            <Link to="/" className="flex items-center group">
+            <Link
+              to="/"
+              className="flex items-center group"
+              onClick={(e) => handleNavClick("/", e)}
+            >
               <img
                 src={logo}
                 alt="EarningSync Logo"
@@ -62,7 +75,7 @@ const Navbar = () => {
             </Link>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.path}
@@ -71,16 +84,11 @@ const Navbar = () => {
                       ? "bg-[#a7ec4f] text-[#013024] shadow"
                       : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
                   }`}
+                  onClick={(e) => handleNavClick(link.path, e)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/get-started"
-                className="ml-4 px-6 py-2 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-base flex items-center"
-              >
-                Get Started
-              </Link>
             </div>
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
@@ -164,18 +172,11 @@ const Navbar = () => {
                         ? "bg-[#a7ec4f] text-[#013024] shadow"
                         : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
                     }`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={(e) => handleNavClick(link.path, e)}
                   >
                     {link.name}
                   </Link>
                 ))}
-                <Link
-                  to="/get-started"
-                  className="mt-4 px-6 py-3 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center justify-center"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
               </nav>
             </motion.div>
           </>
