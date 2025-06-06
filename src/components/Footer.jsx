@@ -9,9 +9,9 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 border-t border-gray-200 pt-8 pb-8 mt-8">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:justify-between md:items-center gap-8">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
         {/* Links */}
-        <div className="w-full md:w-auto flex flex-wrap justify-center md:justify-start items-center gap-x-6 gap-y-2">
+        <div className="w-full flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4">
           <Link
             to="/"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         {/* Socials */}
-        <div className="flex items-center justify-center w-full gap-8 mt-6 md:mt-0">
+        <div className="flex items-center justify-center gap-8 mb-4">
           <a
             href="#"
             aria-label="WhatsApp"

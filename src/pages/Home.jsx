@@ -61,21 +61,23 @@ const Home = () => {
 
       {/* Stats Section */}
       <section className="py-16 bg-white text-gray-900">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          {stats.map((stat, idx) => (
-            <div
-              key={stat.label}
-              className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:shadow-2xl transition-all duration-300"
-            >
-              <div className="mb-4 text-4xl text-green-600">
-                <stat.icon />
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {stats.map((stat, idx) => (
+              <div
+                key={stat.label}
+                className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="mb-4 text-4xl text-green-600">
+                  <stat.icon />
+                </div>
+                <div className="text-3xl font-bold text-green-700 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
-              <div className="text-3xl font-bold text-green-700 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
