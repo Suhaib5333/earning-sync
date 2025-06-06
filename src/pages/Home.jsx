@@ -58,7 +58,7 @@ const Home = () => {
             <br />
             <span className="text-[#a7ec4f]">Secure Returns</span>
           </h1>
-          <p className="text-lg md:text-xl text-green-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-green-100 mb-10 max-w-2xl mx-auto px-6 sm:px-0">
             Join in on earning returns with us through our proven copy trading
             strategy with advanced risk management.
           </p>
