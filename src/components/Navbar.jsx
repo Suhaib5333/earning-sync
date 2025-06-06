@@ -75,12 +75,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/get-started"
-                className="ml-4 px-6 py-2 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-base flex items-center"
-              >
-                Get Started
-              </Link>
             </div>
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
