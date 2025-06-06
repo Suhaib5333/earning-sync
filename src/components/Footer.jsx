@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaWhatsapp, FaLinkedin, FaArrowUp, FaTelegram } from "react-icons/fa";
+import { FaWhatsapp, FaLinkedin, FaArrowUp, FaGlobe } from "react-icons/fa";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -61,25 +61,31 @@ const Footer = () => {
         {/* Socials */}
         <div className="flex items-center justify-center gap-8 mb-4">
           <a
-            href="#"
+            href="https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="WhatsApp"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
             <FaWhatsapp size={32} />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/company/earningsync"
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
             <FaLinkedin size={32} />
           </a>
           <a
-            href="#"
-            aria-label="Telegram"
+            href="https://www.earningsync.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Website"
             className="text-[#013024] hover:text-[#a7ec4f] transition"
           >
-            <FaTelegram size={32} />
+            <FaGlobe size={32} />
           </a>
         </div>
       </div>

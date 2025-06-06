@@ -177,13 +177,6 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
-                <Link
-                  to="/get-started"
-                  className="mt-4 px-6 py-3 rounded-full bg-[#a7ec4f] text-[#013024] font-bold shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center justify-center"
-                  onClick={(e) => handleNavClick("/get-started", e)}
-                >
-                  Get Started
-                </Link>
               </nav>
             </motion.div>
           </>

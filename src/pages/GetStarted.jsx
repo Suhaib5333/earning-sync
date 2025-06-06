@@ -10,8 +10,8 @@ import {
 const GetStarted = () => {
   return (
     <div className="min-h-screen relative">
-      {/* Overlay for Coming Soon */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/80">
+      {/* Coming Soon Overlay (centered on the screen, covers entire page) */}
+      <div className="fixed inset-0 z-30 flex flex-col items-center justify-center bg-black/80">
         <motion.h1
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
