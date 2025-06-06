@@ -12,8 +12,10 @@ const Footer = () => {
   // Scroll to top and navigate
   const handleNavClick = (to, e) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate(to);
+    setTimeout(() => {
+      navigate(to);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 0);
   };
 
   return (
