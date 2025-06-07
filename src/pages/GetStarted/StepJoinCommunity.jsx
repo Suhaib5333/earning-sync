@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaUsers, FaCheckCircle } from "react-icons/fa";
+import { FaUsers, FaCheckCircle, FaChevronDown } from "react-icons/fa";
+
+// Use import so Vite/CRA/Next.js will bundle the image correctly
+import qrImage from "../../assets/whatsappqr.jpg";
 
 const whatsappLink = "https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii";
-const qrImage = "/src/assets/whatsappqr.jpg";
 
 const StepJoinCommunity = ({ openStep, setOpenStep }) => (
   <motion.div
@@ -35,6 +37,11 @@ const StepJoinCommunity = ({ openStep, setOpenStep }) => (
           3. Join Our Community
         </span>
       </div>
+      <FaChevronDown
+        className={`w-6 h-6 transition-transform duration-200 ${
+          openStep === 3 ? "rotate-180" : ""
+        }`}
+      />
     </button>
     <motion.div
       initial={false}

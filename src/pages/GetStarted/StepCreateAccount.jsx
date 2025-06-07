@@ -8,9 +8,13 @@ import {
   FaCheckCircle,
 } from "react-icons/fa";
 
+// Use import for images so they work with Vite/CRA/Next.js
+import desktopImg from "../../assets/register_pc.png";
+import mobileImg from "../../assets/register_mobile.png";
+
 const screenshots = {
-  desktop: "/src/assets/register_pc.png",
-  mobile: "/src/assets/register_mobile.png",
+  desktop: desktopImg,
+  mobile: mobileImg,
 };
 
 const StepCreateAccount = ({ openStep, setOpenStep }) => {

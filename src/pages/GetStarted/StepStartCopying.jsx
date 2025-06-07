@@ -11,24 +11,39 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
+// Use import so Vite/CRA/Next.js will bundle the images correctly
+import copyingDesktop1 from "../../assets/copying_desktop1.png";
+import copyingDesktop2 from "../../assets/copying_desktop2.png";
+import copyingDesktop3 from "../../assets/copying_desktop3.png";
+import copyingDesktop4 from "../../assets/copying_desktop4.png";
+import copyingDesktop5 from "../../assets/copying_desktop5.png";
+import copyingDesktop6 from "../../assets/copying_desktop6.png";
+import copyingDesktop7 from "../../assets/copying_desktop7.png";
+import copyingMobile2 from "../../assets/copying_mobile2.png";
+import copyingMobile3 from "../../assets/copying_mobile3.png";
+import copyingMobile4 from "../../assets/copying_mobile4.png";
+import copyingMobile5 from "../../assets/copying_mobile5.png";
+import copyingMobile6 from "../../assets/copying_mobile6.png";
+import copyingMobile7 from "../../assets/copying_mobile7.png";
+
 // Carousel image arrays
 const desktopImages = [
-  "/src/assets/copying_desktop1.png",
-  "/src/assets/copying_desktop2.png",
-  "/src/assets/copying_desktop3.png",
-  "/src/assets/copying_desktop4.png",
-  "/src/assets/copying_desktop5.png",
-  "/src/assets/copying_desktop6.png",
-  "/src/assets/copying_desktop7.png",
+  copyingDesktop1,
+  copyingDesktop2,
+  copyingDesktop3,
+  copyingDesktop4,
+  copyingDesktop5,
+  copyingDesktop6,
+  copyingDesktop7,
 ];
 const mobileImages = [
-  "/src/assets/copying_desktop1.png",
-  "/src/assets/copying_mobile2.png",
-  "/src/assets/copying_mobile3.png",
-  "/src/assets/copying_mobile4.png",
-  "/src/assets/copying_mobile5.png",
-  "/src/assets/copying_mobile6.png",
-  "/src/assets/copying_mobile7.png",
+  copyingDesktop1,
+  copyingMobile2,
+  copyingMobile3,
+  copyingMobile4,
+  copyingMobile5,
+  copyingMobile6,
+  copyingMobile7,
 ];
 
 const StepStartCopying = ({ openStep, setOpenStep }) => {
