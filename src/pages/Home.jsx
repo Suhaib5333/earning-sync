@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white">
       {/* Hero Section */}
-      <section className="flex flex-col justify-center items-center min-h-[80vh] py-16 relative">
+      <section className="flex flex-col justify-center items-center min-h-[80vh] py-16 relative bg-[#013024]">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
