@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
+import ComingSoon from "../components/ComingSoon";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -51,105 +52,88 @@ const FAQ = () => {
   return (
     <div className="min-h-screen relative">
       {/* Coming Soon Overlay (centered on the screen) */}
-      <div className="fixed inset-0 z-30 flex flex-col items-center justify-center bg-black/80">
-        <motion.h1
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-5xl md:text-7xl font-extrabold text-[#a7ec4f] mb-6 drop-shadow-lg text-center"
-        >
-          Coming Soon
-        </motion.h1>
-        <p className="text-xl md:text-2xl text-white mb-8 text-center max-w-xl">
-          This page is launching soon. Stay tuned!
-        </p>
-      </div>
+      {/* <ComingSoon /> */}
 
-      {/* Existing Content (dimmed and unclickable) */}
-      <div className="pointer-events-none opacity-30 select-none">
-        {/* Hero Section */}
-        <section className="bg-[#013024] text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Frequently Asked{" "}
-                <span className="text-[#a7ec4f]">Questions</span>
-              </h1>
-              <p className="text-xl mb-8 text-gray-300">
-                Find answers to common questions about our copy trading service
-              </p>
-            </motion.div>
-          </div>
-        </section>
+      {/* Hero Section */}
+      <section className="bg-[#013024] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Frequently Asked <span className="text-[#a7ec4f]">Questions</span>
+            </h1>
+            <p className="text-xl mb-8 text-gray-300">
+              Find answers to common questions about our copy trading service
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-        {/* FAQ Section */}
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden"
+                initial={false}
+                animate={{
+                  backgroundColor: openIndex === index ? "#f8f9fa" : "#ffffff",
+                }}
+              >
+                <button
+                  className="w-full px-6 py-4 text-left flex justify-between items-center"
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
+                >
+                  <span className="text-lg font-semibold text-[#013024]">
+                    {faq.question}
+                  </span>
+                  <FaChevronDown
+                    className={`w-5 h-5 text-[#013024] transform transition-transform duration-200 ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
                 <motion.div
-                  key={index}
-                  className="bg-white rounded-lg shadow-md overflow-hidden"
                   initial={false}
                   animate={{
-                    backgroundColor:
-                      openIndex === index ? "#f8f9fa" : "#ffffff",
+                    height: openIndex === index ? "auto" : 0,
+                    opacity: openIndex === index ? 1 : 0,
                   }}
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
                 >
-                  <button
-                    className="w-full px-6 py-4 text-left flex justify-between items-center"
-                    onClick={() =>
-                      setOpenIndex(openIndex === index ? null : index)
-                    }
-                  >
-                    <span className="text-lg font-semibold text-[#013024]">
-                      {faq.question}
-                    </span>
-                    <FaChevronDown
-                      className={`w-5 h-5 text-[#013024] transform transition-transform duration-200 ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: openIndex === index ? "auto" : 0,
-                      opacity: openIndex === index ? 1 : 0,
-                    }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>
-                  </motion.div>
+                  <div className="px-6 pb-4 text-gray-600">{faq.answer}</div>
                 </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="bg-[#013024] py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Still Have Questions?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us for personalized assistance
-            </p>
-            <div className="flex justify-center">
-              <button className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center justify-center">
-                Contact Us Now!
-              </button>
-            </div>
+      {/* CTA Section */}
+      <section className="bg-[#013024] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Still Have Questions?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us for personalized assistance
+          </p>
+          <div className="flex justify-center">
+            <button className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center justify-center">
+              Contact Us Now!
+            </button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
