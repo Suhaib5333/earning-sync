@@ -52,7 +52,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen relative">
       {/* Coming Soon Overlay (centered on the screen) */}
-      {/* <ComingSoon /> */}
+      <ComingSoon />
 
       {/* Hero Section */}
       <section className="bg-[#013024] text-white py-20">

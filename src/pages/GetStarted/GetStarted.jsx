@@ -6,13 +6,14 @@ import {
   FaChartLine,
   FaMoneyBillWave,
 } from "react-icons/fa";
-import ComingSoon from "../components/ComingSoon";
+import ComingSoon from "../../components/ComingSoon";
 
 const GetStarted = () => {
   return (
     <div className="min-h-screen relative">
       {/* Coming Soon Overlay */}
-      <ComingSoon />
+      {/* <ComingSoon /> */}
+
       {/* Hero Section */}
       <section className="bg-[#013024] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
