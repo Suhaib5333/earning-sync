@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   FaUserPlus,
@@ -9,12 +9,21 @@ import {
 } from "react-icons/fa";
 
 const screenshots = {
-  desktop: "/src/assets/logo.png",
-  mobile: "/src/assets/logo.png",
+  desktop: "/src/assets/register_pc.png",
+  mobile: "/src/assets/register_mobile.png",
 };
 
 const StepCreateAccount = ({ openStep, setOpenStep }) => {
   const [accountTab, setAccountTab] = useState("desktop");
+
+  // Detect device type on mount and set tab accordingly
+  useEffect(() => {
+    if (window.innerWidth <= 768) {
+      setAccountTab("mobile");
+    } else {
+      setAccountTab("desktop");
+    }
+  }, []);
 
   return (
     <motion.div
@@ -99,22 +108,27 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
                     <li>
                       Go to the{" "}
                       <a
-                        href="https://www.exness.com/"
+                        href="https://one.exnesstrack.org/a/ake680s6t2"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#a7ec4f] underline"
+                        className="text-[#013024] underline"
                       >
                         Exness website
                       </a>
                       .
                     </li>
                     <li>
-                      Click <b>Open Account</b> and fill in your email and
+                      Click <b>Register</b> and fill in your country, email, and
                       password.
                     </li>
-                    <li>Complete the verification process as prompted.</li>
-                    <li>Fund your account to get started.</li>
+                    <li>
+                      Complete the verification process of both your <b>ID</b>{" "}
+                      and <b>Proof of Address</b>.
+                    </li>
                   </ol>
+                  <div className="mt-3 italic text-[#013024]">
+                    Do <b>not</b> fund your account at this step.
+                  </div>
                 </div>
               )}
               {accountTab === "mobile" && (
@@ -125,35 +139,29 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
                   </h4>
                   <ol className="list-decimal list-inside text-gray-800 space-y-3 text-lg">
                     <li>
-                      Download the{" "}
+                      Go to the{" "}
                       <a
-                        href="https://play.google.com/store/apps/details?id=com.exness.android.meta"
+                        href="https://one.exnesstrack.org/a/ake680s6t2"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#a7ec4f] underline"
+                        className="text-[#013024] underline"
                       >
-                        Exness app for Android
-                      </a>{" "}
-                      or{" "}
-                      <a
-                        href="https://apps.apple.com/app/exness-trade/id1438536237"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#a7ec4f] underline"
-                      >
-                        iOS
+                        Exness website
                       </a>
                       .
                     </li>
                     <li>
-                      Open the app and tap <b>Sign Up</b>.
+                      Click <b>Register</b> and fill in your country, email, and
+                      password.
                     </li>
                     <li>
-                      Enter your email and password, then follow the prompts to
-                      verify your account.
+                      Complete the verification process of both your <b>ID</b>{" "}
+                      and <b>Proof of Address</b>.
                     </li>
-                    <li>Fund your account to get started.</li>
                   </ol>
+                  <div className="mt-3 italic text-[#013024]">
+                    Do <b>not</b> fund your account at this step.
+                  </div>
                 </div>
               )}
             </div>
