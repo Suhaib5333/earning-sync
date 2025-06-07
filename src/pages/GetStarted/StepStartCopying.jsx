@@ -6,15 +6,35 @@ import {
   FaMobileAlt,
   FaChevronDown,
   FaCheckCircle,
+  FaChevronLeft,
+  FaChevronRight,
+  FaTimes,
 } from "react-icons/fa";
 
-const screenshots = {
-  desktop: "/src/assets/startcopy_pc.png",
-  mobile: "/src/assets/startcopy_mobile.png",
-};
+// Carousel image arrays
+const desktopImages = [
+  "/src/assets/copying_desktop1.png",
+  "/src/assets/copying_desktop2.png",
+  "/src/assets/copying_desktop3.png",
+  "/src/assets/copying_desktop4.png",
+  "/src/assets/copying_desktop5.png",
+  "/src/assets/copying_desktop6.png",
+  "/src/assets/copying_desktop7.png",
+];
+const mobileImages = [
+  "/src/assets/copying_desktop1.png",
+  "/src/assets/copying_mobile2.png",
+  "/src/assets/copying_mobile3.png",
+  "/src/assets/copying_mobile4.png",
+  "/src/assets/copying_mobile5.png",
+  "/src/assets/copying_mobile6.png",
+  "/src/assets/copying_mobile7.png",
+];
 
 const StepStartCopying = ({ openStep, setOpenStep }) => {
   const [accountTab, setAccountTab] = useState("desktop");
+  const [carouselIdx, setCarouselIdx] = useState(0);
+  const [previewOpen, setPreviewOpen] = useState(false);
 
   // Detect device type on mount and set tab accordingly
   useEffect(() => {
@@ -24,6 +44,21 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
       setAccountTab("desktop");
     }
   }, []);
+
+  // Reset carousel index when tab changes
+  useEffect(() => {
+    setCarouselIdx(0);
+  }, [accountTab]);
+
+  const images = accountTab === "desktop" ? desktopImages : mobileImages;
+
+  const handlePrev = () => {
+    setCarouselIdx((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCarouselIdx((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <motion.div
@@ -128,48 +163,110 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                       </div>
                     </li>
                     <li>
-                      Click <b>start copying</b>
+                      Click <b>start copying</b>.
                     </li>
                     <li>
-                      Continue with <b>web version</b>
+                      Continue with <b>web version</b>.
                     </li>
-                    <li>Sign in</li>
+                    <li>Sign in.</li>
                     <li>
-                      Click <b>create investment</b>
+                      Click <b>create investment</b>.
                     </li>
                     <li>
                       Top up your{" "}
                       <i>
                         <b>Investment</b>
                       </i>{" "}
-                      wallet
+                      wallet.
                     </li>
                     <li>
-                      Click on <b>create investment</b> again
+                      Click on <b>create investment</b> again.
                     </li>
-                    <li>Enter the amount deposited to invest</li>
+                    <li>Enter the amount deposited to invest.</li>
                   </ol>
                 </div>
               )}
             </div>
-            {/* Screenshot */}
-            <div className="flex-1 flex items-center justify-center">
-              <div className="w-full max-w-xs md:max-w-sm rounded-xl overflow-hidden shadow-lg border border-[#a7ec4f]/30 bg-white">
+            {/* Carousel */}
+            <div className="flex-1 flex flex-col items-center justify-center">
+              <div
+                className={`
+                  w-full 
+                  ${
+                    accountTab === "mobile"
+                      ? "max-w-xs"
+                      : "max-w-2xl md:max-w-3xl"
+                  } 
+                  rounded-xl overflow-hidden shadow-lg border border-[#a7ec4f]/30 bg-white relative
+                `}
+                style={accountTab === "mobile" ? { maxHeight: "350px" } : {}}
+              >
+                <button
+                  onClick={handlePrev}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-[#013024] bg-opacity-80 text-white rounded-full p-3 hover:bg-[#a7ec4f] hover:text-[#013024] transition"
+                  aria-label="Previous"
+                  type="button"
+                  style={{ outline: "none" }}
+                >
+                  <FaChevronLeft size={28} />
+                </button>
                 <img
-                  src={
-                    accountTab === "desktop"
-                      ? screenshots.desktop
-                      : screenshots.mobile
-                  }
-                  alt={
-                    accountTab === "desktop"
-                      ? "Start Copying Desktop Screenshot"
-                      : "Start Copying Mobile Screenshot"
-                  }
-                  className="w-full h-auto object-contain"
-                  style={{ background: "#f8fafc" }}
+                  src={images[carouselIdx]}
+                  alt={`Step screenshot ${carouselIdx + 1}`}
+                  className="w-full h-auto object-contain cursor-zoom-in"
+                  style={{
+                    background: "#f8fafc",
+                    maxHeight: accountTab === "mobile" ? "320px" : "700px",
+                  }}
+                  onClick={() => setPreviewOpen(true)}
                 />
+                <button
+                  onClick={handleNext}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-[#013024] bg-opacity-80 text-white rounded-full p-3 hover:bg-[#a7ec4f] hover:text-[#013024] transition"
+                  aria-label="Next"
+                  type="button"
+                  style={{ outline: "none" }}
+                >
+                  <FaChevronRight size={28} />
+                </button>
+                <div className="flex justify-center gap-1 mt-2 mb-1">
+                  {images.map((_, idx) => (
+                    <span
+                      key={idx}
+                      className={`inline-block w-2 h-2 rounded-full ${
+                        idx === carouselIdx ? "bg-[#a7ec4f]" : "bg-[#013024]/30"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
+              {/* Fullscreen Preview Popup */}
+              {previewOpen && (
+                <div
+                  className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                  onClick={() => setPreviewOpen(false)}
+                >
+                  <div className="relative max-w-5xl w-full flex justify-center">
+                    <button
+                      className="absolute top-4 right-4 text-white text-3xl z-50 bg-black/60 rounded-full p-2 hover:bg-[#a7ec4f] hover:text-[#013024] transition"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setPreviewOpen(false);
+                      }}
+                      aria-label="Close"
+                    >
+                      <FaTimes />
+                    </button>
+                    <img
+                      src={images[carouselIdx]}
+                      alt="Full Preview"
+                      className="max-h-[90vh] w-auto rounded-lg shadow-2xl"
+                      style={{ background: "#f8fafc" }}
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         )}

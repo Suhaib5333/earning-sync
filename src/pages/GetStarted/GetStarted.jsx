@@ -3,16 +3,12 @@ import { motion } from "framer-motion";
 import StepCreateAccount from "./StepCreateAccount";
 import StepStartCopying from "./StepStartCopying";
 import StepJoinCommunity from "./StepJoinCommunity";
-import ComingSoon from "../../components/ComingSoon";
 
 const GetStarted = () => {
   const [openStep, setOpenStep] = useState(null);
 
   return (
     <div className="min-h-screen relative">
-      {/* Coming Soon Overlay */}
-      {/* <ComingSoon /> */}
-
       {/* Hero Section */}
       <section className="bg-[#013024] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
