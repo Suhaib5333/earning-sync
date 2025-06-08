@@ -1,16 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaTelegram, FaTwitter } from "react-icons/fa";
-import ComingSoon from "../components/ComingSoon";
+import { FaEnvelope, FaWhatsapp, FaLinkedin, FaUsers } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen relative">
-      {/* Coming Soon Overlay */}
-      <ComingSoon />
-
-      {/* Hero Section */}
-      <section className="bg-[#013024] text-white py-20">
+    <div className="bg-transparent">
+      {/* Hero/Banner Section */}
+      <section className="bg-[#013024] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -19,125 +15,109 @@ const Contact = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Get in <span className="text-[#a7ec4f]">Touch</span>
+              Contact <span className="text-[#a7ec4f]">EarningSync</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-300">
-              We're here to answer any questions you may have
+            <p className="text-xl mb-4 text-gray-300">
+              Reach out to us anytime through your preferred channel.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-[#013024] mb-6">
-                Contact Information
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-center">
-                  <FaEnvelope className="w-6 h-6 text-[#013024] mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold">Email</h3>
-                    <p className="text-gray-600">support@earningsync.com</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <FaTelegram className="w-6 h-6 text-[#013024] mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold">Telegram</h3>
-                    <p className="text-gray-600">@EarningSync</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <FaTwitter className="w-6 h-6 text-[#013024] mr-4" />
-                  <div>
-                    <h3 className="text-lg font-semibold">Twitter</h3>
-                    <p className="text-gray-600">@EarningSync</p>
-                  </div>
-                </div>
+      {/* Contact Cards Section */}
+      <section className="py-4 w-full">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {/* Email */}
+            <motion.a
+              href="mailto:earningsync@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="flex flex-col items-center justify-center h-full rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#a7ec4f] group text-center p-8"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-4 shadow-inner flex items-center justify-center">
+                <FaEnvelope className="w-12 h-12 text-[#013024]" />
               </div>
-            </div>
-
-            <div>
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#013024] focus:border-[#013024]"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#013024] focus:border-[#013024]"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#013024] focus:border-[#013024]"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#013024] focus:border-[#013024]"
-                    placeholder="Your message..."
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map or Additional Info Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-[#013024] mb-6">
-              Our Support Hours
-            </h2>
-            <p className="text-xl text-gray-600">
-              We're available 24/7 to assist you with any questions or concerns
-            </p>
+              <div className="w-full flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-2 text-[#013024]">
+                  Email
+                </h3>
+                <span className="text-gray-700 mb-2 block break-all">
+                  earningsync@gmail.com
+                </span>
+                <span className="bg-[#013024] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
+                  Send Email
+                </span>
+              </div>
+            </motion.a>
+            {/* WhatsApp */}
+            <motion.a
+              href="https://wa.me/97366386602"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="flex flex-col items-center justify-center h-full rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#a7ec4f] group text-center p-8"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-4 shadow-inner flex items-center justify-center">
+                <FaWhatsapp className="w-12 h-12 text-[#25D366]" />
+              </div>
+              <div className="w-full flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-2 text-[#013024]">
+                  WhatsApp
+                </h3>
+                <span className="text-gray-700 mb-2 block">+973 6638 6602</span>
+                <span className="bg-[#25D366] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
+                  Chat on WhatsApp
+                </span>
+              </div>
+            </motion.a>
+            {/* LinkedIn */}
+            <motion.a
+              href="https://www.linkedin.com/company/earningsync"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="flex flex-col items-center justify-center h-full rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#a7ec4f] group text-center p-8"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-4 shadow-inner flex items-center justify-center">
+                <FaLinkedin className="w-12 h-12 text-[#0077b5]" />
+              </div>
+              <div className="w-full flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-2 text-[#013024]">
+                  LinkedIn
+                </h3>
+                <span className="text-gray-700 mb-2 block break-all">
+                  linkedin.com/company/earningsync
+                </span>
+                <span className="bg-[#0077b5] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
+                  View Profile
+                </span>
+              </div>
+            </motion.a>
+            {/* WhatsApp Community */}
+            <motion.a
+              href="https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="flex flex-col items-center justify-center h-full rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 transition-all duration-300 hover:-translate-y-1 hover:border-[#a7ec4f] group text-center p-8"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-4 shadow-inner flex items-center justify-center">
+                <FaUsers className="w-12 h-12 text-[#25D366]" />
+              </div>
+              <div className="w-full flex flex-col items-center">
+                <h3 className="text-2xl font-bold mb-2 text-[#013024]">
+                  WhatsApp Community
+                </h3>
+                <span className="text-gray-700 mb-2 block text-sm">
+                  Get updates & support from our team and members.
+                </span>
+                <span className="bg-[#25D366] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
+                  Join Group
+                </span>
+              </div>
+            </motion.a>
           </div>
         </div>
       </section>
