@@ -13,14 +13,14 @@ const Footer = () => {
   const handleNavClick = (to, e) => {
     e.preventDefault();
     navigate(to);
-    // Use a timeout to ensure scroll happens after navigation, works for both desktop and mobile
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, 100);
   };
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200 pt-8 pb-8 mt-8">
+    // Remove bg-gray-50 and border, make background transparent so global gradient shows through
+    <footer className="pt-8 pb-8 mt-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
         {/* Links */}
         <div className="w-full flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4">
