@@ -120,7 +120,7 @@ const Home = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {/* Security First */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
               <div className="flex items-center justify-center mb-6">
                 <FaShieldAlt className="text-4xl text-green-700" />
               </div>
@@ -131,7 +131,7 @@ const Home = () => {
                 Protecting your money comes first. We always focus on risk
                 management before chasing profits.
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Risk Management
                 </span>
@@ -141,7 +141,7 @@ const Home = () => {
               </div>
             </div>
             {/* Transparency & Integrity */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
               <div className="flex items-center justify-center mb-6">
                 <FaChartLine className="text-4xl text-green-700" />
               </div>
@@ -150,9 +150,9 @@ const Home = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 No fake results or hype. What you see is what you get. Real,
-                verifiable historical results.
+                verifiable, historical results.
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Honest Reporting
                 </span>
@@ -162,7 +162,7 @@ const Home = () => {
               </div>
             </div>
             {/* Community & Support */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 flex flex-col items-center text-center">
               <div className="flex items-center justify-center mb-6">
                 <FaUsers className="text-4xl text-green-700" />
               </div>
@@ -173,10 +173,15 @@ const Home = () => {
                 Get updates in our WhatsApp group and reach out to our team
                 anytime with questions or concerns.
               </p>
-              <div className="flex gap-2">
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="flex gap-2 justify-center">
+                <a
+                  href="https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold underline hover:bg-green-200 transition"
+                >
                   WhatsApp Group
-                </span>
+                </a>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Direct Support
                 </span>

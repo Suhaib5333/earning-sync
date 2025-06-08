@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaHandshake, FaChartBar, FaShieldAlt } from "react-icons/fa";
+import {
+  FaHandshake,
+  FaChartBar,
+  FaShieldAlt,
+  FaUserTie,
+  FaMoneyCheckAlt,
+  FaChartLine,
+} from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -52,40 +59,46 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="p-6 rounded-lg shadow-lg bg-white"
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
             >
-              <FaHandshake className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">Trust</h3>
-              <p className="text-gray-600 text-center">
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaHandshake className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">Trust</h3>
+              <p className="text-gray-700">
                 We build long-term relationships through transparency and
                 reliability.
               </p>
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="p-6 rounded-lg shadow-lg bg-white"
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
             >
-              <FaChartBar className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaChartBar className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Performance
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-700">
                 Safe returns from proven strategies, always focused on
                 protecting your capital.
               </p>
             </motion.div>
 
             <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="p-6 rounded-lg shadow-lg bg-white"
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
             >
-              <FaShieldAlt className="w-12 h-12 text-[#013024] mb-4 mx-auto" />
-              <h3 className="text-xl font-semibold mb-3 text-center">
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaShieldAlt className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Security
               </h3>
-              <p className="text-gray-600 text-center">
+              <p className="text-gray-700">
                 Your money's protection is prioritized with strong risk
                 management.
               </p>
@@ -95,47 +108,73 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-[#eaffd0]/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-[#013024] mb-12 text-center">
             Why Choose EarningSync?
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#013024]">
-                Expert Management
-              </h3>
-              <p className="text-gray-600">
-                Our team of professionals are dedicated to your success and
-                safety.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#013024]">
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Transparent Fees (now first) */}
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaMoneyCheckAlt className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Transparent Fees
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 We only earn a 30% fee on the profit we make for you. If you
                 don’t profit, we don’t earn.
               </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#013024]">
+            </motion.div>
+            {/* Expert Management (now second) */}
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaUserTie className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
+                Expert Management
+              </h3>
+              <p className="text-gray-700">
+                Our team of professionals are dedicated to your success and
+                safety.
+              </p>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaShieldAlt className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Risk Management
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 Investments with the primary focus being the protection of your
                 capital at all times.
               </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-3 text-[#013024]">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaChartLine className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Proven Track Record
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 Real, consistent results you can verify for yourself.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
