@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-gradient-to-br from-[#eaffd0] via-[#f7fff6] to-white">
         <Navbar />
         <main className="flex-grow">
           <Routes>

@@ -10,7 +10,7 @@ import {
   FaAnchor,
   FaAward,
 } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom"; // <-- useNavigate import
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -38,7 +38,8 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900 text-white">
+    // Remove the page-level gradient here, let App.jsx handle it globally!
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="flex flex-col justify-center items-center min-h-[80vh] py-16 relative bg-[#013024]">
         <motion.div
@@ -53,7 +54,7 @@ const Home = () => {
               Trusted By Dozens of Investors
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg text-white">
             Smart Copy Trading for
             <br />
             <span className="text-[#a7ec4f]">Secure Returns</span>
@@ -71,29 +72,30 @@ const Home = () => {
               Get Started Now
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            {/* <button className="px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-[#013024] transition-all text-lg">
-              View Our Live Results
-            </button> */}
           </div>
         </motion.div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white text-gray-900">
+      <section className="py-16">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, idx) => (
-              <div
+              <motion.div
                 key={stat.label}
-                className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center hover:shadow-2xl transition-all duration-300"
+                whileHover={{
+                  scale: 1.06,
+                  boxShadow: "0 8px 32px 0 #a7ec4f33",
+                }}
+                className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
               >
-                <div className="mb-4 text-4xl text-green-600">
-                  <stat.icon />
+                <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                  <stat.icon className="w-12 h-12 text-[#013024]" />
                 </div>
-                <div className="text-3xl font-bold text-green-700 mb-2">
+                <div className="text-3xl font-bold text-[#013024] mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium text-center">
+                <div className="text-gray-700 font-medium text-center">
                   {stat.label}
                   {stat.subLabel && (
                     <div className="text-xs italic text-gray-400 mt-1">
@@ -101,17 +103,17 @@ const Home = () => {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-white text-gray-900">
+      <section className="py-24">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#013024]">
               Why Choose <span className="text-[#a7ec4f]">EarningSync</span>?
             </h2>
             <p className="text-lg text-gray-600">
@@ -120,18 +122,21 @@ const Home = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {/* Security First */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-6">
-                <FaShieldAlt className="text-4xl text-green-700" />
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaShieldAlt className="w-12 h-12 text-[#013024]" />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Security Before Profit
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Protecting your money comes first. We always focus on risk
                 management before chasing profits.
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Risk Management
                 </span>
@@ -139,20 +144,23 @@ const Home = () => {
                   Secure Custody
                 </span>
               </div>
-            </div>
+            </motion.div>
             {/* Transparency & Integrity */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-6">
-                <FaChartLine className="text-4xl text-green-700" />
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaChartLine className="w-12 h-12 text-[#013024]" />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Real Transparency, No Hype
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 No fake results or hype. What you see is what you get. Real,
-                verifiable historical results.
+                verifiable, historical results.
               </p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Honest Reporting
                 </span>
@@ -160,28 +168,36 @@ const Home = () => {
                   Sustainable Returns
                 </span>
               </div>
-            </div>
+            </motion.div>
             {/* Community & Support */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300">
-              <div className="flex items-center justify-center mb-6">
-                <FaUsers className="text-4xl text-green-700" />
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaUsers className="w-12 h-12 text-[#013024]" />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Community & Support
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Get updates in our WhatsApp group and reach out to our team
                 anytime with questions or concerns.
               </p>
-              <div className="flex gap-2">
-                <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="flex gap-2 justify-center">
+                <a
+                  href="https://chat.whatsapp.com/L0OdHDeFk96AAjSVbJ87Ii"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold underline hover:bg-green-200 transition"
+                >
                   WhatsApp Group
-                </span>
+                </a>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
                   Direct Support
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
