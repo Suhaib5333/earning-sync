@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import {
   FaHandshake,
   FaChartBar,
-  FaShieldAlt,
   FaUserTie,
   FaMoneyCheckAlt,
   FaChartLine,
+  FaUserLock, // Add this import for account independence
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
@@ -83,8 +83,8 @@ const About = () => {
                 Performance
               </h3>
               <p className="text-gray-700">
-                Safe returns from proven strategies, always focused on
-                protecting your capital.
+                Our results are driven by proven strategies, always focused on
+                careful analysis and adapting to market conditions.
               </p>
             </motion.div>
 
@@ -93,14 +93,13 @@ const About = () => {
               className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
             >
               <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaShieldAlt className="w-12 h-12 text-[#013024]" />
+                <FaUserLock className="w-12 h-12 text-[#013024]" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-[#013024]">
                 Security
               </h3>
               <p className="text-gray-700">
-                Your money's protection is prioritized with strong risk
-                management.
+                You have complete authority over your money at all times.
               </p>
             </motion.div>
           </div>
@@ -151,14 +150,15 @@ const About = () => {
               className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
             >
               <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaShieldAlt className="w-12 h-12 text-[#013024]" />
+                <FaUserLock className="w-12 h-12 text-[#013024]" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                Risk Management
+                Account Independence
               </h3>
               <p className="text-gray-700">
-                Investments with the primary focus being the protection of your
-                capital at all times.
+                Your trading account remains fully in your name and under your
+                control. We never have access to your funds, only you can
+                deposit or withdraw at any time.
               </p>
             </motion.div>
             <motion.div
