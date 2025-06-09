@@ -52,7 +52,7 @@ const faqs = [
   {
     question: "What is your average monthly return?",
     answer:
-      "While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile.",
+      "Historically it has been 5%. While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile.",
     icon: FaChartBar,
   },
   {

@@ -25,7 +25,7 @@ const Home = () => {
   const stats = [
     { number: "25+", label: "Years of Experience", icon: FaAward },
     {
-      number: "8%",
+      number: "5%",
       label: "Historical Average Monthly Profit",
       icon: FaAnchor,
     },
