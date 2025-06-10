@@ -6,62 +6,98 @@ import {
   FaPiggyBank,
   FaShieldAlt,
   FaUnlockAlt,
-  FaChartLine,
   FaSyncAlt,
   FaChartBar,
-  FaChevronDown, // <-- Add this import!
+  FaUserShield,
+  FaSignOutAlt,
+  FaUserLock,
+  FaIdCard,
+  FaCreditCard,
+  FaExchangeAlt,
+  FaChevronDown,
 } from "react-icons/fa";
 
-const faqIcons = [
-  FaQuestionCircle, // What is copy trading?
-  FaDollarSign, // How much is the performance fee?
-  FaPiggyBank, // What is the minimum investment?
-  FaShieldAlt, // How do you manage risk?
-  FaUnlockAlt, // Can I withdraw my funds at any time?
-  FaSyncAlt, // How often do you trade?
-  FaChartBar, // What is your average monthly return?
+// Order and icons are now matched to the questions below
+const faqs = [
+  {
+    question: "What is copy trading?",
+    answer:
+      "Copy trading is an automated trading method where you can automatically copy positions opened and managed by another selected trader. When they trade, your account will automatically copy their actions proportionally to your investment.",
+    icon: FaQuestionCircle,
+  },
+  {
+    question: "How much is the performance fee?",
+    answer:
+      "We charge a 30% performance fee on profits generated through our copy trading service. This fee structure ensures our interests are aligned with yours - we only earn when you earn.",
+    icon: FaDollarSign,
+  },
+  {
+    question: "What is the minimum investment?",
+    answer:
+      "$100 is the minimum investment required to start copy trading with us.",
+    icon: FaPiggyBank,
+  },
+  {
+    question: "How do you manage risk?",
+    answer:
+      "We open small lot sizes to ensure that even in the event of a loss, your capital is preserved.",
+    icon: FaShieldAlt,
+  },
+  {
+    question: "How often do you trade?",
+    answer:
+      "Our trading frequency varies based on market conditions and opportunities. We prioritize quality setups over quantity to maintain consistent performance.",
+    icon: FaSyncAlt,
+  },
+  {
+    question: "What is your average monthly return?",
+    answer:
+      "Historically it has been 5%. While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile.",
+    icon: FaChartBar,
+  },
+  {
+    question: "Can I withdraw my funds at any time?",
+    answer:
+      "Yes, you maintain full control of your funds at all times. You can stop copying trades and withdraw your funds whenever you wish. Your initial investment can be withdrawn as a refund using the same payment method, then all future withdrawals can be done using other methods.",
+    icon: FaUnlockAlt,
+  },
+  {
+    question: "Are my funds held/stored with you?",
+    answer:
+      "No, your funds are never held or stored with us. All funds remain in your own Exness account at all times. We only provide the trading strategy for you to copy; we do not have access to your money.",
+    icon: FaUserShield,
+  },
+  {
+    question:
+      "Do you have the authority to perform withdrawal or deposit operations from my account?",
+    answer:
+      "No, we do not have any authority or access to perform withdrawals or deposits from your Exness account. Only you have full control over deposits and withdrawals. Our access is limited to trading only within the copy trading strategy.",
+    icon: FaUserLock,
+  },
+  {
+    question:
+      "What will happen if I decide to stop copying and withdraw my money?",
+    answer:
+      "You can stop copying the strategy at any time directly from your Exness account. Once you stop copying, you are free to withdraw your funds whenever you wish. There are no penalties or restrictions from our side.",
+    icon: FaSignOutAlt,
+  },
+  {
+    question:
+      "Can I use another person's bank card to make deposits or withdrawals?",
+    answer:
+      "No, Exness requires that all deposits and withdrawals are made using payment methods that are in your own name. Using someone else's bank card or payment method is not allowed and may result in issues with your account or transactions.",
+    icon: FaIdCard,
+  },
+  {
+    question: "Deposit and Withdrawal Methods",
+    answer:
+      "Exness offers a wide range of deposit and withdrawal methods, including bank cards (Visa/Mastercard), e-wallets (Skrill, Neteller, Perfect Money, etc.), online banking, and cryptocurrencies. The available options can depend on your country or region. For the most accurate and up-to-date list of methods, please check the 'Deposit' and 'Withdrawal' sections in your Exness account dashboard.",
+    icon: FaCreditCard,
+  },
 ];
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question: "What is copy trading?",
-      answer:
-        "Copy trading is an automated trading method where you can automatically copy positions opened and managed by another selected trader. When they trade, your account will automatically copy their actions proportionally to your investment.",
-    },
-    {
-      question: "How much is the performance fee?",
-      answer:
-        "We charge a 30% performance fee on profits generated through our copy trading service. This fee structure ensures our interests are aligned with yours - we only earn when you earn.",
-    },
-    {
-      question: "What is the minimum investment?",
-      answer:
-        "$100 is the minimum investment required to start copy trading with us.",
-    },
-    {
-      question: "How do you manage risk?",
-      answer:
-        "We open small lot sizes to ensure that even in the event of a loss, your capital is preserved.",
-    },
-    {
-      question: "Can I withdraw my funds at any time?",
-      answer:
-        "Yes, you maintain full control of your funds at all times. You can stop copying trades and withdraw your funds whenever you wish, your initial investment can be withdrawn as a refund using the same payment method, then all future withdrawals can be done using other methods.",
-    },
-    {
-      question: "How often do you trade?",
-      answer:
-        "Our trading frequency varies based on market conditions and opportunities. We prioritize quality setups over quantity to maintain consistent performance.",
-    },
-    {
-      question: "What is your average monthly return?",
-      answer:
-        "While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile.",
-    },
-  ];
 
   return (
     <div className="min-h-screen relative">
@@ -90,7 +126,7 @@ const FAQ = () => {
           <div className="space-y-8">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
-              const Icon = faqIcons[index] || FaQuestionCircle;
+              const Icon = faq.icon || FaQuestionCircle;
               return (
                 <motion.div
                   key={index}
@@ -108,23 +144,23 @@ const FAQ = () => {
                   }}
                 >
                   <button
-                    className={`w-full flex items-center justify-between px-8 py-8 text-left focus:outline-none rounded-3xl transition ${
+                    className={`w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 px-4 sm:px-8 py-8 text-left focus:outline-none rounded-3xl transition ${
                       isOpen
                         ? "bg-[#013024]/90 text-[#a7ec4f]"
                         : "bg-[#013024] text-white"
                     }`}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <div className="flex items-center gap-4">
-                      <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#a7ec4f] text-[#013024] font-bold text-2xl shadow-lg">
+                    <div className="flex items-center gap-4 flex-shrink-0 w-full">
+                      <span className="inline-flex items-center justify-center w-12 h-12 min-w-[3rem] min-h-[3rem] rounded-full bg-[#a7ec4f] text-[#013024] font-bold text-2xl shadow-lg flex-shrink-0">
                         <Icon />
                       </span>
-                      <span className="text-lg md:text-2xl font-bold">
+                      <span className="text-lg md:text-2xl font-bold break-words w-full text-left">
                         {faq.question}
                       </span>
                     </div>
                     <span
-                      className={`ml-4 flex items-center justify-center rounded-full transition-transform duration-200 ${
+                      className={`ml-0 md:ml-4 flex items-center justify-center rounded-full transition-transform duration-200 ${
                         isOpen
                           ? "rotate-180 bg-[#a7ec4f] text-[#013024]"
                           : "bg-white/10 text-[#a7ec4f]"
