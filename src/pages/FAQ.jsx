@@ -144,14 +144,14 @@ const FAQ = () => {
                   }}
                 >
                   <button
-                    className={`w-full flex flex-col md:flex-row md:items-center md:justify-between gap-4 px-4 sm:px-8 py-8 text-left focus:outline-none rounded-3xl transition ${
+                    className={`w-full flex items-center md:justify-between gap-4 px-4 sm:px-8 py-8 text-left focus:outline-none rounded-3xl transition ${
                       isOpen
                         ? "bg-[#013024]/90 text-[#a7ec4f]"
                         : "bg-[#013024] text-white"
                     }`}
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                   >
-                    <div className="flex items-center gap-4 flex-shrink-0 w-full">
+                    <div className="flex items-center gap-4 flex-1 min-w-0">
                       <span className="inline-flex items-center justify-center w-12 h-12 min-w-[3rem] min-h-[3rem] rounded-full bg-[#a7ec4f] text-[#013024] font-bold text-2xl shadow-lg flex-shrink-0">
                         <Icon />
                       </span>
@@ -160,11 +160,11 @@ const FAQ = () => {
                       </span>
                     </div>
                     <span
-                      className={`ml-0 md:ml-4 flex items-center justify-center rounded-full transition-transform duration-200 ${
+                      className={`flex items-center justify-center rounded-full transition-transform duration-200 ${
                         isOpen
                           ? "rotate-180 bg-[#a7ec4f] text-[#013024]"
                           : "bg-white/10 text-[#a7ec4f]"
-                      } w-10 h-10`}
+                      } w-10 h-10 ml-2 flex-shrink-0`}
                     >
                       <FaChevronDown className="w-6 h-6" />
                     </span>
