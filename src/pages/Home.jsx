@@ -202,6 +202,176 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Packages Section */}
+      <section className="relative py-20 bg-[#f3f8e6]">
+        {/* Decorative Blobs */}
+        <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#a7ec4f]/20 rounded-full blur-2xl z-0 animate-pulse" />
+        <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-[#013024]/10 rounded-full blur-2xl z-0 animate-pulse" />
+        <div className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="text-center mb-12 px-4 sm:px-6"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#013024] drop-shadow-lg">
+              Choose Your Profit Share Package
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
+              Greater investments mean lower fees. Select the package that fits
+              your investment style and start earning with us today.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto px-4 sm:px-6">
+            {/* Starter */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
+              whileHover={{
+                scale: typeof window !== "undefined" && window.innerWidth < 640 ? 1.03 : 1.08, // smaller scale on mobile
+                boxShadow: "0 12px 48px 0 #a7ec4f66",
+                zIndex: 10,
+                rotate: typeof window !== "undefined" && window.innerWidth < 640 ? 0 : -2, // no rotate on mobile
+                backgroundColor: "#f6ffe6",
+                borderColor: "#a7ec4f",
+                transition: { duration: 0.18 },
+              }}
+              whileTap={{ scale: 0.97, transition: { duration: 0.12 } }}
+              className="relative bg-white rounded-2xl border border-[#a7ec4f]/30 shadow-lg p-6 sm:p-7 md:p-8 flex flex-col items-center text-center transition-all duration-200 cursor-pointer hover:border-[#a7ec4f] overflow-hidden focus:outline-none mb-6 sm:mb-0"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") handleNavClick("/get-started", e);
+              }}
+            >
+              <span className="inline-block bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full shadow text-base mb-4">
+                Starter
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                30%
+              </div>
+              <div className="font-bold text-base mb-2">Profit Share</div>
+              <div className="inline-block bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $100 - $10,000
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-2 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Profit share is deducted automatically
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Full account control at all times
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Team & Community support
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400 block text-center">
+                No hidden fees • Cancel anytime
+              </span>
+            </motion.div>
+            {/* Pro */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+              whileHover={{
+                scale: typeof window !== "undefined" && window.innerWidth < 640 ? 1.03 : 1.12, // smaller scale on mobile
+                boxShadow: "0 16px 64px 0 #a7ec4f99",
+                zIndex: 10,
+                rotate: typeof window !== "undefined" && window.innerWidth < 640 ? 0 : 2, // no rotate on mobile
+                backgroundColor: "#f6ffe6",
+                borderColor: "#013024",
+                transition: { duration: 0.18 },
+              }}
+              whileTap={{ scale: 0.97, transition: { duration: 0.12 } }}
+              className="relative bg-white rounded-2xl border-2 border-[#a7ec4f] shadow-xl p-7 sm:p-8 md:p-9 flex flex-col items-center text-center transition-all duration-300 cursor-pointer hover:border-[#013024] overflow-hidden focus:outline-none mb-6 sm:mb-0"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") handleNavClick("/get-started", e);
+              }}
+            >
+              <span className="inline-block bg-[#013024] text-[#a7ec4f] font-bold px-7 py-1 rounded-full shadow text-base mb-4 border-2 border-[#a7ec4f]">
+                Pro
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                20%
+              </div>
+              <div className="font-bold text-base mb-2">Profit Share</div>
+              <div className="inline-block bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $10,001 - $100,000
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-2 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Profit share is deducted automatically
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Lower fee for higher deposits
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Priority support
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400 block text-center">
+                No hidden fees • Cancel anytime
+              </span>
+            </motion.div>
+            {/* Elite */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
+              whileHover={{
+                scale: typeof window !== "undefined" && window.innerWidth < 640 ? 1.03 : 1.08, // smaller scale on mobile
+                boxShadow: "0 12px 48px 0 #a7ec4f66",
+                zIndex: 10,
+                rotate: typeof window !== "undefined" && window.innerWidth < 640 ? 0 : -2, // no rotate on mobile
+                backgroundColor: "#f6ffe6",
+                borderColor: "#a7ec4f",
+                transition: { duration: 0.18 },
+              }}
+              whileTap={{ scale: 0.97, transition: { duration: 0.12 } }}
+              className="relative bg-white rounded-2xl border border-[#a7ec4f]/30 shadow-lg p-6 sm:p-7 md:p-8 flex flex-col items-center text-center transition-all duration-200 cursor-pointer hover:border-[#a7ec4f] overflow-hidden focus:outline-none"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") handleNavClick("/get-started", e);
+              }}
+            >
+              <span className="inline-block bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full shadow text-base mb-4">
+                Elite
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                15%
+              </div>
+              <div className="font-bold text-base mb-2">Profit Share</div>
+              <div className="inline-block bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $100,001+
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-2 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Profit share is deducted automatically
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Best value for large investors
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Dedicated account manager
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400 block text-center">
+                No hidden fees • Cancel anytime
+              </span>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-[#013024] text-white text-center relative">
         <div className="max-w-2xl mx-auto px-4">
