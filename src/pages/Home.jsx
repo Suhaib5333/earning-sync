@@ -38,7 +38,6 @@ const Home = () => {
   ];
 
   return (
-    // Remove the page-level gradient here, let App.jsx handle it globally!
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="flex flex-col justify-center items-center min-h-[80vh] py-16 relative bg-[#013024]">
@@ -198,6 +197,136 @@ const Home = () => {
                 </span>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Packages Section */}
+      <section className="py-20 bg-[#f3f8e6]">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#013024] drop-shadow-lg">
+              Choose Your Profit Share Package
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
+              Greater investments mean lower fees. Select the package that fits
+              your investment style and start earning with us today.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Starter */}
+            <div
+              className="bg-white rounded-2xl border border-[#a7ec4f]/30 shadow-lg p-6 flex flex-col items-center text-center hover:border-[#a7ec4f] transition"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ")
+                  handleNavClick("/get-started", e);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <span className="bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full mb-4">
+                Starter
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                30%
+              </div>
+              <div className="font-bold mb-2">Profit Share</div>
+              <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $100 - $10,000
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Full account
+                  control
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Community & team
+                  support
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400">
+                No hidden fees • Cancel anytime
+              </span>
+            </div>
+            {/* Pro */}
+            <div
+              className="bg-white rounded-2xl border-2 border-[#a7ec4f] shadow-xl p-6 flex flex-col items-center text-center hover:border-[#013024] transition"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ")
+                  handleNavClick("/get-started", e);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <span className="bg-[#013024] text-[#a7ec4f] font-bold px-7 py-1 rounded-full mb-4 border-2 border-[#a7ec4f]">
+                Pro
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                20%
+              </div>
+              <div className="font-bold mb-2">Profit Share</div>
+              <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $10,001 - $100,000
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Lower fee for
+                  higher deposits
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Priority support
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400">
+                No hidden fees • Cancel anytime
+              </span>
+            </div>
+            {/* Elite */}
+            <div
+              className="bg-white rounded-2xl border border-[#a7ec4f]/30 shadow-lg p-6 flex flex-col items-center text-center hover:border-[#a7ec4f] transition"
+              tabIndex={0}
+              onClick={(e) => handleNavClick("/get-started", e)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ")
+                  handleNavClick("/get-started", e);
+              }}
+              style={{ cursor: "pointer" }}
+            >
+              <span className="bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full mb-4">
+                Elite
+              </span>
+              <div className="text-4xl font-extrabold text-[#013024] mb-1">
+                15%
+              </div>
+              <div className="font-bold mb-2">Profit Share</div>
+              <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
+                $100,001+
+              </div>
+              <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
+                <li className="flex items-center gap-2">
+                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaArrowRight className="text-[#a7ec4f]" /> Best value for
+                  large investors
+                </li>
+                <li className="flex items-center gap-2">
+                  <FaShieldAlt className="text-[#a7ec4f]" /> Dedicated account
+                  manager
+                </li>
+              </ul>
+              <span className="text-xs text-gray-400">
+                No hidden fees • Cancel anytime
+              </span>
+            </div>
           </div>
         </div>
       </section>
