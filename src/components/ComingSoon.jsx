@@ -16,5 +16,5 @@ const ComingSoon = () => (
     </p>
   </div>
 );
-
+// test
 export default ComingSoon;
