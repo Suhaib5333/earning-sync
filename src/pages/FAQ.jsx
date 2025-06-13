@@ -94,6 +94,12 @@ const faqs = [
       "Exness offers a wide range of deposit and withdrawal methods, including bank cards (Visa/Mastercard), e-wallets (Skrill, Neteller, Perfect Money, etc.), online banking, and cryptocurrencies. The available options can depend on your country or region. For the most accurate and up-to-date list of methods, please check the 'Deposit' and 'Withdrawal' sections in your Exness account dashboard.",
     icon: FaCreditCard,
   },
+  {
+    question: "Why shouldn't I invest in those 50,000%+ strategies I see on Exness?",
+    answer:
+      "Many of those high-return strategies use risky tactics that can mislead investors. For example, a strategy provider might start with $1,000, lose $800, then deposit another $800 to recover, while copiers who can't add more funds would be wiped out. Providers can also deposit or withdraw during open trades to manipulate results, making their performance look much better than what copiers actually experience. Most of these strategies are gambling and designed to attract copiers, but in reality, most investors end up losing money.",
+    icon: FaExchangeAlt,
+  },
 ];
 
 const FAQ = () => {
