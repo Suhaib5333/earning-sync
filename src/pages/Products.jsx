@@ -132,7 +132,7 @@ const Products = () => {
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#a7ec4f] mb-4 drop-shadow-lg">
           Our Products
         </h1>
-        <p className="text-lg md:text-xl text-white max-w-2xl">
+        <p className="text-lg md:text-xl text-white max-w-2xl px-4 md:px-0 mx-auto">
           Discover our range of investment products designed for different risk
           appetites and goals.
         </p>
@@ -182,9 +182,9 @@ const Products = () => {
         </div>
       </div>
       {/* Product Content */}
-      <div className="mt-12 flex flex-col items-center justify-center">
-        <div className="w-full max-w-2xl bg-gradient-to-br from-white via-[#f7fff6] to-[#eaffd0] rounded-3xl shadow-2xl p-0 relative flex flex-col items-center min-h-[340px] border border-[#eaffd0] transition-all duration-300
-          mx-0 md:mx-0"
+      <div className="mt-12 flex flex-col items-center justify-center px-6 md:px-0">
+        <div
+          className="w-full max-w-2xl bg-gradient-to-br from-white via-[#f7fff6] to-[#eaffd0] rounded-3xl shadow-2xl p-0 relative flex flex-col items-center min-h-[340px] border border-[#eaffd0] transition-all duration-300"
           style={{ boxSizing: "border-box" }}
         >
           {/* Progress Bar */}
@@ -195,7 +195,7 @@ const Products = () => {
             />
           </div>
           {/* Carousel Controls */}
-          <div className="flex items-center justify-between w-full px-6 mt-6 mb-4">
+          <div className="flex items-center justify-between w-full px-4 md:px-6 mt-6 mb-4">
             <button
               onClick={handlePrev}
               disabled={activeSlide === 0}
@@ -227,9 +227,9 @@ const Products = () => {
                   {activeProduct === 0 && (
                     <>
                       {activeSlide === 0 && (
-                        // Upgraded: Chart/Bar/Arrow icon, bold, #a7ec4f
+                        // Chart/Bar/Arrow icon with black outline
                         <svg
-                          className="w-12 h-12 text-[#a7ec4f]"
+                          className="w-12 h-12"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -240,8 +240,8 @@ const Products = () => {
                             height="10"
                             rx="1.5"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="2.5"
                           />
                           <rect
                             x="12"
@@ -250,8 +250,8 @@ const Products = () => {
                             height="16"
                             rx="1.5"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="2.5"
                           />
                           <rect
                             x="20"
@@ -260,14 +260,14 @@ const Products = () => {
                             height="20"
                             rx="1.5"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="2.5"
                           />
                           <polyline
                             points="4,22 12,18 20,12 28,8"
                             fill="none"
                             stroke="#013024"
-                            strokeWidth="4"
+                            strokeWidth="3.2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
@@ -282,63 +282,113 @@ const Products = () => {
                         </svg>
                       )}
                       {activeSlide === 1 && (
-                        // Upgraded: Shield/Check/Lock icon, bold, #a7ec4f
+                        // Shield/Check icon with black outline
                         <svg
-                          className="w-12 h-12 text-[#a7ec4f]"
+                          className="w-12 h-12"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
                           <path
                             d="M16 5L27 9.5V16c0 7-5.5 10.5-11 13-5.5-2.5-11-6-11-13V9.5L16 5Z"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="2.5"
                           />
                           <path
                             d="M11.5 17.5l3 3 6-6"
                             fill="none"
                             stroke="#013024"
-                            strokeWidth="3.5"
+                            strokeWidth="3"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                           />
                         </svg>
                       )}
                       {activeSlide === 2 && (
-                        // Upgraded: Dollar/Target/Goal icon, bold, #a7ec4f
+                        // Improved Piggy Bank icon with black outline
                         <svg
-                          className="w-12 h-12 text-[#a7ec4f]"
+                          className="w-12 h-12"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
-                          <circle
+                          <ellipse
                             cx="16"
-                            cy="16"
-                            r="13"
+                            cy="18"
+                            rx="10"
+                            ry="7"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
-                          />
-                          <circle
-                            cx="16"
-                            cy="16"
-                            r="7"
-                            fill="none"
                             stroke="#013024"
-                            strokeWidth="3.5"
+                            strokeWidth="2.5"
+                          />
+                          <circle cx="22" cy="16" r="1" fill="#013024" />
+                          <rect
+                            x="10"
+                            y="23"
+                            width="3"
+                            height="4"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="19"
+                            y="23"
+                            width="3"
+                            height="4"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
                           />
                           <path
-                            d="M16 11v10M13 14h6M13 18h6"
+                            d="M8 14c-2-2-3-5 1-6"
                             stroke="#013024"
-                            strokeWidth="3.5"
+                            strokeWidth="2"
                             strokeLinecap="round"
+                            fill="none"
+                          />
+                          <rect
+                            x="14"
+                            y="13"
+                            width="4"
+                            height="2"
+                            rx="1"
+                            fill="#fff"
+                            stroke="#013024"
+                            strokeWidth="1"
+                          />
+                          <path
+                            d="M26 18c1 0 2 1 2 2s-1 2-2 2"
+                            stroke="#013024"
+                            strokeWidth="2"
+                            fill="none"
+                            strokeLinecap="round"
+                          />
+                          <ellipse
+                            cx="16"
+                            cy="18"
+                            rx="10"
+                            ry="7"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="2.5"
+                          />
+                          <circle
+                            cx="16"
+                            cy="18"
+                            r="10"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="0.5"
+                            opacity="0.1"
                           />
                         </svg>
                       )}
                       {activeSlide === 3 && (
-                        // Upgraded: Alert/Warning/Info icon, bold, #a7ec4f
+                        // Alert/Warning/Info icon with black outline
                         <svg
-                          className="w-12 h-12 text-[#a7ec4f]"
+                          className="w-12 h-12"
                           fill="none"
                           viewBox="0 0 32 32"
                         >
@@ -347,8 +397,8 @@ const Products = () => {
                             cy="16"
                             r="13"
                             fill="#a7ec4f"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="2.5"
                           />
                           <rect
                             x="14.5"
@@ -357,6 +407,8 @@ const Products = () => {
                             height="10"
                             rx="1.5"
                             fill="#013024"
+                            stroke="#013024"
+                            strokeWidth="1"
                           />
                           <rect
                             x="14.5"
@@ -365,14 +417,8 @@ const Products = () => {
                             height="3"
                             rx="1.5"
                             fill="#013024"
-                          />
-                          <circle
-                            cx="16"
-                            cy="16"
-                            r="13"
-                            fill="none"
-                            stroke="#a7ec4f"
-                            strokeWidth="3"
+                            stroke="#013024"
+                            strokeWidth="1"
                           />
                         </svg>
                       )}
