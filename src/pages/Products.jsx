@@ -138,27 +138,55 @@ const Products = () => {
         </p>
       </div>
       {/* Product Selector */}
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-10">
-        {products.map((product, idx) => (
-          <button
-            key={product.name}
-            className={`px-8 py-4 rounded-2xl shadow-lg font-bold text-2xl transition-all duration-200 border-2 focus:outline-none flex flex-col items-center gap-2 w-72 md:w-96
-              ${
-                activeProduct === idx
-                  ? "bg-[#013024] text-[#a7ec4f] border-[#a7ec4f] scale-105"
-                  : "bg-white text-[#013024] border-transparent hover:border-[#a7ec4f]/40"
-              }
-            `}
-            onClick={() => handleProductChange(idx)}
-          >
-            <img src={logo} alt="Logo" className="w-16 h-16 mx-auto mb-2" />
-            {product.name}
-          </button>
-        ))}
+      <div className="w-full">
+        {/* Mobile: side by side, Desktop: original */}
+        <div className="flex flex-row gap-4 px-4 mt-8 mb-4 md:hidden w-full max-w-md mx-auto">
+          {products.map((product, idx) => (
+            <button
+              key={product.name}
+              className={`flex-1 px-4 py-4 rounded-2xl shadow-lg font-bold text-lg transition-all duration-200 border-2 focus:outline-none flex flex-col items-center gap-2
+                ${
+                  activeProduct === idx
+                    ? "bg-[#013024] text-[#a7ec4f] border-[#a7ec4f] scale-105"
+                    : "bg-white text-[#013024] border-transparent hover:border-[#a7ec4f]/40"
+                }
+              `}
+              onClick={() => handleProductChange(idx)}
+              style={{
+                minWidth: 0,
+                maxWidth: "100%",
+              }}
+            >
+              <img src={logo} alt="Logo" className="w-12 h-12 mx-auto mb-2" />
+              {product.name}
+            </button>
+          ))}
+        </div>
+        <div className="hidden md:flex flex-col md:flex-row gap-8 justify-center items-center mt-10">
+          {products.map((product, idx) => (
+            <button
+              key={product.name}
+              className={`px-8 py-4 rounded-2xl shadow-lg font-bold text-2xl transition-all duration-200 border-2 focus:outline-none flex flex-col items-center gap-2 w-72 md:w-96
+                ${
+                  activeProduct === idx
+                    ? "bg-[#013024] text-[#a7ec4f] border-[#a7ec4f] scale-105"
+                    : "bg-white text-[#013024] border-transparent hover:border-[#a7ec4f]/40"
+                }
+              `}
+              onClick={() => handleProductChange(idx)}
+            >
+              <img src={logo} alt="Logo" className="w-16 h-16 mx-auto mb-2" />
+              {product.name}
+            </button>
+          ))}
+        </div>
       </div>
       {/* Product Content */}
       <div className="mt-12 flex flex-col items-center justify-center">
-        <div className="w-full max-w-2xl bg-gradient-to-br from-white via-[#f7fff6] to-[#eaffd0] rounded-3xl shadow-2xl p-0 relative flex flex-col items-center min-h-[340px] border border-[#eaffd0] transition-all duration-300">
+        <div className="w-full max-w-2xl bg-gradient-to-br from-white via-[#f7fff6] to-[#eaffd0] rounded-3xl shadow-2xl p-0 relative flex flex-col items-center min-h-[340px] border border-[#eaffd0] transition-all duration-300
+          mx-0 md:mx-0"
+          style={{ boxSizing: "border-box" }}
+        >
           {/* Progress Bar */}
           <div className="w-full h-2 rounded-t-3xl overflow-hidden bg-[#eaffd0]">
             <div
@@ -200,36 +228,152 @@ const Products = () => {
                     <>
                       {activeSlide === 0 && (
                         // Upgraded: Chart/Bar/Arrow icon, bold, #a7ec4f
-                        <svg className="w-12 h-12 text-[#a7ec4f]" fill="none" viewBox="0 0 32 32">
-                          <rect x="4" y="16" width="4" height="10" rx="1.5" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <rect x="12" y="10" width="4" height="16" rx="1.5" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <rect x="20" y="6" width="4" height="20" rx="1.5" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <polyline points="4,22 12,18 20,12 28,8" fill="none" stroke="#013024" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
-                          <circle cx="28" cy="8" r="2.5" fill="#a7ec4f" stroke="#013024" strokeWidth="2"/>
+                        <svg
+                          className="w-12 h-12 text-[#a7ec4f]"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <rect
+                            x="4"
+                            y="16"
+                            width="4"
+                            height="10"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <rect
+                            x="12"
+                            y="10"
+                            width="4"
+                            height="16"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <rect
+                            x="20"
+                            y="6"
+                            width="4"
+                            height="20"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <polyline
+                            points="4,22 12,18 20,12 28,8"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <circle
+                            cx="28"
+                            cy="8"
+                            r="2.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
                         </svg>
                       )}
                       {activeSlide === 1 && (
                         // Upgraded: Shield/Check/Lock icon, bold, #a7ec4f
-                        <svg className="w-12 h-12 text-[#a7ec4f]" fill="none" viewBox="0 0 32 32">
-                          <path d="M16 5L27 9.5V16c0 7-5.5 10.5-11 13-5.5-2.5-11-6-11-13V9.5L16 5Z" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <path d="M11.5 17.5l3 3 6-6" fill="none" stroke="#013024" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <svg
+                          className="w-12 h-12 text-[#a7ec4f]"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <path
+                            d="M16 5L27 9.5V16c0 7-5.5 10.5-11 13-5.5-2.5-11-6-11-13V9.5L16 5Z"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <path
+                            d="M11.5 17.5l3 3 6-6"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="3.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
                         </svg>
                       )}
                       {activeSlide === 2 && (
                         // Upgraded: Dollar/Target/Goal icon, bold, #a7ec4f
-                        <svg className="w-12 h-12 text-[#a7ec4f]" fill="none" viewBox="0 0 32 32">
-                          <circle cx="16" cy="16" r="13" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <circle cx="16" cy="16" r="7" fill="none" stroke="#013024" strokeWidth="3.5"/>
-                          <path d="M16 11v10M13 14h6M13 18h6" stroke="#013024" strokeWidth="3.5" strokeLinecap="round"/>
+                        <svg
+                          className="w-12 h-12 text-[#a7ec4f]"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="13"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="7"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="3.5"
+                          />
+                          <path
+                            d="M16 11v10M13 14h6M13 18h6"
+                            stroke="#013024"
+                            strokeWidth="3.5"
+                            strokeLinecap="round"
+                          />
                         </svg>
                       )}
                       {activeSlide === 3 && (
                         // Upgraded: Alert/Warning/Info icon, bold, #a7ec4f
-                        <svg className="w-12 h-12 text-[#a7ec4f]" fill="none" viewBox="0 0 32 32">
-                          <circle cx="16" cy="16" r="13" fill="#a7ec4f" stroke="#a7ec4f" strokeWidth="3"/>
-                          <rect x="14.5" y="10" width="3" height="10" rx="1.5" fill="#013024"/>
-                          <rect x="14.5" y="22" width="3" height="3" rx="1.5" fill="#013024"/>
-                          <circle cx="16" cy="16" r="13" fill="none" stroke="#a7ec4f" strokeWidth="3"/>
+                        <svg
+                          className="w-12 h-12 text-[#a7ec4f]"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="13"
+                            fill="#a7ec4f"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
+                          <rect
+                            x="14.5"
+                            y="10"
+                            width="3"
+                            height="10"
+                            rx="1.5"
+                            fill="#013024"
+                          />
+                          <rect
+                            x="14.5"
+                            y="22"
+                            width="3"
+                            height="3"
+                            rx="1.5"
+                            fill="#013024"
+                          />
+                          <circle
+                            cx="16"
+                            cy="16"
+                            r="13"
+                            fill="none"
+                            stroke="#a7ec4f"
+                            strokeWidth="3"
+                          />
                         </svg>
                       )}
                     </>
