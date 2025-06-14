@@ -95,9 +95,107 @@ const products = [
   {
     name: "EarningSync HR (High Risk)",
     description: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Mauris euismod, nisl eget aliquam ultricies, nunc nisl aliquam nunc, eget aliquam massa nisl quis neque.",
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.",
+      // Slide 1: Overview (EXTRAVAGANT, using your text)
+      <>
+        <span className="block text-2xl font-bold text-[#013024] mb-2">
+          What is EarningSync High-Risk?
+        </span>
+        <span>
+          At{" "}
+          <span className="font-semibold text-[#013024]">
+            EarningSync High-Risk
+          </span>
+          , we rely on an{" "}
+          <span className="font-semibold text-[#013024]">
+            advanced trading strategy
+          </span>{" "}
+          built around a{" "}
+          <span className="font-semibold text-[#013024]">
+            custom indicator developed using Pine Script
+          </span>
+          . This indicator generates{" "}
+          <span className="font-semibold text-[#013024]">
+            precise trade signals
+          </span>{" "}
+          that are executed automatically on a dedicated trading account, with{" "}
+          <span className="font-semibold text-[#013024]">
+            continuous monitoring and control by our expert trading team
+          </span>
+          .
+        </span>
+      </>,
+      // Slide 2: Instruments Traded (EXTRAVAGANT, using your text)
+      <>
+        <span className="block text-xl font-bold text-[#013024] mb-2">
+          Instruments Traded
+        </span>
+        <ul className="list-disc list-inside text-left mx-auto max-w-lg text-base">
+          <li>
+            <span className="font-semibold text-[#013024]">Gold (XAUUSD)</span>
+          </li>
+          <li>
+            <span className="font-semibold text-[#013024]">
+              Dow Jones Index (US30)
+            </span>
+          </li>
+          <li>
+            <span className="font-semibold text-[#013024]">
+              Nasdaq Index (NAS100)
+            </span>
+          </li>
+          <li>
+            <span className="font-semibold text-[#013024]">
+              Bitcoin (BTCUSD)
+            </span>
+          </li>
+        </ul>
+        <span>
+          The strategy focuses on these high-potential instruments, seeking to
+          capture opportunities across diverse and volatile markets.
+        </span>
+      </>,
+      // Slide 3: Position Scaling & Risk Approach (EXTRAVAGANT, using your text)
+      <>
+        <span className="block text-xl font-bold text-[#013024] mb-2">
+          Position Scaling & Risk Approach
+        </span>
+        <ul className="list-disc list-inside text-left mx-auto max-w-lg text-base">
+          <li>
+            We utilize a{" "}
+            <span className="font-semibold text-[#013024]">
+              position-scaling approach
+            </span>{" "}
+            to reach a favorable average entry price.
+          </li>
+          <li>
+            <span className="font-semibold text-[#013024]">
+              No stop-loss levels
+            </span>{" "}
+            are applied, given the strategy’s nature and risk control
+            mechanisms.
+          </li>
+        </ul>
+        <span>
+          All trades are executed automatically and are under the vigilant
+          supervision of our expert team, ensuring manual intervension when
+          needed.
+        </span>
+      </>,
+      // Slide 4: Risk Disclosure (EXTRAVAGANT, standard warning)
+      <>
+        <span className="block text-xl font-bold text-[#013024] mb-2">
+          Risk Disclosure
+        </span>
+        <span className="text-base">
+          This strategy is{" "}
+          <span className="font-semibold text-[#013024]">high risk</span> and is
+          intended for experienced copy trading investors seeking aggressive
+          growth. The absence of stop-losses and the use of position scaling can
+          result in significant drawdowns or loss of capital. Only invest what
+          you can afford to lose, and ensure you fully understand the risks
+          involved.
+        </span>
+      </>,
     ],
   },
 ];
@@ -419,6 +517,173 @@ const Products = () => {
                             fill="#013024"
                             stroke="#013024"
                             strokeWidth="1"
+                          />
+                        </svg>
+                      )}
+                    </>
+                  )}
+                  {activeProduct === 1 && (
+                    <>
+                      {activeSlide === 0 && (
+                        // Lightning bolt for advanced/active strategy
+                        <svg
+                          className="w-12 h-12"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <polygon
+                            points="18,3 6,18 15,18 14,29 26,13 17,13"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2.5"
+                            strokeLinejoin="round"
+                          />
+                          <polyline
+                            points="18,3 6,18 15,18 14,29 26,13 17,13"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="2.5"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      )}
+                      {activeSlide === 1 && (
+                        // Multi-asset: coins + chart
+                        <svg
+                          className="w-12 h-12"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <ellipse
+                            cx="10"
+                            cy="24"
+                            rx="6"
+                            ry="3"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <ellipse
+                            cx="22"
+                            cy="18"
+                            rx="6"
+                            ry="3"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="18"
+                            y="8"
+                            width="4"
+                            height="8"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="24"
+                            y="12"
+                            width="4"
+                            height="4"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="12"
+                            y="14"
+                            width="4"
+                            height="6"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                        </svg>
+                      )}
+                      {activeSlide === 2 && (
+                        // Scaling arrows for position scaling
+                        <svg
+                          className="w-12 h-12"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <rect
+                            x="8"
+                            y="20"
+                            width="4"
+                            height="8"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="16"
+                            y="12"
+                            width="4"
+                            height="16"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <rect
+                            x="24"
+                            y="4"
+                            width="4"
+                            height="24"
+                            rx="1.5"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2"
+                          />
+                          <polyline
+                            points="10,24 18,20 26,8"
+                            fill="none"
+                            stroke="#013024"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <polygon
+                            points="24,4 30,10 26,8 24,4"
+                            fill="#013024"
+                          />
+                        </svg>
+                      )}
+                      {activeSlide === 3 && (
+                        // Bold warning triangle for risk
+                        <svg
+                          className="w-12 h-12"
+                          fill="none"
+                          viewBox="0 0 32 32"
+                        >
+                          <polygon
+                            points="16,5 29,27 3,27"
+                            fill="#a7ec4f"
+                            stroke="#013024"
+                            strokeWidth="2.5"
+                            strokeLinejoin="round"
+                          />
+                          <rect
+                            x="14.5"
+                            y="14"
+                            width="3"
+                            height="7"
+                            rx="1.5"
+                            fill="#013024"
+                          />
+                          <rect
+                            x="14.5"
+                            y="23"
+                            width="3"
+                            height="3"
+                            rx="1.5"
+                            fill="#013024"
                           />
                         </svg>
                       )}
