@@ -46,6 +46,13 @@ const Footer = () => {
             Get Started
           </Link>
           <Link
+            to="/products"
+            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick("/products", e)}
+          >
+            Products
+          </Link>
+          <Link
             to="/faq"
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
             onClick={(e) => handleNavClick("/faq", e)}
