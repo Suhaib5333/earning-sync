@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {/* Email */}
             <motion.a
-              href="mailto:earningsync@gmail.com"
+              href="mailto:info@earningsync.com"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
@@ -44,7 +44,7 @@ const Contact = () => {
                   Email
                 </h3>
                 <span className="text-gray-700 mb-2 block break-all">
-                  earningsync@gmail.com
+                  info@earningsync.com
                 </span>
                 <span className="bg-[#013024] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
                   Send Email
