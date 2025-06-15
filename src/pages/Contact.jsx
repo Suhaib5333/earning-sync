@@ -4,6 +4,17 @@ import { FaEnvelope, FaWhatsapp, FaLinkedin, FaUsers } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 emailjs.init("NqVyP1tbFm3VvkKM3");
 
+const subjectOptions = [
+  "General Inquiry",
+  "Getting Started",
+  "Copy Trading Support",
+  "Profit Share & Fees",
+  "Account & Security",
+  "Technical Issue",
+  "Feedback",
+  "Other",
+];
+
 const Contact = () => {
   const form = useRef();
   const [sending, setSending] = useState(false);
@@ -14,11 +25,13 @@ const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState(subjectOptions[0]);
   // Track focus for each field
   const [focus, setFocus] = useState({
     name: false,
     email: false,
     message: false,
+    subject: false,
   });
 
   // EmailJS credentials
@@ -38,6 +51,7 @@ const Contact = () => {
       name,
       email,
       message,
+      subject, // <-- sent as {{subject}} to EmailJS
       time: getCurrentTime(),
     };
 
@@ -55,6 +69,7 @@ const Contact = () => {
           setName("");
           setEmail("");
           setMessage("");
+          setSubject(subjectOptions[0]);
           form.current.reset();
         },
         () => {
@@ -166,6 +181,35 @@ const Contact = () => {
                   Your Email
                 </label>
               </div>
+            </div>
+            {/* Subject Dropdown */}
+            <div className="relative">
+              <select
+                name="subject"
+                id="subject"
+                required
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                onFocus={() => setFocus((f) => ({ ...f, subject: true }))}
+                onBlur={() => setFocus((f) => ({ ...f, subject: false }))}
+                className="peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all appearance-none"
+                style={{
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
+                  appearance: "none",
+                  minHeight: "3rem",
+                }}
+              >
+                {subjectOptions.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+              </select>
+              {/* Removed the Subject label */}
+              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#013024] text-lg">
+                ▼
+              </span>
             </div>
             {/* Message Field */}
             <div className="relative">
