@@ -352,13 +352,13 @@ const Home = () => {
             Join a community of investors and start earning passive income
             today.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/get-started"
               onClick={(e) => handleNavClick("/get-started", e)}
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
-              Get Started Now
+              Get Started 
               <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
             <Link
@@ -367,6 +367,14 @@ const Home = () => {
               className="px-8 py-3 bg-white text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#eaffc7] transition-all text-lg flex items-center group border border-[#a7ec4f]"
             >
               Educate Me
+              <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+            <Link
+              to="/dashboard"
+              onClick={(e) => handleNavClick("/dashboard", e)}
+              className="px-8 py-3 bg-[#013024] text-[#a7ec4f] font-bold rounded-full shadow-lg border border-[#a7ec4f] hover:bg-[#a7ec4f] hover:text-[#013024] transition-all text-lg flex items-center group"
+            >
+              View Dashboard
               <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
           </div>

@@ -90,6 +90,18 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              {/* Dashboard Link - Desktop */}
+              <Link
+                to="/dashboard"
+                className={`px-4 py-2 rounded-lg font-semibold text-base transition-all duration-200 ${
+                  isActivePath("/dashboard")
+                    ? "bg-[#a7ec4f] text-[#013024] shadow"
+                    : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
+                }`}
+                onClick={(e) => handleNavClick("/dashboard", e)}
+              >
+                Dashboard
+              </Link>
             </div>
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
@@ -178,6 +190,18 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
+                {/* Dashboard Link - Mobile */}
+                <Link
+                  to="/dashboard"
+                  className={`px-4 py-3 rounded-full font-semibold text-lg transition-all duration-200 ${
+                    location.pathname === "/dashboard"
+                      ? "bg-[#a7ec4f] text-[#013024] shadow"
+                      : "text-[#013024] hover:bg-[#e6f9d5] hover:text-[#013024]"
+                  }`}
+                  onClick={(e) => handleNavClick("/dashboard", e)}
+                >
+                  Dashboard
+                </Link>
               </nav>
             </motion.div>
           </>

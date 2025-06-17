@@ -9,6 +9,7 @@ import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Education from "./pages/Education"; // Add this import
+import Dashboard from "./pages/Dashboard"; // Add this import
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/education" element={<Education />} /> {/* Add this line */}
+            <Route path="/education" element={<Education />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
         <Footer />
