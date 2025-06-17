@@ -72,6 +72,15 @@ const Home = () => {
               Get Started Now
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
+            <Link
+              to="/education"
+              onClick={(e) => handleNavClick("/education", e)}
+              className="px-8 py-3 bg-white text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#eaffc7] transition-all text-lg flex items-center group border border-[#a7ec4f]"
+              style={{ marginLeft: 0 }}
+            >
+              Educate Me
+              <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
           </div>
         </motion.div>
       </section>
@@ -343,13 +352,21 @@ const Home = () => {
             Join a community of investors and start earning passive income
             today.
           </p>
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <Link
               to="/get-started"
               onClick={(e) => handleNavClick("/get-started", e)}
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
               Get Started Now
+              <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+            </Link>
+            <Link
+              to="/education"
+              onClick={(e) => handleNavClick("/education", e)}
+              className="px-8 py-3 bg-white text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#eaffc7] transition-all text-lg flex items-center group border border-[#a7ec4f]"
+            >
+              Educate Me
               <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
           </div>

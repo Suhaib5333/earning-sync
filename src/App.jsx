@@ -8,6 +8,7 @@ import GetStarted from "./pages/GetStarted/GetStarted";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
+import Education from "./pages/Education"; // Add this import
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/education" element={<Education />} /> {/* Add this line */}
           </Routes>
         </main>
         <Footer />
