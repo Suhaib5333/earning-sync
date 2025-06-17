@@ -55,14 +55,15 @@ const Home = () => {
             {/* CHANGED from "Secure Returns" to "Better Investing" */}
           </h1>
           <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-         className="mx-auto w-fit flex items-center justify-center gap-2 bg-green-100 text-green-800 px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm"
-          >
-       <FaShieldAlt className="text-green-600 text-base" />
-        Trusted by Dozens of Investors
-       </motion.div>
+           initial={{ opacity: 0, y: -10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.4, duration: 0.6 }}
+           className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
+>
+           <FaShieldAlt className="text-yellow-400 text-base" />
+           Trusted by Dozens of Investors
+           </motion.div>
+
 
           <p className="text-lg md:text-xl text-green-100 mt-6 mb-10 max-w-2xl mx-auto px-6 sm:px-0">
           Join in on earning returns with us through our proven copy trading
