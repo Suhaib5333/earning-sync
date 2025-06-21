@@ -8,6 +8,9 @@ import GetStarted from "./pages/GetStarted/GetStarted";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import RiskWarning from "./pages/RiskWarning";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/riskwarning" element={<RiskWarning />} />
           </Routes>
         </main>
         <Footer />
