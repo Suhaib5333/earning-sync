@@ -117,22 +117,27 @@ const Footer = () => {
           © {new Date().getFullYear()} EarningSync. All rights reserved.
         </p>
         <div className="flex items-center gap-4 md:order-2 order-1">
-          {/*
           <Link
             to="/privacy"
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition"
-            onClick={e => handleNavClick("/privacy", e)}
+            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
+            onClick={(e) => handleNavClick("/privacy", e)}
           >
             Privacy Policy
           </Link>
           <Link
             to="/terms"
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition"
-            onClick={e => handleNavClick("/terms", e)}
+            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
+            onClick={(e) => handleNavClick("/terms", e)}
           >
-            Terms
+            Terms & Conditions
           </Link>
-          */}
+          <Link
+            to="/riskwarning"
+            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
+            onClick={(e) => handleNavClick("/riskwarning", e)}
+          >
+            Risk Warning
+          </Link>
         </div>
         <button
           onClick={scrollToTop}
