@@ -1,14 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "../assets/logo_transparent.png";
+import { FaGlobe } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+   const { i18n } = useTranslation();
+   const [langDropdownOpen, setLangDropdownOpen] = useState(false);
+const langDropdownRef = useRef(null);
+
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (langDropdownRef.current && !langDropdownRef.current.contains(e.target)) {
+      setLangDropdownOpen(false);
+    }
+  };
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => document.removeEventListener("mousedown", handleClickOutside);
+}, []);
+
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -74,6 +90,7 @@ const Navbar = () => {
                 EarningSync
               </span>
             </Link>
+            
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
               {navLinks.map((link) => (
@@ -90,8 +107,49 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+              {/* language switcher */}
+               <div className="relative ml-4" ref={langDropdownRef}>
+           <button
+               onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+               className="bg-white border px-3 py-1.5 rounded text-sm flex items-center gap-2 shadow-sm"
+                  >
+                <FaGlobe className="text-gray-600 w-4 h-4" />
+               <span>{i18n.language === "ar" ? "العربية" : "English"}</span>
+               <svg
+                className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor"viewBox="0 0 24 24"
+    >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+           </button>
+
+            {langDropdownOpen && (
+            <div className="absolute right-0 mt-2 w-28 bg-white border rounded shadow-md z-50">
+         <button
+        onClick={() => {
+          i18n.changeLanguage("en");
+          document.dir = "ltr";
+          setLangDropdownOpen(false);
+        }}
+        className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+        >
+          English
+      </button>
+            <button
+                onClick={() => {
+          i18n.changeLanguage("ar");
+          document.dir = "rtl";
+          setLangDropdownOpen(false);
+        }}
+        className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+      >
+        العربية
+      </button>
+    </div>
+  )}
+</div>
+{/* language switcher */}
             </div>
-            {/* Mobile Menu Button */}
+              {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center">
               <motion.button
                 whileTap={{ scale: 0.9 }}

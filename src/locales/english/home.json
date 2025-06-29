@@ -1,0 +1,89 @@
+{
+  "hero": {
+    "title": "Smart Copy Trading for",
+    "highlight": "Better Investing",
+    "description": "Join in on earning returns with us through our proven copy trading strategy with advanced risk management.",
+    "badge": "Trusted by Dozens of Investors",
+    "cta": "Get Started Now"
+  }
+,
+  "stats": {
+    "years_of_experience": "Years of Experience",
+    "historical_profit": "Historical Average Monthly Profit",
+    "maximum_drawdown": "Maximum Drawdown",
+    "on_earning_sync_classic": "On Earning Sync Classic"
+  }
+  , 
+  "features": {
+    "title": "Why Choose ",
+    "brand": "EarningSync",
+    "subtitle": "Discover what sets us apart in the world of copy trading.",
+    "security": {
+      "title": "Security Before Profit",
+      "desc": "Protecting your money comes first. We always focus on risk management before chasing profits.",
+      "badges": ["Risk Management", "Secure Custody"]
+    },
+    "transparency": {
+      "title": "Real Transparency, No Hype",
+      "desc": "No fake results or hype. What you see is what you get. Real, verifiable, historical results.",
+      "badges": ["Honest Reporting", "Sustainable Returns"]
+    },
+    "community": {
+      "title": "Community & Support",
+      "desc": "Get updates in our WhatsApp group and reach out to our team anytime with questions or concerns.",
+      "badges": {
+        "whatsapp": "WhatsApp Group",
+        "support": "Direct Support"
+      }
+    }},
+  
+  "packages": {
+  "title": "Choose Your Profit Share Package",
+  "subtitle": "Greater investments mean lower fees. Select the package that fits your investment style and start earning with us today.",
+  "starter": {
+    "label": "Starter",
+    "range": "$100 - $10,000",
+    "features": [
+      "Automatic deduction",
+      "Full account control",
+      "Community & team support"
+    ]
+  },
+  "pro": {
+    "label": "Pro",
+    "range": "$10,001 - $100,000",
+    "features": [
+      "Automatic deduction",
+      "Lower fee for higher deposits",
+      "Priority support"
+    ]
+  },
+  "elite": {
+    "label": "Elite",
+    "range": "$100,001+",
+    "features": [
+      "Automatic deduction",
+      "Best value for large investors",
+      "Dedicated account manager"
+    ]
+  },
+  "common": {
+    "profitShare": "Profit Share",
+    "note": "No hidden fees • Cancel anytime"
+  } 
+}, "cta": {
+    "title": "Ready to Transform Your ",
+    "highlight": "Investment Journey ?",
+    "subtitle": "Join a community of investors and start earning passive income today.",
+    "button": "Get Started Now",
+    "note": "Start with just $100 • Stop copying & withdraw at anytime"
+  }
+
+
+
+
+}
+  
+
+
+
