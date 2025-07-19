@@ -6,7 +6,7 @@ const products = [
   {
     name: "EarningSync Classic",
     description: [
-      // Slide 1: Overview
+      // Slide 1: Overview (Shortened)
       <>
         <span className="block text-2xl font-bold text-[#013024] mb-2">
           What is EarningSync Classic?
@@ -15,39 +15,34 @@ const products = [
           <span className="font-semibold text-[#013024]">
             EarningSync Classic
           </span>{" "}
-          is a{" "}
+          is a semi-automated strategy for{" "}
           <span className="font-semibold text-[#013024]">
-            semi automated trading strategy
-          </span>{" "}
-          for the{" "}
-          <span className="font-semibold text-[#013024]">NASDAQ index</span>,
-          executing{" "}
-          <span className="font-semibold text-[#013024]">buy-only trades</span>{" "}
-          within a carefully defined risk and capital allocation framework.
+            USTEC (NASDAQ), GOLD, USOIL, and US30
+          </span>
+          . It trades only buy-side, using strict risk and capital rules for
+          steady, sustainable results. Designed to capture upside momentum with
+          low risk, it's ideal for investors seeking stable returns.
         </span>
       </>,
-      // Slide 2: Trade Allocation & Risk Management
+      // Slide 2: Trade Allocation & Risk Management (Shortened)
       <>
         <span className="block text-xl font-bold text-[#013024] mb-2">
           Trade Allocation & Risk Management
         </span>
         <ul className="list-disc list-inside text-left mx-auto max-w-lg text-base">
           <li>
-            Strict cap of{" "}
             <span className="font-semibold text-[#013024]">
-              0.12 lots per $1,000
+              Lot Size Control:
             </span>{" "}
-            account balance, never exceeded.
+            Max 0.05 lots per $1,000 balance for consistent, conservative
+            sizing.
           </li>
           <li>
-            Exposure limit based on historical{" "}
-            <span className="font-semibold text-[#013024]">NASDAQ</span>{" "}
-            drawdowns, engineered to withstand declines of{" "}
-            <span className="font-semibold text-[#013024]">up to 40%-50%</span>.
-          </li>
-          <li>
-            Designed for long-term sustainability and consistency, even in
-            volatile markets.
+            <span className="font-semibold text-[#013024]">
+              Focused Market Exposure:
+            </span>{" "}
+            Only one symbol is traded at a time, no overlap between US30, GOLD,
+            USTEC, or USOIL, to avoid overexposure and keep precision.
           </li>
         </ul>
       </>,
