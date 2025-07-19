@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import logo from "../assets/logo_transparent.png";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  FaChevronLeft,
+  FaChevronRight,
+  FaSignal,
+  FaRobot,
+  FaChartLine,
+  FaDollarSign,
+  FaTelegramPlane,
+  FaStar,
+} from "react-icons/fa";
 
 const products = [
   {
@@ -88,7 +97,7 @@ const products = [
     ],
   },
   {
-    name: "EarningSync HR (High Risk)",
+    name: "EarningSync HR",
     description: [
       // Slide 1: Overview (EXTRAVAGANT, using your text)
       <>
@@ -190,6 +199,70 @@ const products = [
           you can afford to lose, and ensure you fully understand the risks
           involved.
         </span>
+      </>,
+    ],
+  },
+  {
+    name: "EarningSync Signals",
+    description: [
+      // Slide 1: Overview
+      <>
+        <div className="flex items-center gap-2 mb-2">
+          <FaSignal className="text-[#a7ec4f] w-8 h-8" />
+          <span className="text-xl font-bold text-[#013024]">Overview</span>
+        </div>
+        <span>
+          Get automated trading signals for Gold, NASDAQ, and Bitcoin. No
+          guesswork, just real analysis. Receive alerts instantly on Telegram.
+        </span>
+      </>,
+      // Slide 2: Features
+      <>
+        <div className="flex items-center gap-2 mb-2">
+          <FaRobot className="text-[#a7ec4f] w-8 h-8" />
+          <span className="text-xl font-bold text-[#013024]">Features</span>
+        </div>
+        <ul className="list-disc list-inside text-left mx-auto max-w-lg text-base">
+          <li>100% automated, bot-driven signals</li>
+          <li>Trend-following for higher accuracy</li>
+          <li>No emotions, just rules</li>
+          <li>Clear entries, take profit, and stop loss</li>
+        </ul>
+      </>,
+      // Slide 3: Subscription
+      <>
+        <div className="flex items-center gap-2 mb-2">
+          <FaDollarSign className="text-[#a7ec4f] w-8 h-8" />
+          <span className="text-xl font-bold text-[#013024]">Subscription</span>
+        </div>
+        <div className="text-base text-left mx-auto max-w-lg">
+          <div>
+            <span className="font-semibold text-[#013024]">$100/month</span>
+          </div>
+          <div>
+            <span className="font-semibold text-[#013024]">$35/week</span>
+          </div>
+          <div className="mt-2 flex items-center gap-2">
+            <FaTelegramPlane className="text-[#0088cc] w-5 h-5" />
+            <span>
+              Access to a private Telegram channel with exclusive signals.
+            </span>
+          </div>
+        </div>
+      </>,
+      // Slide 4: Why Choose Us
+      <>
+        <div className="flex items-center gap-2 mb-2">
+          <FaStar className="text-[#a7ec4f] w-8 h-8" />
+          <span className="text-xl font-bold text-[#013024]">
+            Why Choose Us
+          </span>
+        </div>
+        <ul className="list-disc list-inside text-left mx-auto max-w-lg text-base">
+          <li>Instant and reliable delivery</li>
+          <li>High win-rate from trend alignment</li>
+          <li>No experience needed, just follow the signals</li>
+        </ul>
       </>,
     ],
   },
