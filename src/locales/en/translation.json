@@ -1,4 +1,29 @@
 {
+  "about": {
+    "heroTitle": "About <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "heroDesc": "Your trusted partner for transparent, real copy trading results.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "To help you grow your money with real results and honest reporting. We always put your security first and support you every step of the way.",
+    "trustTitle": "Trust",
+    "trustDesc": "We build long-term relationships through transparency and reliability.",
+    "performanceTitle": "Performance",
+    "performanceDesc": "Our results are driven by proven strategies, always focused on careful analysis and adapting to market conditions.",
+    "securityTitle": "Security",
+    "securityDesc": "You have complete authority over your money at all times.",
+    "whyChooseTitle": "Why Choose EarningSync?",
+    "feesTitle": "Transparent Fees",
+    "feesDesc": "We only earn a 30% fee on the profit we make for you. If you don’t profit, we don’t earn.",
+    "expertTitle": "Expert Management",
+    "expertDesc": "Our team of professionals are dedicated to your success and security.",
+    "independenceTitle": "Account Independence",
+    "independenceDesc": "Your trading account remains fully in your name and under your control. We never have access to your funds, only you can deposit or withdraw at any time.",
+    "trackTitle": "Proven Track Record",
+    "trackDesc": "Real, consistent results you can verify for yourself.",
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDesc": "Join our community and start your journey with EarningSync today.",
+    "ctaButton": "Get Started Now",
+    "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
+  },
   "home": {
     "heroTitle": "Smart Copy Trading for\nBetter Investing",
     "heroSubtitle": "Trusted by Dozens of Investors",
@@ -56,6 +81,28 @@
     "getStarted": "Get Started",
     "products": "Products",
     "faq": "FAQ",
-    "contact": "Contact"
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "risk": "Risk Disclosure"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "risk": "Risk Disclosure",
+    "copyright": "© EarningSync. All rights reserved.",
+    "contactButton": "Contact Us"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "content": "EarningSync values your privacy. We only collect information necessary to provide our services, such as your name, email, and account details. Your data is never sold or shared with third parties except as required to deliver our services or comply with legal obligations.\nWe do not store sensitive personal data. Information you provide is used only for communication and service delivery. We do not offer user accounts or portals that allow you to access or delete stored data.\nFor any questions about your privacy or data, please contact us at info@earningsync.com"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "content": "By accessing or using EarningSync, you agree to follow all applicable laws and these terms. Our services are provided for informational and educational purposes. You are responsible for your own trading decisions and account security.\nEarningSync does not guarantee profits or prevent losses. Past performance is not indicative of future results. We reserve the right to update these terms at any time. Continued use of our services means you accept any changes.\nIf you have questions about these terms, contact us at info@earningsync.com"
+  },
+  "risk": {
+    "title": "Risk Warning",
+    "content": "Trading and investing involve significant risk. You may lose more than your initial investment. EarningSync provides tools and information to help you make informed decisions, but we do not provide financial advice or guarantees.\nAll strategies, including EarningSync Classic and High Risk, carry the potential for both profit and loss. Past results do not guarantee future performance. Only trade with capital you can afford to lose and consider seeking independent advice if needed.\nBy using EarningSync, you acknowledge and accept these risks."
   }
 }
