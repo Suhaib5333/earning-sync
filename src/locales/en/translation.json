@@ -1,0 +1,61 @@
+{
+  "home": {
+    "heroTitle": "Smart Copy Trading for\nBetter Investing",
+    "heroSubtitle": "Trusted by Dozens of Investors",
+    "heroDescription": "Join in on earning returns with us through our proven copy trading strategy with advanced risk management.",
+    "getStarted": "Get Started Now",
+    "stats": {
+      "yearsExperience": "Years of Experience",
+      "historicalProfit": "Historical Average Monthly Profit",
+      "maxDrawdown": "Maximum Drawdown",
+      "onClassic": "On Earning Sync Classic"
+    },
+    "whyChoose": "Why Choose EarningSync?",
+    "whyChooseDesc": "Discover what sets us apart in the world of copy trading.",
+    "features": {
+      "securityTitle": "Security Before Profit",
+      "securityDesc": "Protecting your money comes first. We always focus on risk management before chasing profits.",
+      "riskManagement": "Risk Management",
+      "secureCustody": "Secure Custody",
+      "transparencyTitle": "Real Transparency, No Hype",
+      "transparencyDesc": "No fake results or hype. What you see is what you get. Real, verifiable, historical results.",
+      "honestReporting": "Honest Reporting",
+      "sustainableReturns": "Sustainable Returns",
+      "communityTitle": "Community & Support",
+      "communityDesc": "Get updates in our WhatsApp group and reach out to our team anytime with questions or concerns.",
+      "whatsappGroup": "WhatsApp Group",
+      "directSupport": "Direct Support"
+    },
+    "packagesTitle": "Choose Your Profit Share Package",
+    "packagesDesc": "Greater investments mean lower fees. Select the package that fits your investment style and start earning with us today.",
+    "starter": "Starter",
+    "starterPercent": "30%",
+    "pro": "Pro",
+    "proPercent": "20%",
+    "elite": "Elite",
+    "elitePercent": "15%",
+    "profitShare": "Profit Share",
+    "rangeStarter": "$100 - $10,000",
+    "rangePro": "$10,001 - $100,000",
+    "rangeElite": "$100,001+",
+    "autoDeduction": "Automatic deduction",
+    "fullControl": "Full account control",
+    "communitySupport": "Community & team support",
+    "lowerFee": "Lower fee for higher deposits",
+    "prioritySupport": "Priority support",
+    "bestValue": "Best value for large investors",
+    "dedicatedManager": "Dedicated account manager",
+    "noHiddenFees": "No hidden fees • Cancel anytime",
+    "ctaTitle": "Ready to Transform Your Investment Journey?",
+    "ctaDesc": "Join a community of investors and start earning passive income today.",
+    "startWith100": "Start with just $100 • Stop copying & withdraw at anytime"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "getStarted": "Get Started",
+    "products": "Products",
+    "faq": "FAQ",
+    "contact": "Contact"
+  }
+}

@@ -19,6 +19,7 @@ function App() {
         <Navbar />
         <main className="flex-grow">
           <Routes>
+            {/* English routes */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/get-started" element={<GetStarted />} />
@@ -28,6 +29,16 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/riskwarning" element={<RiskWarning />} />
+            {/* Arabic routes (with /ar prefix) */}
+            <Route path="/ar" element={<Home />} />
+            <Route path="/ar/about" element={<About />} />
+            <Route path="/ar/get-started" element={<GetStarted />} />
+            <Route path="/ar/products" element={<Products />} />
+            <Route path="/ar/faq" element={<FAQ />} />
+            <Route path="/ar/contact" element={<Contact />} />
+            <Route path="/ar/privacy" element={<Privacy />} />
+            <Route path="/ar/terms" element={<Terms />} />
+            <Route path="/ar/riskwarning" element={<RiskWarning />} />
           </Routes>
         </main>
         <Footer />

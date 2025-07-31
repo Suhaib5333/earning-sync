@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
   FaShieldAlt,
@@ -14,6 +15,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   // Scroll to top and navigate instantly
   const handleNavClick = (to, e) => {
@@ -23,16 +25,16 @@ const Home = () => {
   };
 
   const stats = [
-    { number: "25+", label: "Years of Experience", icon: FaAward },
+    { number: "25+", label: t("home.stats.yearsExperience"), icon: FaAward },
     {
-      number: "5%", // CHANGED from "8%" to "5%"
-      label: "Historical Average Monthly Profit",
+      number: "5%",
+      label: t("home.stats.historicalProfit"),
       icon: FaAnchor,
     },
     {
       number: "31%",
-      label: "Maximum Drawdown",
-      subLabel: "On Earning Sync Classic",
+      label: t("home.stats.maxDrawdown"),
+      subLabel: t("home.stats.onClassic"),
       icon: FaShieldAlt,
     },
   ];
@@ -47,27 +49,21 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center"
         >
-          
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg text-white">
-            Smart Copy Trading for
-            <br />
-            <span className="text-[#a7ec4f]">Better Investing</span>{" "}
-            {/* CHANGED from "Secure Returns" to "Better Investing" */}
+            {t("home.heroTitle")}
           </h1>
           <motion.div
-           initial={{ opacity: 0, y: -10 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.4, duration: 0.6 }}
-           className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
->
-           <FaShieldAlt className="text-yellow-400 text-base" />
-           Trusted by Dozens of Investors
-           </motion.div>
-
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
+          >
+            <FaShieldAlt className="text-yellow-400 text-base" />
+            {t("home.heroSubtitle")}
+          </motion.div>
 
           <p className="text-lg md:text-xl text-green-100 mt-6 mb-10 max-w-2xl mx-auto px-6 sm:px-0">
-          Join in on earning returns with us through our proven copy trading
-          strategy with advanced risk management.
+            {t("home.heroDescription")}
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
@@ -75,7 +71,7 @@ const Home = () => {
               onClick={(e) => handleNavClick("/get-started", e)}
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
-              Get Started Now
+              {t("home.getStarted")}
               <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
@@ -120,11 +116,9 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-[#013024]">
-              Why Choose <span className="text-[#a7ec4f]">EarningSync</span>?
+              {t("home.whyChoose")}
             </h2>
-            <p className="text-lg text-gray-600">
-              Discover what sets us apart in the world of copy trading.
-            </p>
+            <p className="text-lg text-gray-600">{t("home.whyChooseDesc")}</p>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {/* Security First */}
@@ -136,18 +130,17 @@ const Home = () => {
                 <FaShieldAlt className="w-12 h-12 text-[#013024]" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                Security Before Profit
+                {t("home.features.securityTitle")}
               </h3>
               <p className="text-gray-700 mb-4">
-                Protecting your money comes first. We always focus on risk
-                management before chasing profits.
+                {t("home.features.securityDesc")}
               </p>
               <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Risk Management
+                  {t("home.features.riskManagement")}
                 </span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Secure Custody
+                  {t("home.features.secureCustody")}
                 </span>
               </div>
             </motion.div>
@@ -160,18 +153,17 @@ const Home = () => {
                 <FaChartLine className="w-12 h-12 text-[#013024]" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                Real Transparency, No Hype
+                {t("home.features.transparencyTitle")}
               </h3>
               <p className="text-gray-700 mb-4">
-                No fake results or hype. What you see is what you get. Real,
-                verifiable, historical results.
+                {t("home.features.transparencyDesc")}
               </p>
               <div className="flex gap-2 justify-center">
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Honest Reporting
+                  {t("home.features.honestReporting")}
                 </span>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Sustainable Returns
+                  {t("home.features.sustainableReturns")}
                 </span>
               </div>
             </motion.div>
@@ -184,11 +176,10 @@ const Home = () => {
                 <FaUsers className="w-12 h-12 text-[#013024]" />
               </div>
               <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                Community & Support
+                {t("home.features.communityTitle")}
               </h3>
               <p className="text-gray-700 mb-4">
-                Get updates in our WhatsApp group and reach out to our team
-                anytime with questions or concerns.
+                {t("home.features.communityDesc")}
               </p>
               <div className="flex gap-2 justify-center">
                 <a
@@ -197,10 +188,10 @@ const Home = () => {
                   rel="noopener noreferrer"
                   className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold underline hover:bg-green-200 transition"
                 >
-                  WhatsApp Group
+                  {t("home.features.whatsappGroup")}
                 </a>
                 <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-                  Direct Support
+                  {t("home.features.directSupport")}
                 </span>
               </div>
             </motion.div>
@@ -213,11 +204,10 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-2 text-[#013024] drop-shadow-lg">
-              Choose Your Profit Share Package
+              {t("home.packagesTitle")}
             </h2>
             <p className="text-base md:text-lg text-gray-600 max-w-xl mx-auto">
-              Greater investments mean lower fees. Select the package that fits
-              your investment style and start earning with us today.
+              {t("home.packagesDesc")}
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -233,30 +223,31 @@ const Home = () => {
               style={{ cursor: "pointer" }}
             >
               <span className="bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full mb-4">
-                Starter
+                {t("home.starter")}
               </span>
               <div className="text-4xl font-extrabold text-[#013024] mb-1">
-                
+                {t("home.starterPercent")}
               </div>
-              <div className="font-bold mb-2">Profit Share</div>
+              <div className="font-bold mb-2">{t("home.profitShare")}</div>
               <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
-                $100 - $10,000
+                {t("home.rangeStarter")}
               </div>
               <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
                 <li className="flex items-center gap-2">
-                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                  <FaStar className="text-[#a7ec4f]" />{" "}
+                  {t("home.autoDeduction")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaArrowRight className="text-[#a7ec4f]" /> Full account
-                  control
+                  <FaArrowRight className="text-[#a7ec4f]" />{" "}
+                  {t("home.fullControl")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaShieldAlt className="text-[#a7ec4f]" /> Community & team
-                  support
+                  <FaShieldAlt className="text-[#a7ec4f]" />{" "}
+                  {t("home.communitySupport")}
                 </li>
               </ul>
               <span className="text-xs text-gray-400">
-                No hidden fees • Cancel anytime
+                {t("home.noHiddenFees")}
               </span>
             </div>
             {/* Pro */}
@@ -271,29 +262,31 @@ const Home = () => {
               style={{ cursor: "pointer" }}
             >
               <span className="bg-[#013024] text-[#a7ec4f] font-bold px-7 py-1 rounded-full mb-4 border-2 border-[#a7ec4f]">
-                Pro
+                {t("home.pro")}
               </span>
               <div className="text-4xl font-extrabold text-[#013024] mb-1">
-                20%
+                {t("home.proPercent")}
               </div>
-              <div className="font-bold mb-2">Profit Share</div>
+              <div className="font-bold mb-2">{t("home.profitShare")}</div>
               <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
-                $10,001 - $100,000
+                {t("home.rangePro")}
               </div>
               <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
                 <li className="flex items-center gap-2">
-                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                  <FaStar className="text-[#a7ec4f]" />{" "}
+                  {t("home.autoDeduction")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaArrowRight className="text-[#a7ec4f]" /> Lower fee for
-                  higher deposits
+                  <FaArrowRight className="text-[#a7ec4f]" />{" "}
+                  {t("home.lowerFee")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaShieldAlt className="text-[#a7ec4f]" /> Priority support
+                  <FaShieldAlt className="text-[#a7ec4f]" />{" "}
+                  {t("home.prioritySupport")}
                 </li>
               </ul>
               <span className="text-xs text-gray-400">
-                No hidden fees • Cancel anytime
+                {t("home.noHiddenFees")}
               </span>
             </div>
             {/* Elite */}
@@ -308,30 +301,31 @@ const Home = () => {
               style={{ cursor: "pointer" }}
             >
               <span className="bg-[#a7ec4f] text-[#013024] font-bold px-5 py-1 rounded-full mb-4">
-                Elite
+                {t("home.elite")}
               </span>
               <div className="text-4xl font-extrabold text-[#013024] mb-1">
-                15%
+                {t("home.elitePercent")}
               </div>
-              <div className="font-bold mb-2">Profit Share</div>
+              <div className="font-bold mb-2">{t("home.profitShare")}</div>
               <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
-                $100,001+
+                {t("home.rangeElite")}
               </div>
               <ul className="text-gray-700 mb-4 space-y-1 text-left text-sm w-full max-w-xs mx-auto">
                 <li className="flex items-center gap-2">
-                  <FaStar className="text-[#a7ec4f]" /> Automatic deduction
+                  <FaStar className="text-[#a7ec4f]" />{" "}
+                  {t("home.autoDeduction")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaArrowRight className="text-[#a7ec4f]" /> Best value for
-                  large investors
+                  <FaArrowRight className="text-[#a7ec4f]" />{" "}
+                  {t("home.bestValue")}
                 </li>
                 <li className="flex items-center gap-2">
-                  <FaShieldAlt className="text-[#a7ec4f]" /> Dedicated account
-                  manager
+                  <FaShieldAlt className="text-[#a7ec4f]" />{" "}
+                  {t("home.dedicatedManager")}
                 </li>
               </ul>
               <span className="text-xs text-gray-400">
-                No hidden fees • Cancel anytime
+                {t("home.noHiddenFees")}
               </span>
             </div>
           </div>
@@ -342,25 +336,21 @@ const Home = () => {
       <section className="py-20 bg-[#013024] text-white text-center relative">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Ready to Transform Your{" "}
-            <span className="text-[#a7ec4f]">Investment Journey?</span>
+            {t("home.ctaTitle")}
           </h2>
-          <p className="text-lg text-green-100 mb-8">
-            Join a community of investors and start earning passive income
-            today.
-          </p>
+          <p className="text-lg text-green-100 mb-8">{t("home.ctaDesc")}</p>
           <div className="flex justify-center">
             <Link
               to="/get-started"
               onClick={(e) => handleNavClick("/get-started", e)}
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
-              Get Started Now
+              {t("home.getStarted")}
               <FaArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
           </div>
           <p className="mt-6 text-green-200 text-sm">
-            Start with just $100 • Stop copying & withdraw at anytime
+            {t("home.startWith100")}
           </p>
         </div>
       </section>
