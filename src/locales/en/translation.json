@@ -139,7 +139,7 @@
   },
   "productsPage": {
     "title": "Our Products",
-    "desc": "Explore our range of copy trading solutions, each designed for a different risk profile and investment goal.",
+    "desc": "Discover our range of investment products designed for different risk appetites and goals.",
     "products": [
       {
         "name": "EarningSync Classic",
@@ -163,7 +163,7 @@
         ]
       },
       {
-        "name": "EarningSync High-Risk",
+        "name": "EarningSync HR",
         "slides": [
           {
             "title": "What is EarningSync High-Risk?",
