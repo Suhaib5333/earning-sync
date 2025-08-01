@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
   FaChartLine,
@@ -47,6 +48,7 @@ const mobileImages = [
 ];
 
 const StepStartCopying = ({ openStep, setOpenStep }) => {
+  const { t, i18n } = useTranslation();
   const [accountTab, setAccountTab] = useState("desktop");
   const [carouselIdx, setCarouselIdx] = useState(0);
   const [previewOpen, setPreviewOpen] = useState(false);
@@ -90,6 +92,7 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
             ? "0 8px 32px 0 rgba(167,236,79,0.15)"
             : "0 2px 8px 0 rgba(1,48,36,0.08)",
       }}
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
     >
       <button
         className={`w-full flex items-center justify-between px-8 py-8 text-left focus:outline-none rounded-2xl transition ${
@@ -101,9 +104,12 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
       >
         <div className="flex items-center gap-4">
           <FaChartLine className="w-8 h-8" />
-          <span className="text-2xl md:text-3xl font-bold">
-            2. Start Copying
-          </span>
+          <span
+            className="text-2xl md:text-3xl font-bold"
+            dangerouslySetInnerHTML={{
+              __html: t("getStarted.steps.startCopyingTitle"),
+            }}
+          />
         </div>
         <FaChevronDown
           className={`w-6 h-6 transition-transform duration-200 ${
@@ -134,7 +140,12 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                   onClick={() => setAccountTab("desktop")}
                   type="button"
                 >
-                  <FaDesktop /> Desktop
+                  <FaDesktop />{" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.startCopyingDesktop"),
+                    }}
+                  />
                 </button>
                 <button
                   className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold transition text-lg ${
@@ -145,61 +156,55 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                   onClick={() => setAccountTab("mobile")}
                   type="button"
                 >
-                  <FaMobileAlt /> Mobile
+                  <FaMobileAlt />{" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.startCopyingMobile"),
+                    }}
+                  />
                 </button>
               </div>
               {(accountTab === "desktop" || accountTab === "mobile") && (
                 <div>
                   <h4 className="text-xl font-bold mb-4 text-[#013024] flex items-center gap-2">
                     <FaCheckCircle className="text-[#a7ec4f]" />{" "}
-                    {accountTab === "desktop" ? "Desktop" : "Mobile"}{" "}
-                    Instructions
+                    <span>
+                      {i18n.language === "ar"
+                        ? (accountTab === "desktop"
+                            ? "التعليمات للكمبيوتر"
+                            : "التعليمات للجوال")
+                        : (accountTab === "desktop"
+                            ? "Desktop Instructions"
+                            : "Mobile Instructions")}
+                    </span>
                   </h4>
                   <ol className="list-decimal list-inside text-gray-800 space-y-3 text-lg">
-                    <li>
-                      Select either:
-                      <div className="flex flex-col mt-2 ml-4 gap-1">
-                        <a
-                          href="https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor
-"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition"
-                        >
-                          EarningSync Classic
-                        </a>
-                        <a
-                          href="https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor
-"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition"
-                        >
-                          EarningSync High Risk
-                        </a>
-                      </div>
+                    {/* Step 1: Select either (en) or اختر إما: (ar) inline with the number, links on separate lines */}
+                    <li className="">
+                      <span className="font-semibold mr-2">
+                        {i18n.language === "ar" ? "اختر إما:" : "Select either:"}
+                      </span>
+                      {/* Always render links on separate lines for both languages, regardless of translation string */}
+                      {(() => {
+                        const step0 = t("getStarted.steps.startCopyingSteps.0");
+                        return step0
+                          .split(/<br\s*\/??\s*>/)
+                          .map((line, idx) => (
+                            <span key={idx} style={{ display: 'block', marginTop: idx === 0 ? 0 : 4 }} dangerouslySetInnerHTML={{ __html: line.trim() }} />
+                          ));
+                      })()}
                     </li>
-                    <li>
-                      Click <b>start copying</b>.
-                    </li>
-                    <li>
-                      Continue with <b>web version</b>.
-                    </li>
-                    <li>Sign in.</li>
-                    <li>
-                      Click <b>create investment</b>.
-                    </li>
-                    <li>
-                      Top up your{" "}
-                      <i>
-                        <b>Investment</b>
-                      </i>{" "}
-                      wallet.
-                    </li>
-                    <li>
-                      Click on <b>create investment</b> again.
-                    </li>
-                    <li>Enter the amount deposited to invest.</li>
+                    {/* Steps 2-8 */}
+                    {t("getStarted.steps.startCopyingSteps", {
+                      returnObjects: true,
+                    })
+                      .slice(1)
+                      .map((step, idx) => (
+                        <li
+                          key={idx + 2}
+                          dangerouslySetInnerHTML={{ __html: step }}
+                        />
+                      ))}
                   </ol>
                 </div>
               )}

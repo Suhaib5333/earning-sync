@@ -7,8 +7,7 @@ import {
   FaChevronDown,
   FaCheckCircle,
 } from "react-icons/fa";
-
-// Use import for images so they work with Vite/CRA/Next.js
+import { useTranslation } from "react-i18next";
 import desktopImg from "../../assets/register_pc.png";
 import mobileImg from "../../assets/register_mobile.png";
 
@@ -18,6 +17,7 @@ const screenshots = {
 };
 
 const StepCreateAccount = ({ openStep, setOpenStep }) => {
+  const { t, i18n } = useTranslation();
   const [accountTab, setAccountTab] = useState("desktop");
 
   // Detect device type on mount and set tab accordingly
@@ -44,6 +44,7 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
             ? "0 8px 32px 0 rgba(167,236,79,0.15)"
             : "0 2px 8px 0 rgba(1,48,36,0.08)",
       }}
+      dir={i18n.dir()}
     >
       <button
         className={`w-full flex items-center justify-between px-8 py-8 text-left focus:outline-none rounded-2xl transition ${
@@ -55,9 +56,12 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
       >
         <div className="flex items-center gap-4">
           <FaUserPlus className="w-8 h-8" />
-          <span className="text-2xl md:text-3xl font-bold">
-            1. Create an Account
-          </span>
+          <span
+            className="text-2xl md:text-3xl font-bold"
+            dangerouslySetInnerHTML={{
+              __html: t("getStarted.steps.createAccountTitle"),
+            }}
+          />
         </div>
         <FaChevronDown
           className={`w-6 h-6 transition-transform duration-200 ${
@@ -88,7 +92,12 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
                   onClick={() => setAccountTab("desktop")}
                   type="button"
                 >
-                  <FaDesktop /> Desktop
+                  <FaDesktop />{" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.createAccountDesktop"),
+                    }}
+                  />
                 </button>
                 <button
                   className={`flex items-center gap-2 px-5 py-2 rounded-full font-semibold transition text-lg ${
@@ -99,73 +108,68 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
                   onClick={() => setAccountTab("mobile")}
                   type="button"
                 >
-                  <FaMobileAlt /> Mobile
+                  <FaMobileAlt />{" "}
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.createAccountMobile"),
+                    }}
+                  />
                 </button>
               </div>
               {accountTab === "desktop" && (
                 <div>
                   <h4 className="text-xl font-bold mb-4 text-[#013024] flex items-center gap-2">
-                    <FaCheckCircle className="text-[#a7ec4f]" /> Desktop
-                    Instructions
+                    <FaCheckCircle className="text-[#a7ec4f]" />{" "}
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: t("getStarted.steps.createAccountDesktop"),
+                      }}
+                    />
                   </h4>
                   <ol className="list-decimal list-inside text-gray-800 space-y-3 text-lg">
-                    <li>
-                      Go to the{" "}
-                      <a
-                        href="https://one.exnesstrack.org/a/ake680s6t2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#013024] underline"
-                      >
-                        Exness website
-                      </a>
-                      .
-                    </li>
-                    <li>
-                      Click <b>Register</b> and fill in your country, email, and
-                      password.
-                    </li>
-                    <li>
-                      Complete the verification process of both your <b>ID</b>{" "}
-                      and <b>Proof of Address</b>.
-                    </li>
+                    {t("getStarted.steps.createAccountSteps", {
+                      returnObjects: true,
+                    })?.map((step, idx) => (
+                      <li
+                        key={idx}
+                        dangerouslySetInnerHTML={{ __html: step }}
+                      />
+                    ))}
                   </ol>
-                  <div className="mt-3 italic text-[#013024]">
-                    Do <b>not</b> fund your account at this step.
-                  </div>
+                  <div
+                    className="mt-3 italic text-[#013024]"
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.createAccountNote"),
+                    }}
+                  />
                 </div>
               )}
               {accountTab === "mobile" && (
                 <div>
                   <h4 className="text-xl font-bold mb-4 text-[#013024] flex items-center gap-2">
-                    <FaCheckCircle className="text-[#a7ec4f]" /> Mobile
-                    Instructions
+                    <FaCheckCircle className="text-[#a7ec4f]" />{" "}
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: t("getStarted.steps.createAccountMobile"),
+                      }}
+                    />
                   </h4>
                   <ol className="list-decimal list-inside text-gray-800 space-y-3 text-lg">
-                    <li>
-                      Go to the{" "}
-                      <a
-                        href="https://one.exnesstrack.org/a/ake680s6t2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#013024] underline"
-                      >
-                        Exness website
-                      </a>
-                      .
-                    </li>
-                    <li>
-                      Click <b>Register</b> and fill in your country, email, and
-                      password.
-                    </li>
-                    <li>
-                      Complete the verification process of both your <b>ID</b>{" "}
-                      and <b>Proof of Address</b>.
-                    </li>
+                    {t("getStarted.steps.createAccountSteps", {
+                      returnObjects: true,
+                    })?.map((step, idx) => (
+                      <li
+                        key={idx}
+                        dangerouslySetInnerHTML={{ __html: step }}
+                      />
+                    ))}
                   </ol>
-                  <div className="mt-3 italic text-[#013024]">
-                    Do <b>not</b> fund your account at this step.
-                  </div>
+                  <div
+                    className="mt-3 italic text-[#013024]"
+                    dangerouslySetInnerHTML={{
+                      __html: t("getStarted.steps.createAccountNote"),
+                    }}
+                  />
                 </div>
               )}
             </div>
@@ -180,8 +184,14 @@ const StepCreateAccount = ({ openStep, setOpenStep }) => {
                   }
                   alt={
                     accountTab === "desktop"
-                      ? "Exness Desktop Screenshot"
-                      : "Exness Mobile Screenshot"
+                      ? t(
+                          "getStarted.steps.1.desktopAlt",
+                          "Exness Desktop Screenshot"
+                        )
+                      : t(
+                          "getStarted.steps.1.mobileAlt",
+                          "Exness Mobile Screenshot"
+                        )
                   }
                   className="w-full h-auto object-contain"
                   style={{ background: "#f8fafc" }}

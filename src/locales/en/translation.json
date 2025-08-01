@@ -115,17 +115,17 @@
       "createAccountSteps": [
         "Go to <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">Exness website</a>.",
         "Click <b>Register</b> and fill in your country, email, and password.",
-        "Complete the verification process of both your <b>ID</b> and <b>Proof of Address</b>.",
-        "<i>Do not fund your account at this step.</i>"
+        "Complete the verification process of both your <b>ID</b> and <b>Proof of Address</b>."
       ],
+      "createAccountNote": "<i>Do <b>not</b> fund your account at this step.</i>",
       "startCopyingTitle": "<b>2. Start Copying</b>",
       "startCopyingDesktop": "<b>Desktop</b>",
       "startCopyingMobile": "<b>Mobile</b>",
       "startCopyingSteps": [
-        "Choose either <a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a> or <a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">High Risk</a>.",
+        "<a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync High Risk</a>.",
         "Click <b>Start Copying</b>.",
         "Continue with <b>Web Version</b>.",
-        "<b>Log in</b>.",
+        "<b>Sign in.</b>",
         "Click <b>Create Investment</b>.",
         "Fund your <i><b>Investment Wallet</b></i>.",
         "Click <b>Create Investment</b> again.",

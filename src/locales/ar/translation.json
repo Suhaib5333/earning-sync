@@ -115,14 +115,14 @@
       "createAccountSteps": [
         "اذهب إلى <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">موقع Exness</a>.",
         "اضغط على <b>تسجيل</b> واملأ بلدك وبريدك الإلكتروني وكلمة المرور.",
-        "أكمل عملية التحقق من <b>الهوية</b> و <b>إثبات العنوان</b>.",
-        "<i>لا تقم بتمويل حسابك في هذه الخطوة.</i>"
+        "أكمل عملية التحقق من <b>الهوية</b> و <b>إثبات العنوان</b>."
       ],
+      "createAccountNote": "<i>لا <b>تقم</b> بتمويل حسابك في هذه الخطوة.</i>",
       "startCopyingTitle": "<b>٢. ابدأ النسخ</b>",
       "startCopyingDesktop": "<b>كمبيوتر</b>",
       "startCopyingMobile": "<b>جوال</b>",
       "startCopyingSteps": [
-        "اختر إما <a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">إيرنينج سينك كلاسيك</a> أو <a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">عالي المخاطر</a>.",
+        "<a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">إيرنينج سينك كلاسيك</a><br/><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">إيرنينج عالي المخاطر</a>.",
         "اضغط على <b>بدء النسخ</b>.",
         "تابع مع <b>نسخة الويب</b>.",
         "<b>سجّل الدخول</b>.",
