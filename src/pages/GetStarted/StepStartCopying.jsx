@@ -170,19 +170,21 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                     <FaCheckCircle className="text-[#a7ec4f]" />{" "}
                     <span>
                       {i18n.language === "ar"
-                        ? (accountTab === "desktop"
-                            ? "التعليمات للكمبيوتر"
-                            : "التعليمات للجوال")
-                        : (accountTab === "desktop"
-                            ? "Desktop Instructions"
-                            : "Mobile Instructions")}
+                        ? accountTab === "desktop"
+                          ? "التعليمات للكمبيوتر"
+                          : "التعليمات للجوال"
+                        : accountTab === "desktop"
+                        ? "Desktop Instructions"
+                        : "Mobile Instructions"}
                     </span>
                   </h4>
                   <ol className="list-decimal list-inside text-gray-800 space-y-3 text-lg">
                     {/* Step 1: Select either (en) or اختر إما: (ar) inline with the number, links on separate lines */}
                     <li className="">
                       <span className="font-semibold mr-2">
-                        {i18n.language === "ar" ? "اختر إما:" : "Select either:"}
+                        {i18n.language === "ar"
+                          ? "اختر إما:"
+                          : "Select either:"}
                       </span>
                       {/* Always render links on separate lines for both languages, regardless of translation string */}
                       {(() => {
@@ -190,7 +192,14 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                         return step0
                           .split(/<br\s*\/??\s*>/)
                           .map((line, idx) => (
-                            <span key={idx} style={{ display: 'block', marginTop: idx === 0 ? 0 : 4 }} dangerouslySetInnerHTML={{ __html: line.trim() }} />
+                            <span
+                              key={idx}
+                              style={{
+                                display: "block",
+                                marginTop: idx === 0 ? 0 : 4,
+                              }}
+                              dangerouslySetInnerHTML={{ __html: line.trim() }}
+                            />
                           ));
                       })()}
                     </li>
