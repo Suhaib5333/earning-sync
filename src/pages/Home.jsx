@@ -72,7 +72,10 @@ const Home = () => {
           />
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
-              to={(location.pathname.startsWith("/ar") ? "/ar" : "") + "/get-started"}
+              to={
+                (location.pathname.startsWith("/ar") ? "/ar" : "") +
+                "/get-started"
+              }
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
               {t("home.getStarted")}
@@ -345,7 +348,10 @@ const Home = () => {
           <p className="text-lg text-green-100 mb-8">{t("home.ctaDesc")}</p>
           <div className="flex justify-center">
             <Link
-              to={(location.pathname.startsWith("/ar") ? "/ar" : "") + "/get-started"}
+              to={
+                (location.pathname.startsWith("/ar") ? "/ar" : "") +
+                "/get-started"
+              }
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
               {t("home.getStarted")}

@@ -668,7 +668,10 @@ const Products = () => {
           </p>
           <div className="flex justify-center">
             <a
-              href={(location.pathname.startsWith("/ar") ? "/ar" : "") + "/get-started"}
+              href={
+                (location.pathname.startsWith("/ar") ? "/ar" : "") +
+                "/get-started"
+              }
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
               style={{ textDecoration: "none" }}
             >
