@@ -104,5 +104,37 @@
   "risk": {
     "title": "Risk Warning",
     "content": "Trading and investing involve significant risk. You may lose more than your initial investment. EarningSync provides tools and information to help you make informed decisions, but we do not provide financial advice or guarantees.\nAll strategies, including EarningSync Classic and High Risk, carry the potential for both profit and loss. Past results do not guarantee future performance. Only trade with capital you can afford to lose and consider seeking independent advice if needed.\nBy using EarningSync, you acknowledge and accept these risks."
+  },
+  "getStarted": {
+    "heroTitle": "Start Your Journey with <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "heroDesc": "Follow these simple steps to begin your copy trading journey.",
+    "steps": {
+      "createAccountTitle": "<b>1. Create an Account</b>",
+      "createAccountDesktop": "<b>Desktop</b>",
+      "createAccountMobile": "<b>Mobile</b>",
+      "createAccountSteps": [
+        "Go to <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">Exness website</a>.",
+        "Click <b>Register</b> and fill in your country, email, and password.",
+        "Complete the verification process of both your <b>ID</b> and <b>Proof of Address</b>.",
+        "<i>Do not fund your account at this step.</i>"
+      ],
+      "startCopyingTitle": "<b>2. Start Copying</b>",
+      "startCopyingDesktop": "<b>Desktop</b>",
+      "startCopyingMobile": "<b>Mobile</b>",
+      "startCopyingSteps": [
+        "Choose either <a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a> or <a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">High Risk</a>.",
+        "Click <b>Start Copying</b>.",
+        "Continue with <b>Web Version</b>.",
+        "<b>Log in</b>.",
+        "Click <b>Create Investment</b>.",
+        "Fund your <i><b>Investment Wallet</b></i>.",
+        "Click <b>Create Investment</b> again.",
+        "Enter the deposited amount to invest."
+      ],
+      "joinCommunityTitle": "<b>3. Join the Community</b>",
+      "joinCommunityDesc": "Click the link below or scan the QR code to join the WhatsApp group and get the latest updates.",
+      "joinCommunityButton": "Join WhatsApp Group",
+      "joinCommunityScan": "Scan with your camera to join via QR code"
+    }
   }
 }

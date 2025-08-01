@@ -39,8 +39,10 @@ const Home = () => {
     },
   ];
 
+  const { i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" dir={isArabic ? "rtl" : "ltr"}>
       {/* Hero Section */}
       <section className="flex flex-col justify-center items-center min-h-[80vh] py-16 relative bg-[#013024]">
         <motion.div
@@ -49,9 +51,10 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg text-white">
-            {t("home.heroTitle")}
-          </h1>
+          <h1
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg text-white"
+            dangerouslySetInnerHTML={{ __html: t("home.heroTitle") }}
+          />
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,12 +62,14 @@ const Home = () => {
             className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
           >
             <FaShieldAlt className="text-yellow-400 text-base" />
-            {t("home.heroSubtitle")}
+            <span
+              dangerouslySetInnerHTML={{ __html: t("home.heroSubtitle") }}
+            />
           </motion.div>
-
-          <p className="text-lg md:text-xl text-green-100 mt-6 mb-10 max-w-2xl mx-auto px-6 sm:px-0">
-            {t("home.heroDescription")}
-          </p>
+          <p
+            className="text-lg md:text-xl text-green-100 mt-6 mb-10 max-w-2xl mx-auto px-6 sm:px-0"
+            dangerouslySetInnerHTML={{ __html: t("home.heroDescription") }}
+          />
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
               to="/get-started"

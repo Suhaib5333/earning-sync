@@ -104,5 +104,37 @@
     "risk": "إفصاح المخاطر",
     "copyright": "© إيرنينج سينك. جميع الحقوق محفوظة.",
     "contactButton": "تواصل معنا"
+  },
+  "getStarted": {
+    "heroTitle": "ابدأ رحلتك مع <span class=\"text-[#a7ec4f]\">إيرنينج سينك</span>",
+    "heroDesc": "اتبع هذه الخطوات البسيطة لبدء رحلتك في نسخ التداول.",
+    "steps": {
+      "createAccountTitle": "<b>١. أنشئ حسابًا</b>",
+      "createAccountDesktop": "<b>كمبيوتر</b>",
+      "createAccountMobile": "<b>جوال</b>",
+      "createAccountSteps": [
+        "اذهب إلى <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">موقع Exness</a>.",
+        "اضغط على <b>تسجيل</b> واملأ بلدك وبريدك الإلكتروني وكلمة المرور.",
+        "أكمل عملية التحقق من <b>الهوية</b> و <b>إثبات العنوان</b>.",
+        "<i>لا تقم بتمويل حسابك في هذه الخطوة.</i>"
+      ],
+      "startCopyingTitle": "<b>٢. ابدأ النسخ</b>",
+      "startCopyingDesktop": "<b>كمبيوتر</b>",
+      "startCopyingMobile": "<b>جوال</b>",
+      "startCopyingSteps": [
+        "اختر إما <a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">إيرنينج سينك كلاسيك</a> أو <a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">عالي المخاطر</a>.",
+        "اضغط على <b>بدء النسخ</b>.",
+        "تابع مع <b>نسخة الويب</b>.",
+        "<b>سجّل الدخول</b>.",
+        "اضغط على <b>إنشاء استثمار</b>.",
+        "قم بشحن <i><b>محفظة الاستثمار</b></i> الخاصة بك.",
+        "اضغط مرة أخرى على <b>إنشاء استثمار</b>.",
+        "أدخل المبلغ المودع للاستثمار."
+      ],
+      "joinCommunityTitle": "<b>٣. انضم إلى المجتمع</b>",
+      "joinCommunityDesc": "اضغط على الرابط أدناه أو امسح رمز QR للانضمام إلى مجموعة الواتساب والحصول على آخر التحديثات.",
+      "joinCommunityButton": "انضم إلى مجموعة الواتساب",
+      "joinCommunityScan": "امسح بالكاميرا للانضمام عبر رمز QR"
+    }
   }
 }
