@@ -83,29 +83,110 @@ const Navbar = () => {
         style={{ borderBottom: "1px solid #e5e7eb" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 lg:h-20">
-            {/* Logo and Brand for all views */}
-            <Link
-              to={currentLang === "ar" ? "/ar" : "/"}
-              className="flex items-center group"
-              onClick={(e) =>
-                handleNavClick(currentLang === "ar" ? "/ar" : "/", e)
-              }
-            >
-              <img
-                src={logo}
-                alt="EarningSync Logo"
-                className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
-                style={{
-                  background: "none",
-                  border: "none",
-                  boxShadow: "none",
-                }}
-              />
-              <span className="ml-2 text-xl font-extrabold text-[#013024] tracking-tight select-none">
-                EarningSync
-              </span>
-            </Link>
+          <div className="flex justify-between items-center h-16 lg:h-20 w-full">
+            {/* Mobile: Logo, Language Dropdown, Menu Icon */}
+            <div className="flex items-center w-full lg:w-auto">
+              <Link
+                to={currentLang === "ar" ? "/ar" : "/"}
+                className="flex items-center group"
+                onClick={(e) =>
+                  handleNavClick(currentLang === "ar" ? "/ar" : "/", e)
+                }
+              >
+                <img
+                  src={logo}
+                  alt="EarningSync Logo"
+                  className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
+                  style={{
+                    background: "none",
+                    border: "none",
+                    boxShadow: "none",
+                  }}
+                />
+                <span className="ml-2 text-xl font-extrabold text-[#013024] tracking-tight select-none">
+                  EarningSync
+                </span>
+              </Link>
+              {/* Mobile Language Dropdown */}
+              <div className="flex lg:hidden ml-2">
+                <div className="relative">
+                  <button
+                    className="flex items-center px-2 py-1 rounded-lg border border-[#a7ec4f] bg-white text-[#013024] font-semibold hover:bg-[#a7ec4f]/20 transition text-sm"
+                    aria-label="Change language"
+                    onClick={() => setLangDropdown((v) => !v)}
+                    onBlur={() => setTimeout(() => setLangDropdown(false), 150)}
+                  >
+                    {currentLang === "ar" ? (
+                      <img
+                        src={bahrainFlag}
+                        alt="عربي"
+                        className="w-5 h-5 mr-1 object-contain"
+                        style={{
+                          transform: "scaleX(1)",
+                          borderRadius: "3px",
+                        }}
+                      />
+                    ) : (
+                      <img
+                        src={ukFlag}
+                        alt="English"
+                        className="w-5 h-5 mr-1 object-contain"
+                        style={{ borderRadius: "3px" }}
+                      />
+                    )}
+                    <span>{currentLang === "ar" ? "عربي" : "EN"}</span>
+                    <svg
+                      className="ml-1 w-3 h-3"
+                      fill="none"
+                      stroke="#013024"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {langDropdown && (
+                    <div className="absolute right-0 mt-2 w-24 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
+                      <button
+                        className="w-full flex items-center px-2 py-1 hover:bg-[#a7ec4f]/20 text-[#013024] rounded-t-lg text-sm"
+                        onMouseDown={(e) => e.preventDefault()}
+                        onClick={() => {
+                          setLangDropdown(false);
+                          handleLangChange("en");
+                        }}
+                      >
+                        <img
+                          src={ukFlag}
+                          alt="English"
+                          className="w-5 h-5 mr-1 object-contain"
+                          style={{ borderRadius: "3px" }}
+                        />{" "}
+                        EN
+                      </button>
+                      <button
+                        className="w-full flex items-center px-2 py-1 hover:bg-[#a7ec4f]/20 text-[#013024] rounded-b-lg text-sm"
+                        onMouseDown={(e) => e.preventDefault()}
+                        onClick={() => {
+                          setLangDropdown(false);
+                          handleLangChange("ar");
+                        }}
+                      >
+                        <img
+                          src={bahrainFlag}
+                          alt="عربي"
+                          className="w-5 h-5 mr-1 object-contain"
+                          style={{
+                            transform: "scaleX(1)",
+                            borderRadius: "3px",
+                          }}
+                        />{" "}
+                        عربي
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
               {navLinks.map((link, idx) => (
