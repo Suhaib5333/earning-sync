@@ -227,15 +227,11 @@ const Contact = () => {
                 <option value="" disabled>
                   {t("contactPage.form.subjectPlaceholder")}
                 </option>
-                <option value={t("contactPage.form.subjectGeneral")}>
-                  {t("contactPage.form.subjectGeneral")}
-                </option>
-                <option value={t("contactPage.form.subjectSupport")}>
-                  {t("contactPage.form.subjectSupport")}
-                </option>
-                <option value={t("contactPage.form.subjectPartnership")}>
-                  {t("contactPage.form.subjectPartnership")}
-                </option>
+                {subjectOptions.map((key) => (
+                  <option key={key} value={key}>
+                    {t(key)}
+                  </option>
+                ))}
               </select>
               {/* Dropdown arrow, RTL-aware */}
               <span

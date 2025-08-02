@@ -65,7 +65,7 @@
     "title": "Contact <span class=\"text-[#a7ec4f]\">EarningSync</span>",
     "formTitle": "Get in Touch",
     "formNote": "We’d love to hear from you. Fill out the form and our team will respond promptly.",
-    "desc": "We’re here to help! Reach out to us for any questions, support, or partnership opportunities.",
+    "desc": "We’re here to help! Reach out to us anytime through your preferred channel.",
     "form": {
       "name": "Your Name",
       "email": "Email Address",
@@ -79,8 +79,6 @@
       "subjectTechnicalIssue": "Technical Issue",
       "subjectFeedback": "Feedback",
       "subjectOther": "Other",
-      "subjectSupport": "Support",
-      "subjectPartnership": "Partnership",
       "message": "Message",
       "send": "Send Message",
       "success": "Your message has been sent successfully!",
