@@ -160,7 +160,7 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                       Select either:
                       <div className="flex flex-col mt-2 ml-4 gap-1">
                         <a
-                          href="https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor
+                          href="https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor
 "
                           target="_blank"
                           rel="noopener noreferrer"
@@ -169,7 +169,7 @@ const StepStartCopying = ({ openStep, setOpenStep }) => {
                           EarningSync Classic
                         </a>
                         <a
-                          href="https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=mobile&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor
+                          href="https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor
 "
                           target="_blank"
                           rel="noopener noreferrer"
