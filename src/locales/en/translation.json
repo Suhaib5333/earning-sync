@@ -1,54 +1,106 @@
 {
-  "home": {
-    "heroTitle": "Smart Copy Trading for\nBetter Investing",
-    "heroSubtitle": "Trusted by Dozens of Investors",
-    "heroDescription": "Join in on earning returns with us through our proven copy trading strategy with advanced risk management.",
-    "getStarted": "Get Started Now",
-    "stats": {
-      "yearsExperience": "Years of Experience",
-      "historicalProfit": "Historical Average Monthly Profit",
-      "maxDrawdown": "Maximum Drawdown",
-      "onClassic": "On Earning Sync Classic"
+  "faqPage": {
+    "title1": "Frequently Asked",
+    "title2": "Questions",
+    "desc": "Find answers to common questions about our copy trading service",
+    "faqs": [
+      {
+        "question": "What is copy trading?",
+        "answer": "Copy trading is an automated trading method where you can automatically copy positions opened and managed by another selected trader. When they trade, your account will automatically copy their actions proportionally to your investment."
+      },
+      {
+        "question": "How much is the performance fee?",
+        "answer": "We charge a 30% performance fee on profits generated through our copy trading service. This fee structure ensures our interests are aligned with yours - we only earn when you earn."
+      },
+      {
+        "question": "What is the minimum investment?",
+        "answer": "$100 is the minimum investment required to start copy trading with us."
+      },
+      {
+        "question": "How do you manage risk?",
+        "answer": "We open small lot sizes to ensure that even in the event of a loss, your capital is preserved."
+      },
+      {
+        "question": "How often do you trade?",
+        "answer": "Our trading frequency varies based on market conditions and opportunities. We prioritize quality setups over quantity to maintain consistent performance."
+      },
+      {
+        "question": "What is your average monthly return?",
+        "answer": "Historically it has been 5%. While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile."
+      },
+      {
+        "question": "Can I withdraw my funds at any time?",
+        "answer": "Yes, you maintain full control of your funds at all times. You can stop copying trades and withdraw your funds whenever you wish. Your initial investment can be withdrawn as a refund using the same payment method, then all future withdrawals can be done using other methods."
+      },
+      {
+        "question": "Are my funds held/stored with you?",
+        "answer": "No, your funds are never held or stored with us. All funds remain in your own Exness account at all times. We only provide the trading strategy for you to copy; we do not have access to your money."
+      },
+      {
+        "question": "Do you have the authority to perform withdrawal or deposit operations from my account?",
+        "answer": "No, we do not have any authority or access to perform withdrawals or deposits from your Exness account. Only you have full control over deposits and withdrawals. Our access is limited to trading only within the copy trading strategy."
+      },
+      {
+        "question": "What will happen if I decide to stop copying and withdraw my money?",
+        "answer": "You can stop copying the strategy at any time directly from your Exness account. Once you stop copying, you are free to withdraw your funds whenever you wish. There are no penalties or restrictions from our side."
+      },
+      {
+        "question": "Can I use another person's bank card to make deposits or withdrawals?",
+        "answer": "No, Exness requires that all deposits and withdrawals are made using payment methods that are in your own name. Using someone else's bank card or payment method is not allowed and may result in issues with your account or transactions."
+      },
+      {
+        "question": "Deposit and Withdrawal Methods",
+        "answer": "Exness offers a wide range of deposit and withdrawal methods, including bank cards (Visa/Mastercard), e-wallets (Skrill, Neteller, Perfect Money, etc.), online banking, and cryptocurrencies. The available options can depend on your country or region. For the most accurate and up-to-date list of methods, please check the 'Deposit' and 'Withdrawal' sections in your Exness account dashboard."
+      },
+      {
+        "question": "Why shouldn't I invest in those extremely high return % strategies I see on Exness?",
+        "answer": "Many of those high-return strategies use risky tactics that can mislead investors. For example, a strategy provider might start with $1,000, lose $800, then deposit another $800 to recover, while copiers who can't add more funds would be wiped out. Providers can also deposit or withdraw during open trades to manipulate results, making their performance look much better than what copiers actually experience. Most of these strategies are gambling and designed to attract copiers, but in reality, most investors end up losing money."
+      }
+    ],
+    "ctaTitle": "Still Have Questions?",
+    "ctaDesc": "Contact us for personalized assistance",
+    "ctaButton": "Contact Us Now!"
+  },
+  "contactPage": {
+    "title": "Contact <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "formTitle": "Get in Touch",
+    "formNote": "We’d love to hear from you. Fill out the form and our team will respond promptly.",
+    "desc": "We’re here to help! Reach out to us for any questions, support, or partnership opportunities.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjectGeneral": "General Inquiry",
+      "subjectGettingStarted": "Getting Started",
+      "subjectCopyTradingSupport": "Copy Trading Support",
+      "subjectProfitShareFees": "Profit Share & Fees",
+      "subjectAccountSecurity": "Account & Security",
+      "subjectTechnicalIssue": "Technical Issue",
+      "subjectFeedback": "Feedback",
+      "subjectOther": "Other",
+      "subjectSupport": "Support",
+      "subjectPartnership": "Partnership",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "There was an error sending your message. Please try again later."
     },
-    "whyChoose": "Why Choose EarningSync?",
-    "whyChooseDesc": "Discover what sets us apart in the world of copy trading.",
-    "features": {
-      "securityTitle": "Security Before Profit",
-      "securityDesc": "Protecting your money comes first. We always focus on risk management before chasing profits.",
-      "riskManagement": "Risk Management",
-      "secureCustody": "Secure Custody",
-      "transparencyTitle": "Real Transparency, No Hype",
-      "transparencyDesc": "No fake results or hype. What you see is what you get. Real, verifiable, historical results.",
-      "honestReporting": "Honest Reporting",
-      "sustainableReturns": "Sustainable Returns",
-      "communityTitle": "Community & Support",
-      "communityDesc": "Get updates in our WhatsApp group and reach out to our team anytime with questions or concerns.",
-      "whatsappGroup": "WhatsApp Group",
-      "directSupport": "Direct Support"
+    "note": "We’ll get back to you as soon as possible.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location",
+      "address": "Bahrain, United Kingdom"
     },
-    "packagesTitle": "Choose Your Profit Share Package",
-    "packagesDesc": "Greater investments mean lower fees. Select the package that fits your investment style and start earning with us today.",
-    "starter": "Starter",
-    "starterPercent": "30%",
-    "pro": "Pro",
-    "proPercent": "20%",
-    "elite": "Elite",
-    "elitePercent": "15%",
-    "profitShare": "Profit Share",
-    "rangeStarter": "$100 - $10,000",
-    "rangePro": "$10,001 - $100,000",
-    "rangeElite": "$100,001+",
-    "autoDeduction": "Automatic deduction",
-    "fullControl": "Full account control",
-    "communitySupport": "Community & team support",
-    "lowerFee": "Lower fee for higher deposits",
-    "prioritySupport": "Priority support",
-    "bestValue": "Best value for large investors",
-    "dedicatedManager": "Dedicated account manager",
-    "noHiddenFees": "No hidden fees • Cancel anytime",
-    "ctaTitle": "Ready to Transform Your Investment Journey?",
-    "ctaDesc": "Join a community of investors and start earning passive income today.",
-    "startWith100": "Start with just $100 • Stop copying & withdraw at anytime"
+    "sendEmail": "Send Email",
+    "chatOnWhatsapp": "Chat on WhatsApp",
+    "linkedin": "LinkedIn",
+    "viewProfile": "View Profile",
+    "whatsappCommunity": "WhatsApp Community",
+    "communityDesc": "Get updates and support from our team and members.",
+    "joinGroup": "Join Group"
   },
   "navbar": {
     "home": "Home",

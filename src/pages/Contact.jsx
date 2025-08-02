@@ -1,21 +1,24 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaWhatsapp, FaLinkedin, FaUsers } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 import emailjs from "@emailjs/browser";
-emailjs.init("NqVyP1tbFm3VvkKM3");
+emailjs.init("_ETPsxH_gg93jVbee");
 
 const subjectOptions = [
-  "General Inquiry",
-  "Getting Started",
-  "Copy Trading Support",
-  "Profit Share & Fees",
-  "Account & Security",
-  "Technical Issue",
-  "Feedback",
-  "Other",
+  "contactPage.form.subjectGeneral",
+  "contactPage.form.subjectGettingStarted",
+  "contactPage.form.subjectCopyTradingSupport",
+  "contactPage.form.subjectProfitShareFees",
+  "contactPage.form.subjectAccountSecurity",
+  "contactPage.form.subjectTechnicalIssue",
+  "contactPage.form.subjectFeedback",
+  "contactPage.form.subjectOther",
 ];
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.dir() === "rtl";
   const form = useRef();
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -37,8 +40,7 @@ const Contact = () => {
   // EmailJS credentials
   const EMAILJS_SERVICE_ID = "service_9jhmyoj";
   const EMAILJS_TEMPLATE_ID = "template_79lewzz";
-  const EMAILJS_PUBLIC_KEY = "NqVyP1tbFm3VvkKM3";
-
+  const EMAILJS_PUBLIC_KEY = "_ETPsxH_gg93jVbee";
   const getCurrentTime = () => new Date().toLocaleString();
 
   const sendEmail = (e) => {
@@ -62,31 +64,42 @@ const Contact = () => {
         templateParams,
         EMAILJS_PUBLIC_KEY
       )
-      .then(
-        () => {
-          setSent(true);
-          setSending(false);
-          setName("");
-          setEmail("");
-          setMessage("");
-          setSubject(subjectOptions[0]);
-          form.current.reset();
-        },
-        () => {
-          setError("Failed to send. Please try again later.");
-          setSending(false);
-        }
-      );
+      .then(() => {
+        setSent(true);
+        setSending(false);
+        setName("");
+        setEmail("");
+        setMessage("");
+        setSubject(subjectOptions[0]);
+        form.current.reset();
+      })
+      .catch(() => {
+        setError("Failed to send. Please try again later.");
+        setSending(false);
+      });
   };
 
-  // Helper for floating label: floats if focused or has value
-  const floatLabel = (field, value) =>
-    focus[field] || value
-      ? "-top-4 left-3 text-xs px-1 bg-transparent text-[#013024] z-10"
-      : "top-3 left-4 text-base text-[#013024]/60 bg-transparent z-0";
+  // Alias for compatibility with form onSubmit
+  const handleSubmit = sendEmail;
+
+  // Helper for floating label: floats if focused or has value, RTL-aware
+  const floatLabel = (field, value) => {
+    const base =
+      focus[field] || value
+        ? "-top-4 text-xs px-1 bg-transparent text-[#013024] z-10"
+        : "top-3 text-base text-[#013024]/60 bg-transparent z-0";
+    if (isRTL) {
+      return `${base} right-4 left-auto text-right`;
+    } else {
+      return `${base} left-4`;
+    }
+  };
 
   return (
-    <div className="bg-[#f7fff6] min-h-screen">
+    <div
+      className={`bg-[#f7fff6] min-h-screen${isRTL ? " rtl" : ""}`}
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       {/* Hero/Banner Section */}
       <section className="bg-[#013024] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,39 +109,34 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Contact <span className="text-[#a7ec4f]">EarningSync</span>
-            </h1>
+            <h1
+              className="text-4xl md:text-6xl font-bold mb-6"
+              dangerouslySetInnerHTML={{ __html: t("contactPage.title") }}
+            />
             <p className="text-xl mb-4 text-gray-300">
-              Reach out to us anytime through your preferred channel.
+              {t("contactPage.desc")}
             </p>
           </motion.div>
         </div>
       </section>
-
       {/* Contact Form Section */}
-      <section className="py-10 w-full bg-gradient-to-br from-[#f7fff6] via-[#eaffea] to-[#e6f9e6]">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
+        {/* Decorative Gradient Accent */}
+        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-32 bg-gradient-to-tr from-[#a7ec4f] via-[#eaffea] to-[#013024] opacity-30 rounded-full blur-2xl pointer-events-none"></div>
+        <div className="w-full max-w-3xl mx-auto bg-white/80 rounded-2xl shadow-xl p-8 md:p-12 border-2 border-[#a7ec4f] relative z-10">
           <motion.form
             ref={form}
-            onSubmit={sendEmail}
+            onSubmit={handleSubmit}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="relative bg-white/80 backdrop-blur-lg border-2 border-[#013024] rounded-3xl shadow-2xl p-10 flex flex-col gap-8"
-            style={{
-              boxShadow:
-                "0 8px 32px 0 rgba(167,236,79,0.15), 0 1.5px 8px 0 #01302411",
-            }}
+            transition={{ duration: 0.8 }}
+            className="space-y-6"
           >
-            {/* Decorative Gradient Accent */}
-            <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-32 bg-gradient-to-tr from-[#a7ec4f] via-[#eaffea] to-[#013024] opacity-30 rounded-full blur-2xl pointer-events-none"></div>
             <h2 className="text-4xl font-extrabold text-[#013024] mb-2 text-center tracking-tight drop-shadow-lg">
-              Get in Touch
+              {t("contactPage.formTitle")}
             </h2>
             <p className="text-lg text-[#013024]/80 text-center mb-2">
-              We’d love to hear from you. Fill out the form and our team will
-              respond promptly.
+              {t("contactPage.formNote")}
             </p>
             <div className="flex flex-col md:flex-row gap-6">
               {/* Name Field */}
@@ -142,8 +150,11 @@ const Contact = () => {
                   onChange={(e) => setName(e.target.value)}
                   onFocus={() => setFocus((f) => ({ ...f, name: true }))}
                   onBlur={() => setFocus((f) => ({ ...f, name: false }))}
-                  className="peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all placeholder-transparent"
-                  placeholder="Your Name"
+                  className={`peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all ${
+                    isRTL ? "text-right" : ""
+                  }`}
+                  style={isRTL ? { textAlign: "right", direction: "rtl" } : {}}
+                  placeholder=" "
                   autoComplete="off"
                 />
                 <label
@@ -152,8 +163,13 @@ const Contact = () => {
                     "name",
                     name
                   )}`}
+                  style={
+                    isRTL
+                      ? { right: "1rem", left: "auto", textAlign: "right" }
+                      : {}
+                  }
                 >
-                  Your Name
+                  {t("contactPage.form.name")}
                 </label>
               </div>
               {/* Email Field */}
@@ -167,8 +183,11 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   onFocus={() => setFocus((f) => ({ ...f, email: true }))}
                   onBlur={() => setFocus((f) => ({ ...f, email: false }))}
-                  className="peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all placeholder-transparent"
-                  placeholder="Your Email"
+                  className={`peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all ${
+                    isRTL ? "text-right" : ""
+                  }`}
+                  style={isRTL ? { textAlign: "right", direction: "rtl" } : {}}
+                  placeholder=" "
                   autoComplete="off"
                 />
                 <label
@@ -177,8 +196,13 @@ const Contact = () => {
                     "email",
                     email
                   )}`}
+                  style={
+                    isRTL
+                      ? { right: "1rem", left: "auto", textAlign: "right" }
+                      : {}
+                  }
                 >
-                  Your Email
+                  {t("contactPage.form.email")}
                 </label>
               </div>
             </div>
@@ -200,14 +224,25 @@ const Contact = () => {
                   minHeight: "3rem",
                 }}
               >
-                {subjectOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
+                <option value="" disabled>
+                  {t("contactPage.form.subjectPlaceholder")}
+                </option>
+                <option value={t("contactPage.form.subjectGeneral")}>
+                  {t("contactPage.form.subjectGeneral")}
+                </option>
+                <option value={t("contactPage.form.subjectSupport")}>
+                  {t("contactPage.form.subjectSupport")}
+                </option>
+                <option value={t("contactPage.form.subjectPartnership")}>
+                  {t("contactPage.form.subjectPartnership")}
+                </option>
               </select>
-              {/* Removed the Subject label */}
-              <span className="pointer-events-none absolute right-5 top-1/2 -translate-y-1/2 text-[#013024] text-lg">
+              {/* Dropdown arrow, RTL-aware */}
+              <span
+                className={`pointer-events-none absolute ${
+                  isRTL ? "left-5" : "right-5"
+                } top-1/2 -translate-y-1/2 text-[#013024] text-lg`}
+              >
                 ▼
               </span>
             </div>
@@ -222,8 +257,11 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 onFocus={() => setFocus((f) => ({ ...f, message: true }))}
                 onBlur={() => setFocus((f) => ({ ...f, message: false }))}
-                className="peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all placeholder-transparent resize-none"
-                placeholder="Your Message"
+                className={`peer w-full px-4 py-3 rounded-xl border-2 border-[#013024] bg-white/60 text-[#013024] font-medium focus:border-[#a7ec4f] focus:ring-2 focus:ring-[#a7ec4f]/30 outline-none transition-all resize-none ${
+                  isRTL ? "text-right" : ""
+                }`}
+                style={isRTL ? { textAlign: "right", direction: "rtl" } : {}}
+                placeholder=" "
               />
               <label
                 htmlFor="message"
@@ -231,8 +269,13 @@ const Contact = () => {
                   "message",
                   message
                 )}`}
+                style={
+                  isRTL
+                    ? { right: "1rem", left: "auto", textAlign: "right" }
+                    : {}
+                }
               >
-                Your Message
+                {t("contactPage.form.message")}
               </label>
             </div>
             {/* Submit Button */}
@@ -267,7 +310,7 @@ const Contact = () => {
                       d="M4 12a8 8 0 018-8v8z"
                     />
                   </svg>
-                  Sending...
+                  {t("contactPage.form.send")}
                 </>
               ) : (
                 <>
@@ -293,19 +336,19 @@ const Contact = () => {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  Send Message
+                  {t("contactPage.form.send")}
                 </>
               )}
             </button>
             {/* Success/Error Messages */}
             {sent && (
               <div className="text-green-600 text-center font-semibold mt-2">
-                Thank you! Your message has been sent.
+                {t("contactPage.form.success")}
               </div>
             )}
             {error && (
               <div className="text-red-600 text-center font-semibold mt-2">
-                {error}
+                {t("contactPage.form.error")}
               </div>
             )}
           </motion.form>
@@ -329,13 +372,13 @@ const Contact = () => {
               </div>
               <div className="w-full flex flex-col items-center">
                 <h3 className="text-2xl font-bold mb-2 text-[#013024]">
-                  Email
+                  {t("contactPage.info.email")}
                 </h3>
                 <span className="text-gray-700 mb-2 block break-all">
                   info@earningsync.com
                 </span>
                 <span className="bg-[#013024] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
-                  Send Email
+                  {t("contactPage.sendEmail")}
                 </span>
               </div>
             </motion.a>
@@ -352,11 +395,16 @@ const Contact = () => {
               </div>
               <div className="w-full flex flex-col items-center">
                 <h3 className="text-2xl font-bold mb-2 text-[#013024]">
-                  WhatsApp
+                  {t("contactPage.info.whatsapp")}
                 </h3>
-                <span className="text-gray-700 mb-2 block">+973 6638 6602</span>
+                <span
+                  className="text-gray-700 mb-2 block"
+                  style={{ direction: "ltr", unicodeBidi: "plaintext" }}
+                >
+                  +973 6638 6602
+                </span>
                 <span className="bg-[#25D366] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
-                  Chat on WhatsApp
+                  {t("contactPage.chatOnWhatsapp")}
                 </span>
               </div>
             </motion.a>
@@ -373,13 +421,13 @@ const Contact = () => {
               </div>
               <div className="w-full flex flex-col items-center">
                 <h3 className="text-2xl font-bold mb-2 text-[#013024]">
-                  LinkedIn
+                  {t("contactPage.linkedin")}
                 </h3>
                 <span className="text-gray-700 mb-2 block break-all">
                   linkedin.com/company/earningsync
                 </span>
                 <span className="bg-[#0077b5] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
-                  View Profile
+                  {t("contactPage.viewProfile")}
                 </span>
               </div>
             </motion.a>
@@ -396,13 +444,13 @@ const Contact = () => {
               </div>
               <div className="w-full flex flex-col items-center">
                 <h3 className="text-2xl font-bold mb-2 text-[#013024]">
-                  WhatsApp Community
+                  {t("contactPage.whatsappCommunity")}
                 </h3>
                 <span className="text-gray-700 mb-2 block text-sm">
-                  Get updates & support from our team and members.
+                  {t("contactPage.communityDesc")}
                 </span>
                 <span className="bg-[#25D366] text-white px-4 py-1 rounded-full font-semibold group-hover:underline transition text-sm">
-                  Join Group
+                  {t("contactPage.joinGroup")}
                 </span>
               </div>
             </motion.a>

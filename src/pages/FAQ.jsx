@@ -16,98 +16,36 @@ import {
   FaExchangeAlt,
   FaChevronDown,
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
-// Order and icons are now matched to the questions below
-const faqs = [
-  {
-    question: "What is copy trading?",
-    answer:
-      "Copy trading is an automated trading method where you can automatically copy positions opened and managed by another selected trader. When they trade, your account will automatically copy their actions proportionally to your investment.",
-    icon: FaQuestionCircle,
-  },
-  {
-    question: "How much is the performance fee?",
-    answer:
-      "We charge a 30% performance fee on profits generated through our copy trading service. This fee structure ensures our interests are aligned with yours - we only earn when you earn.",
-    icon: FaDollarSign,
-  },
-  {
-    question: "What is the minimum investment?",
-    answer:
-      "$100 is the minimum investment required to start copy trading with us.",
-    icon: FaPiggyBank,
-  },
-  {
-    question: "How do you manage risk?",
-    answer:
-      "We open small lot sizes to ensure that even in the event of a loss, your capital is preserved.",
-    icon: FaShieldAlt,
-  },
-  {
-    question: "How often do you trade?",
-    answer:
-      "Our trading frequency varies based on market conditions and opportunities. We prioritize quality setups over quantity to maintain consistent performance.",
-    icon: FaSyncAlt,
-  },
-  {
-    question: "What is your average monthly return?",
-    answer:
-      "Historically it has been 5%. While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile.",
-    icon: FaChartBar,
-  },
-  {
-    question: "Can I withdraw my funds at any time?",
-    answer:
-      "Yes, you maintain full control of your funds at all times. You can stop copying trades and withdraw your funds whenever you wish. Your initial investment can be withdrawn as a refund using the same payment method, then all future withdrawals can be done using other methods.",
-    icon: FaUnlockAlt,
-  },
-  {
-    question: "Are my funds held/stored with you?",
-    answer:
-      "No, your funds are never held or stored with us. All funds remain in your own Exness account at all times. We only provide the trading strategy for you to copy; we do not have access to your money.",
-    icon: FaUserShield,
-  },
-  {
-    question:
-      "Do you have the authority to perform withdrawal or deposit operations from my account?",
-    answer:
-      "No, we do not have any authority or access to perform withdrawals or deposits from your Exness account. Only you have full control over deposits and withdrawals. Our access is limited to trading only within the copy trading strategy.",
-    icon: FaUserLock,
-  },
-  {
-    question:
-      "What will happen if I decide to stop copying and withdraw my money?",
-    answer:
-      "You can stop copying the strategy at any time directly from your Exness account. Once you stop copying, you are free to withdraw your funds whenever you wish. There are no penalties or restrictions from our side.",
-    icon: FaSignOutAlt,
-  },
-  {
-    question:
-      "Can I use another person's bank card to make deposits or withdrawals?",
-    answer:
-      "No, Exness requires that all deposits and withdrawals are made using payment methods that are in your own name. Using someone else's bank card or payment method is not allowed and may result in issues with your account or transactions.",
-    icon: FaIdCard,
-  },
-  {
-    question: "Deposit and Withdrawal Methods",
-    answer:
-      "Exness offers a wide range of deposit and withdrawal methods, including bank cards (Visa/Mastercard), e-wallets (Skrill, Neteller, Perfect Money, etc.), online banking, and cryptocurrencies. The available options can depend on your country or region. For the most accurate and up-to-date list of methods, please check the 'Deposit' and 'Withdrawal' sections in your Exness account dashboard.",
-    icon: FaCreditCard,
-  },
-  {
-    question:
-      "Why shouldn't I invest in those extremely high return % strategies I see on Exness?",
-    answer:
-      "Many of those high-return strategies use risky tactics that can mislead investors. For example, a strategy provider might start with $1,000, lose $800, then deposit another $800 to recover, while copiers who can't add more funds would be wiped out. Providers can also deposit or withdraw during open trades to manipulate results, making their performance look much better than what copiers actually experience. Most of these strategies are gambling and designed to attract copiers, but in reality, most investors end up losing money.",
-    icon: FaExchangeAlt,
-  },
+const iconMap = [
+  FaQuestionCircle,
+  FaDollarSign,
+  FaPiggyBank,
+  FaShieldAlt,
+  FaSyncAlt,
+  FaChartBar,
+  FaUnlockAlt,
+  FaUserShield,
+  FaUserLock,
+  FaSignOutAlt,
+  FaIdCard,
+  FaCreditCard,
+  FaExchangeAlt,
 ];
 
 const FAQ = () => {
+  const { t, i18n } = useTranslation();
   const [openIndex, setOpenIndex] = useState(null);
 
+  // Get questions/answers from translation
+  const faqs = t("faqPage.faqs", { returnObjects: true });
+
   return (
-    <div className="min-h-screen relative">
+    <div
+      className="min-h-screen relative"
+      dir={i18n.language === "ar" ? "rtl" : "ltr"}
+    >
       {/* Hero Section */}
       <section className="bg-[#013024] text-white py-20 shadow-lg rounded-b-3xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,11 +56,10 @@ const FAQ = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">
-              Frequently Asked <span className="text-[#a7ec4f]">Questions</span>
+              <span>{t("faqPage.title1")}</span>{" "}
+              <span className="text-[#a7ec4f]">{t("faqPage.title2")}</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-300">
-              Find answers to common questions about our copy trading service
-            </p>
+            <p className="text-xl mb-8 text-gray-300">{t("faqPage.desc")}</p>
           </motion.div>
         </div>
       </section>
@@ -133,7 +70,7 @@ const FAQ = () => {
           <div className="space-y-8">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
-              const Icon = faq.icon || FaQuestionCircle;
+              const Icon = iconMap[index] || FaQuestionCircle;
               return (
                 <motion.div
                   key={index}
@@ -202,17 +139,15 @@ const FAQ = () => {
       <section className="py-16 bg-[#013024] text-white text-center rounded-t-3xl shadow-inner mt-20">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-            Still Have Questions?
+            {t("faqPage.ctaTitle")}
           </h2>
-          <p className="text-lg text-green-100 mb-8">
-            Contact us for personalized assistance
-          </p>
+          <p className="text-lg text-green-100 mb-8">{t("faqPage.ctaDesc")}</p>
           <div className="flex justify-center">
             <a
-              href="/contact"
+              href={i18n.language === "ar" ? "/ar/contact" : "/contact"}
               className="px-8 py-3 bg-[#a7ec4f] text-[#013024] font-bold rounded-full shadow-lg hover:bg-[#bfff5c] transition-all text-lg flex items-center group"
             >
-              Contact Us Now!
+              {t("faqPage.ctaButton")}
             </a>
           </div>
         </div>
