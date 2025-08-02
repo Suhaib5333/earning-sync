@@ -1,0 +1,272 @@
+{
+  "faqPage": {
+    "title1": "Frequently Asked",
+    "title2": "Questions",
+    "desc": "Find answers to common questions about our copy trading service",
+    "faqs": [
+      {
+        "question": "What is copy trading?",
+        "answer": "Copy trading is an automated trading method where you can automatically copy positions opened and managed by another selected trader. When they trade, your account will automatically copy their actions proportionally to your investment."
+      },
+      {
+        "question": "How much is the performance fee?",
+        "answer": "We charge a 30% performance fee on profits generated through our copy trading service. This fee structure ensures our interests are aligned with yours - we only earn when you earn."
+      },
+      {
+        "question": "What is the minimum investment?",
+        "answer": "$100 is the minimum investment required to start copy trading with us."
+      },
+      {
+        "question": "How do you manage risk?",
+        "answer": "We open small lot sizes to ensure that even in the event of a loss, your capital is preserved."
+      },
+      {
+        "question": "How often do you trade?",
+        "answer": "Our trading frequency varies based on market conditions and opportunities. We prioritize quality setups over quantity to maintain consistent performance."
+      },
+      {
+        "question": "What is your average monthly return?",
+        "answer": "Historically it has been 5%. While past performance doesn't guarantee future results, we aim for consistent monthly returns while prioritizing capital preservation. Detailed performance statistics are available on our Exness profile."
+      },
+      {
+        "question": "Can I withdraw my funds at any time?",
+        "answer": "Yes, you maintain full control of your funds at all times. You can stop copying trades and withdraw your funds whenever you wish. Your initial investment can be withdrawn as a refund using the same payment method, then all future withdrawals can be done using other methods."
+      },
+      {
+        "question": "Are my funds held/stored with you?",
+        "answer": "No, your funds are never held or stored with us. All funds remain in your own Exness account at all times. We only provide the trading strategy for you to copy; we do not have access to your money."
+      },
+      {
+        "question": "Do you have the authority to perform withdrawal or deposit operations from my account?",
+        "answer": "No, we do not have any authority or access to perform withdrawals or deposits from your Exness account. Only you have full control over deposits and withdrawals. Our access is limited to trading only within the copy trading strategy."
+      },
+      {
+        "question": "What will happen if I decide to stop copying and withdraw my money?",
+        "answer": "You can stop copying the strategy at any time directly from your Exness account. Once you stop copying, you are free to withdraw your funds whenever you wish. There are no penalties or restrictions from our side."
+      },
+      {
+        "question": "Can I use another person's bank card to make deposits or withdrawals?",
+        "answer": "No, Exness requires that all deposits and withdrawals are made using payment methods that are in your own name. Using someone else's bank card or payment method is not allowed and may result in issues with your account or transactions."
+      },
+      {
+        "question": "Deposit and Withdrawal Methods",
+        "answer": "Exness offers a wide range of deposit and withdrawal methods, including bank cards (Visa/Mastercard), e-wallets (Skrill, Neteller, Perfect Money, etc.), online banking, and cryptocurrencies. The available options can depend on your country or region. For the most accurate and up-to-date list of methods, please check the 'Deposit' and 'Withdrawal' sections in your Exness account dashboard."
+      },
+      {
+        "question": "Why shouldn't I invest in those extremely high return % strategies I see on Exness?",
+        "answer": "Many of those high-return strategies use risky tactics that can mislead investors. For example, a strategy provider might start with $1,000, lose $800, then deposit another $800 to recover, while copiers who can't add more funds would be wiped out. Providers can also deposit or withdraw during open trades to manipulate results, making their performance look much better than what copiers actually experience. Most of these strategies are gambling and designed to attract copiers, but in reality, most investors end up losing money."
+      }
+    ],
+    "ctaTitle": "Still Have Questions?",
+    "ctaDesc": "Contact us for personalized assistance",
+    "ctaButton": "Contact Us Now!"
+  },
+  "contactPage": {
+    "title": "Contact <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "formTitle": "Get in Touch",
+    "formNote": "We’d love to hear from you. Fill out the form and our team will respond promptly.",
+    "desc": "We’re here to help! Reach out to us anytime through your preferred channel.",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "subjectPlaceholder": "Select a subject",
+      "subjectGeneral": "General Inquiry",
+      "subjectGettingStarted": "Getting Started",
+      "subjectCopyTradingSupport": "Copy Trading Support",
+      "subjectProfitShareFees": "Profit Share & Fees",
+      "subjectAccountSecurity": "Account & Security",
+      "subjectTechnicalIssue": "Technical Issue",
+      "subjectFeedback": "Feedback",
+      "subjectOther": "Other",
+      "message": "Message",
+      "send": "Send Message",
+      "success": "Your message has been sent successfully!",
+      "error": "There was an error sending your message. Please try again later."
+    },
+    "note": "We’ll get back to you as soon as possible.",
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "location": "Location",
+      "address": "Bahrain, United Kingdom"
+    },
+    "sendEmail": "Send Email",
+    "chatOnWhatsapp": "Chat on WhatsApp",
+    "linkedin": "LinkedIn",
+    "viewProfile": "View Profile",
+    "whatsappCommunity": "WhatsApp Community",
+    "communityDesc": "Get updates and support from our team and members.",
+    "joinGroup": "Join Group"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "getStarted": "Get Started",
+    "products": "Products",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "risk": "Risk Disclosure"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "risk": "Risk Disclosure",
+    "copyright": "© EarningSync. All rights reserved.",
+    "contactButton": "Contact Us"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "content": "EarningSync values your privacy. We only collect information necessary to provide our services, such as your name, email, and account details. Your data is never sold or shared with third parties except as required to deliver our services or comply with legal obligations.\nWe do not store sensitive personal data. Information you provide is used only for communication and service delivery. We do not offer user accounts or portals that allow you to access or delete stored data.\nFor any questions about your privacy or data, please contact us at info@earningsync.com"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "content": "By accessing or using EarningSync, you agree to follow all applicable laws and these terms. Our services are provided for informational and educational purposes. You are responsible for your own trading decisions and account security.\nEarningSync does not guarantee profits or prevent losses. Past performance is not indicative of future results. We reserve the right to update these terms at any time. Continued use of our services means you accept any changes.\nIf you have questions about these terms, contact us at info@earningsync.com"
+  },
+  "risk": {
+    "title": "Risk Warning",
+    "content": "Trading and investing involve significant risk. You may lose more than your initial investment. EarningSync provides tools and information to help you make informed decisions, but we do not provide financial advice or guarantees.\nAll strategies, including EarningSync Classic and High Risk, carry the potential for both profit and loss. Past results do not guarantee future performance. Only trade with capital you can afford to lose and consider seeking independent advice if needed.\nBy using EarningSync, you acknowledge and accept these risks."
+  },
+  "about": {
+    "heroTitle": "About <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "heroDesc": "Your trusted partner for safe, transparent, and real copy trading results.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "To help you grow your money safely, with real results and honest reporting. We always put your security first and support you every step of the way.",
+    "trustTitle": "Trust",
+    "trustDesc": "We build long-term relationships through transparency and reliability.",
+    "performanceTitle": "Performance",
+    "performanceDesc": "Our results are driven by proven strategies, always focused on careful analysis and adapting to market conditions.",
+    "securityTitle": "Security",
+    "securityDesc": "You have complete authority over your money at all times.",
+    "whyChooseTitle": "Why Choose EarningSync?",
+    "feesTitle": "Transparent Fees",
+    "feesDesc": "We only earn a 30% fee on the profit we make for you. If you don’t profit, we don’t earn.",
+    "expertTitle": "Expert Management",
+    "expertDesc": "Our team of professionals are dedicated to your success and safety.",
+    "independenceTitle": "Account Independence",
+    "independenceDesc": "Your trading account remains fully in your name and under your control. We never have access to your funds; only you can deposit or withdraw at any time.",
+    "trackTitle": "Proven Track Record",
+    "trackDesc": "Real, consistent results you can verify for yourself.",
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDesc": "Join our community and start your journey with EarningSync today.",
+    "ctaButton": "Get Started Now",
+    "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
+  },
+  "getStarted": {
+    "heroTitle": "Start Your Journey with <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "heroDesc": "Follow these simple steps to begin your copy trading journey.",
+    "steps": {
+      "createAccountTitle": "<b>1. Create an Account</b>",
+      "createAccountDesktop": "<b>Desktop</b>",
+      "createAccountMobile": "<b>Mobile</b>",
+      "createAccountSteps": [
+        "Go to <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">Exness website</a>.",
+        "Click <b>Register</b> and fill in your country, email, and password.",
+        "Complete the verification process of both your <b>ID</b> and <b>Proof of Address</b>."
+      ],
+      "createAccountNote": "<i>Do <b>not</b> fund your account at this step.</i>",
+      "startCopyingTitle": "<b>2. Start Copying</b>",
+      "startCopyingDesktop": "<b>Desktop</b>",
+      "startCopyingMobile": "<b>Mobile</b>",
+      "startCopyingSteps": [
+        "<a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync High Risk</a>.",
+        "Click <b>Start Copying</b>.",
+        "Continue with <b>Web Version</b>.",
+        "<b>Sign in.</b>",
+        "Click <b>Create Investment</b>.",
+        "Fund your <i><b>Investment Wallet</b></i>.",
+        "Click <b>Create Investment</b> again.",
+        "Enter the deposited amount to invest."
+      ],
+      "joinCommunityTitle": "<b>3. Join the Community</b>",
+      "joinCommunityDesc": "Click the link below or scan the QR code to join the WhatsApp group and get the latest updates.",
+      "joinCommunityButton": "Join WhatsApp Group",
+      "joinCommunityScan": "Scan with your camera to join via QR code"
+    }
+  },
+  "productsPage": {
+    "title": "Our Products",
+    "desc": "Discover our range of investment products designed for different risk appetites and goals.",
+    "products": [
+      {
+        "name": "EarningSync Classic",
+        "slides": [
+          {
+            "title": "What is EarningSync Classic?",
+            "desc": "<span class='font-semibold text-[#013024]'>EarningSync Classic</span> is a semi-automated strategy for <span class='font-semibold text-[#013024]'>USTEC (NASDAQ), GOLD, USOIL, and US30</span>. It trades only buy-side, using strict risk and capital rules for steady, sustainable results. Designed to capture upside momentum with low risk, it's ideal for investors seeking stable returns."
+          },
+          {
+            "title": "Trade Allocation & Risk Management",
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Lot Size Control:</span> Max 0.05 lots per $1,000 balance for consistent, conservative sizing.</li><li><span class='font-semibold text-[#013024]'>Focused Market Exposure:</span> Only one symbol is traded at a time, no overlap between US30, GOLD, USTEC, or USOIL, to avoid overexposure and keep precision.</li></ul>"
+          },
+          {
+            "title": "Minimum Investment & Objective",
+            "desc": "<div class='mb-2'><span class='font-semibold text-[#013024]'>Minimum deposit:</span> $100, accessible to a broad range of investors.</div><div><span class='font-semibold text-[#013024]'>Objective:</span> Generate stable annual income while preserving capital. Best for long-term investors seeking balanced, steady returns. Follows a <span class='font-semibold text-[#013024]'>strictly rule-based plan</span> for consistent, emotion-free performance.</div>"
+          },
+          {
+            "title": "Risk Disclosure",
+            "desc": "While the strategy is built with conservative exposure levels, it is <span class='font-semibold text-[#013024]'>not risk-free</span>. The main risk arises if the <span class='font-semibold text-[#013024]'>NASDAQ index</span> crashes more than <span class='font-semibold text-[#013024]'>50%</span> while all trades are fully allocated. Past performance is not a guarantee of future results, and market anomalies may still occur."
+          }
+        ]
+      }
+    ],
+    "ctaTitle": "Ready to Get Started?",
+    "ctaDesc": "Join our community and start your journey with EarningSync today.",
+    "ctaButton": "Get Started Now",
+    "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
+  },
+  "home": {
+    "heroTitle": "Smart Copy Trading for<br><span class=\"text-[#a7ec4f]\">Better Investing</span>",
+    "heroSubtitle": "Trusted by Dozens of Investors",
+    "heroDescription": "Join in on earning returns with us through our proven copy trading strategy with advanced risk management.",
+    "getStarted": "Get Started Now",
+    "stats": {
+      "yearsExperience": "Years of Experience",
+      "historicalProfit": "Historical Average Monthly Profit",
+      "maxDrawdown": "Maximum Drawdown",
+      "onClassic": "On Earning Sync Classic"
+    },
+    "whyChoose": "Why Choose EarningSync?",
+    "whyChooseDesc": "Discover what sets us apart in the world of copy trading.",
+    "features": {
+      "securityTitle": "Security Before Profit",
+      "securityDesc": "Protecting your money comes first. We always focus on risk management before chasing profits.",
+      "riskManagement": "Risk Management",
+      "secureCustody": "Secure Custody",
+      "transparencyTitle": "Real Transparency, No Hype",
+      "transparencyDesc": "No fake results or hype. What you see is what you get. Real, verifiable, historical results.",
+      "honestReporting": "Honest Reporting",
+      "sustainableReturns": "Sustainable Returns",
+      "communityTitle": "Community & Support",
+      "communityDesc": "Get updates in our WhatsApp group and reach out to our team anytime with questions or concerns.",
+      "whatsappGroup": "WhatsApp Group",
+      "directSupport": "Direct Support"
+    },
+    "packagesTitle": "Choose Your Profit Share Package",
+    "packagesDesc": "Greater investments mean lower fees. Select the package that fits your investment style and start earning with us today.",
+    "starter": "Starter",
+    "starterPercent": "30%",
+    "profitShare": "Profit Share",
+    "rangeStarter": "$100 - $10,000",
+    "autoDeduction": "Automatic deduction",
+    "fullControl": "Full account control",
+    "communitySupport": "Community & team support",
+    "noHiddenFees": "No hidden fees • Cancel anytime",
+    "pro": "Pro",
+    "proPercent": "20%",
+    "rangePro": "$10,001 - $100,000",
+    "lowerFee": "Lower fee for higher deposits",
+    "prioritySupport": "Priority support",
+    "elite": "Elite",
+    "elitePercent": "15%",
+    "rangeElite": "$100,001+",
+    "bestValue": "Best value for large investors",
+    "dedicatedManager": "Dedicated account manager",
+    "ctaTitle": "Ready to Transform Your Investment Journey?",
+    "ctaDesc": "Join a community of investors and start earning passive income today.",
+    "startWith100": "Start with just $100 • Stop copying & withdraw at anytime"
+  }
+}

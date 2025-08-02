@@ -1,26 +1,26 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const RiskWarning = () => (
-  <div className="max-w-2xl mx-auto px-4 py-16 text-[#013024] bg-white/90 rounded-2xl shadow-lg mt-10 mb-10 border-2 border-[#a7ec4f]">
-    <h1 className="text-4xl font-extrabold mb-6 text-center tracking-tight">
-      Risk Warning
-    </h1>
-    <div className="space-y-6 text-lg leading-relaxed">
-      <p>
-        Trading and investing involve significant risk. You may lose more than
-        your initial investment. EarningSync provides tools and information to
-        help you make informed decisions, but we do not provide financial advice
-        or guarantees.
-      </p>
-      <p>
-        All strategies, including EarningSync Classic and High Risk, carry the
-        potential for both profit and loss. Past results do not guarantee future
-        performance. Only trade with capital you can afford to lose and consider
-        seeking independent advice if needed.
-      </p>
-      <p>By using EarningSync, you acknowledge and accept these risks.</p>
+const RiskWarning = () => {
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === "ar";
+  const paragraphs = t("risk.content").split("\n");
+  return (
+    <div
+      className="max-w-2xl mx-auto px-4 py-16 text-[#013024] bg-white/90 rounded-2xl shadow-lg mt-10 mb-10 border-2 border-[#a7ec4f]"
+      dir={isArabic ? "rtl" : "ltr"}
+      style={isArabic ? { textAlign: "right" } : { textAlign: "left" }}
+    >
+      <h1 className="text-4xl font-extrabold mb-6 text-center tracking-tight">
+        {t("risk.title")}
+      </h1>
+      <div className="space-y-6 text-lg leading-relaxed">
+        {paragraphs.map((p, idx) => (
+          <p key={idx}>{p}</p>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default RiskWarning;
