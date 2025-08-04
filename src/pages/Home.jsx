@@ -47,7 +47,6 @@ const Home = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="text-center"
         >
-          
           <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg text-white">
             Smart Copy Trading for
             <br />
@@ -55,19 +54,18 @@ const Home = () => {
             {/* CHANGED from "Secure Returns" to "Better Investing" */}
           </h1>
           <motion.div
-           initial={{ opacity: 0, y: -10 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.4, duration: 0.6 }}
-           className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
->
-           <FaShieldAlt className="text-yellow-400 text-base" />
-           Trusted by Dozens of Investors
-           </motion.div>
-
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mx-auto w-fit flex items-center justify-center gap-2 bg-white/10 backdrop-blur-md text-white px-5 py-2 rounded-full text-sm font-semibold mt-4 shadow-sm border border-white/20"
+          >
+            <FaShieldAlt className="text-yellow-400 text-base" />
+            Trusted by Dozens of Investors
+          </motion.div>
 
           <p className="text-lg md:text-xl text-green-100 mt-6 mb-10 max-w-2xl mx-auto px-6 sm:px-0">
-          Join in on earning returns with us through our proven copy trading
-          strategy with advanced risk management.
+            Join in on earning returns with us through our proven copy trading
+            strategy with advanced risk management.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Link
@@ -236,7 +234,7 @@ const Home = () => {
                 Starter
               </span>
               <div className="text-4xl font-extrabold text-[#013024] mb-1">
-                
+                30%
               </div>
               <div className="font-bold mb-2">Profit Share</div>
               <div className="bg-[#013024]/10 text-[#013024] px-3 py-1 rounded-full font-semibold text-sm mb-4">
