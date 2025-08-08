@@ -247,10 +247,6 @@
           {
             "title": "Subscription",
             "desc": "<div><span class='font-semibold text-[#013024]'>$100/month</span></div><div><span class='font-semibold text-[#013024]'>$35/week</span></div><div class='mt-2 flex items-center gap-2'><span>Access to a private Telegram channel with exclusive signals.</span></div>"
-          },
-          {
-            "title": "Why Us?",
-            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li>Instant and reliable alerts</li><li>High win rate from trend alignment</li><li>No experience needed, just follow the signals</li></ul>"
           }
         ]
       }

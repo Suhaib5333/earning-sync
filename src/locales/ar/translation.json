@@ -259,10 +259,6 @@
           {
             "title": "رسوم الاشتراك",
             "desc": "<div><span class='font-semibold text-[#013024]'>100 دولار/شهر</span></div><div><span class='font-semibold text-[#013024]'>35 دولار/أسبوع</span></div><div class='mt-2 flex items-center gap-2'><span>قناة خاصة على التيلغرام و دعم فني دائم.</span></div>"
-          },
-          {
-            "title": "لماذا نحن؟",
-            "desc": "<ul class='list-disc list-inside text-right mx-auto max-w-lg text-base'><li>تنبيهات فورية وموثوقة</li><li>نسبة ربح عالية من توافق الاتجاه</li><li>لا تحتاج خبرة، فقط اتبع الإشارات</li></ul>"
           }
         ]
       }
