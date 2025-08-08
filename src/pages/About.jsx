@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className="min-h-screen" dir={isArabic ? "rtl" : "ltr"}>
       {/* Hero Section */}
-      <section className="bg-[#013024] text-white py-20">
+      <section className="bg-[#013024] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,9 +45,9 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-[#013024] mb-4 text-center">
               {t("about.missionTitle")}
             </h2>
@@ -55,8 +55,17 @@ const About = () => {
               {t("about.missionDesc")}
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-12">
+      {/* Why Choose Us Section */}
+      <section className="py-10 bg-gradient-to-br from-gray-50 to-[#eaffd0]/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-[#013024] mb-6 text-center">
+            {t("about.whyChooseTitle")}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Trust (top left) */}
             <motion.div
               whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
               className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
@@ -69,7 +78,20 @@ const About = () => {
               </h3>
               <p className="text-gray-700">{t("about.trustDesc")}</p>
             </motion.div>
-
+            {/* Transparent Fees (top right, restored) */}
+            <motion.div
+              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
+              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
+            >
+              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
+                <FaMoneyCheckAlt className="w-12 h-12 text-[#013024]" />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
+                {t("about.feesTitle")}
+              </h3>
+              <p className="text-gray-700">{t("about.feesDesc")}</p>
+            </motion.div>
+            {/* Performance (bottom left) */}
             <motion.div
               whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
               className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
@@ -82,7 +104,7 @@ const About = () => {
               </h3>
               <p className="text-gray-700">{t("about.performanceDesc")}</p>
             </motion.div>
-
+            {/* Security (bottom right) */}
             <motion.div
               whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
               className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
@@ -99,69 +121,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-[#eaffd0]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-[#013024] mb-12 text-center">
-            {t("about.whyChooseTitle")}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Transparent Fees (now first) */}
-            <motion.div
-              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
-              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
-            >
-              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaMoneyCheckAlt className="w-12 h-12 text-[#013024]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                {t("about.feesTitle")}
-              </h3>
-              <p className="text-gray-700">{t("about.feesDesc")}</p>
-            </motion.div>
-            {/* Expert Management (now second) */}
-            <motion.div
-              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
-              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
-            >
-              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaUserTie className="w-12 h-12 text-[#013024]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                {t("about.expertTitle")}
-              </h3>
-              <p className="text-gray-700">{t("about.expertDesc")}</p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
-              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
-            >
-              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaUserLock className="w-12 h-12 text-[#013024]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                {t("about.independenceTitle")}
-              </h3>
-              <p className="text-gray-700">{t("about.independenceDesc")}</p>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.06, boxShadow: "0 8px 32px 0 #a7ec4f33" }}
-              className="p-8 rounded-2xl shadow-xl bg-gradient-to-br from-white to-[#f7fff6] border border-[#a7ec4f]/30 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:border-[#a7ec4f]"
-            >
-              <div className="bg-[#a7ec4f]/20 rounded-full p-5 mb-5 shadow-inner">
-                <FaChartLine className="w-12 h-12 text-[#013024]" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3 text-[#013024]">
-                {t("about.trackTitle")}
-              </h3>
-              <p className="text-gray-700">{t("about.trackDesc")}</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-[#013024] text-white text-center relative mt-20">
+      <section className="py-12 bg-[#013024] text-white text-center relative mt-10">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-center">
             {t("about.ctaTitle")}
