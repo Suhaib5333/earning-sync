@@ -132,18 +132,18 @@
   },
   "about": {
     "heroTitle": "About <span class=\"text-[#a7ec4f]\">EarningSync</span>",
-    "heroDesc": "Your trusted partner for safe, transparent, and real copy trading results.",
+    "heroDesc": "A copy trading provider in global financial markets with real results.",
     "missionTitle": "Our Mission",
-    "missionDesc": "To help you grow your money safely, with real results and honest reporting. We always put your security first and support you every step of the way.",
-    "trustTitle": "Trust",
-    "trustDesc": "We build long-term relationships through transparency and reliability.",
-    "performanceTitle": "Performance",
-    "performanceDesc": "Our results are driven by proven strategies, always focused on careful analysis and adapting to market conditions.",
+    "missionDesc": "We invest our own capital in the markets, share the results openly, and empower everyone with cutting-edge technology to replicate those successes in their own portfolios.",
+    "trustTitle": "Experience",
+    "trustDesc": "We have a specialized team with over 25 years of experience trading in global markets.",
+    "performanceTitle": "Unbiased Performance Results",
+    "performanceDesc": "We present all our results directly and transparently, accessible anytime without restrictions.",
     "securityTitle": "Security",
-    "securityDesc": "You have complete authority over your money at all times.",
+    "securityDesc": "You have full control over your funds at all times. You can withdraw your money or stop copying whenever you choose",
     "whyChooseTitle": "Why Choose EarningSync?",
-    "feesTitle": "Transparent Fees",
-    "feesDesc": "We only earn a 30% fee on the profit we make for you. If you don’t profit, we don’t earn.",
+    "feesTitle": "Full Support",
+    "feesDesc": "We provide you with full support and clear, unbiased answers to all your inquiries in a professional manner.",
     "expertTitle": "Expert Management",
     "expertDesc": "Our team of professionals are dedicated to your success and safety.",
     "independenceTitle": "Account Independence",
@@ -164,7 +164,7 @@
       "createAccountMobile": "<b>Mobile</b>",
       "createAccountSteps": [
         "Go to <a href=\"https://one.exnesstrack.org/a/ake680s6t2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline\">Exness website</a>.",
-        "Click <b>Register</b> and fill in your country, email, and password.",
+        "Click <b>Register</b> and fill in the requested details.",
         "Complete the verification process of both your <b>ID</b> and <b>Proof of Address</b>."
       ],
       "createAccountNote": "<i>Do <b>not</b> fund your account at this step.</i>",
@@ -200,7 +200,7 @@
           },
           {
             "title": "Trade Allocation & Risk Management",
-            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Lot Size Control:</span> Max 0.05 lots per $1,000 balance for consistent, conservative sizing.</li><li><span class='font-semibold text-[#013024]'>Focused Market Exposure:</span> Only one symbol is traded at a time, no overlap between US30, GOLD, USTEC, or USOIL, to avoid overexposure and keep precision.</li></ul>"
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Lot Size Control:</span> Max 0.2 lots per $1,000 balance for consistent, conservative sizing.</li><li><span class='font-semibold text-[#013024]'>Lower Leverage Usage:</span> We avoid excessive use of leverage to minimize risk exposure and maintain the sustainability of positive trading outcomes.</li></ul>"
           },
           {
             "title": "Minimum Investment & Objective",
@@ -208,7 +208,7 @@
           },
           {
             "title": "Risk Disclosure",
-            "desc": "While the strategy is built with conservative exposure levels, it is <span class='font-semibold text-[#013024]'>not risk-free</span>. The main risk arises if the <span class='font-semibold text-[#013024]'>NASDAQ index</span> crashes more than <span class='font-semibold text-[#013024]'>50%</span> while all trades are fully allocated. Past performance is not a guarantee of future results, and market anomalies may still occur."
+            "desc": "Although the strategy is built on conservative exposure levels, it is not risk-free. Past performance does not guarantee future results, and exceptional market conditions may occur."
           }
         ]
       },
@@ -221,7 +221,7 @@
           },
           {
             "title": "Traded Instruments",
-            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Gold (XAUUSD)</span></li><li><span class='font-semibold text-[#013024]'>Dow Jones (US30)</span></li><li><span class='font-semibold text-[#013024]'>Nasdaq (NAS100)</span></li><li><span class='font-semibold text-[#013024]'>Bitcoin (BTCUSD)</span></li></ul>The strategy focuses on these high-potential instruments to capture opportunities in volatile and diverse markets."
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Gold (XAUUSD)</span></li><li><span class='font-semibold text-[#013024]'>Dow Jones (US30)</span></li><li><span class='font-semibold text-[#013024]'>Nasdaq (NAS100)</span></li><li><span class='font-semibold text-[#013024]'>Bitcoin (BTCUSD)</span></li><li><span class='font-semibold text-[#013024]'>Oil (WTI)</span></li></ul>The strategy focuses on these high-potential instruments to capture opportunities in volatile and diverse markets."
           },
           {
             "title": "Position Scaling & Risk Approach",
@@ -238,7 +238,7 @@
         "slides": [
           {
             "title": "Overview",
-            "desc": "Get automated trading signals for Gold, Nasdaq, and Bitcoin. No guessing, just real analysis. Alerts are sent instantly via Telegram."
+            "desc": "100% Automated Trading Signals covering the GOLD market, NASDAQ index, and Bitcoin. Delivered via a private Telegram channel with clearly defined entry levels, stop-loss, and take-profit targets."
           },
           {
             "title": "Features",
@@ -261,9 +261,9 @@
     "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
   },
   "home": {
-    "heroTitle": "Smart Copy Trading for<br><span class=\"text-[#a7ec4f]\">Better Investing</span>",
-    "heroSubtitle": "Trusted by Dozens of Investors",
-    "heroDescription": "Join in on earning returns with us through our proven copy trading strategy with advanced risk management.",
+    "heroTitle": "Advanced Copy Trading<br><span class=\"text-[#a7ec4f]\">Technology</span>",
+    "heroSubtitle": "Dozens of Investors Copy and Trust Us",
+    "heroDescription": "Join in on earning the same returns that we earn through advanced risk management.",
     "getStarted": "Get Started Now",
     "stats": {
       "yearsExperience": "Years of Experience",
@@ -275,11 +275,11 @@
     "whyChooseDesc": "Discover what sets us apart in the world of copy trading.",
     "features": {
       "securityTitle": "Security Before Profit",
-      "securityDesc": "Protecting your money comes first. We always focus on risk management before chasing profits.",
+      "securityDesc": "We use advanced tools to manage market risks in order to achieve the best positive results.",
       "riskManagement": "Risk Management",
       "secureCustody": "Secure Custody",
-      "transparencyTitle": "Real Transparency, No Hype",
-      "transparencyDesc": "No fake results or hype. What you see is what you get. Real, verifiable, historical results.",
+      "transparencyTitle": "100% Real Results",
+      "transparencyDesc": "Results are displayed publicly and can be accessed at any time without restrictions",
       "honestReporting": "Honest Reporting",
       "sustainableReturns": "Sustainable Returns",
       "communityTitle": "Community & Support",
