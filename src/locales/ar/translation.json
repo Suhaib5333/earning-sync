@@ -168,7 +168,7 @@
     "contactButton": "تواصل معنا"
   },
   "getStarted": {
-    "heroTitle": "ابدأ رحلتك مع <span class=\"text-[#a7ec4f]\">EarningSync</span>",
+    "heroTitle": "<span class=\"text-[#a7ec4f]\">EarningSync</span> ابدأ رحلتك مع",
     "heroDesc": "اتبع هذه الخطوات البسيطة لبدء رحلتك في نسخ التداول.",
     "steps": {
       "createAccountTitle": "<b>١. أنشئ حسابًا</b>",
