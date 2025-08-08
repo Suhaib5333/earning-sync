@@ -67,11 +67,11 @@
     "missionTitle": "مهمتنا",
     "missionDesc": "نعمل على تحقيق  استثمار أموالنا الخاصة في الأسواق و تقديم نتائج هذا الاستثمار للجميع وتوفير تكنلوجيا تمكنهم من الحصول على  نفس النتائج في محافظهم المالية.",
     "trustTitle": "الخبرة",
-    "trustDesc": "لدينا فريق عمل متخصص تمتد خبرته في التداول بالأسواق العالمية لاكثر من 25 سنة.",
+    "trustDesc": "لدينا فريق عمل متخصص تمتد خبرته في التداول بالأسواق العالمية لأكثر من 25 سنة.",
     "performanceTitle": "تقارير أداء محايدة",
-    "performanceDesc": "نقدم جميع نتائجنا بشكل مباشر يمكن الوصول له في أي وقت دون قيود",
+    "performanceDesc": "نقدم جميع نتائجنا بشكل مباشر وشفاف يمكن الوصول لها في أي وقت دون قيود.",
     "securityTitle": "الأمان",
-    "securityDesc": "لديك تحكم كامل في أموالك في جميع الأوقات يمكنك سحب الأموال أو التوقف عن النسخ.",
+    "securityDesc": "لديك تحكم كامل في أموالك في جميع الأوقات. يمكنك سحب الأموال أو التوقف عن النسخ متى شئت.",
     "whyChooseTitle": "لماذا تختار EarningSync؟",
     "feesTitle": "دعم كامل",
     "feesDesc": "نوفر لك الدعم الكامل و إجابة واضحة وحيادية عن جميع استسفارتك بشكل مهني",
@@ -96,10 +96,10 @@
   },
   "risk": {
     "title": "إفصاح المخاطر",
-"content": "EarningSync Classic هو استراتيجية شبه آلية لـ ناسداك (USTEC)، الذهب، النفط الأمريكي، وUS30 ، باستخدام قواعد صارمة لإدارة المخاطر ورأس المال لتحقيق نتائج مستقرة ومستدامة. مصمم لاقتناص الزخم بأقل مخاطرة، وهو مثالي للمستثمرين الباحثين عن عوائد مستقرة.\nجميع الاستراتيجيات، بما في ذلك EarningSync Classic وEarningSync HR، تحمل احتمالية الربح والخسارة. النتائج السابقة لا تضمن الأداء المستقبلي. تداول فقط برأس مال يمكنك تحمل خسارته، ويفضل استشارة مختص مستقل عند الحاجة.\nباستخدامك EarningSync، فإنك تقر وتقبل هذه المخاطر."
+    "content": "EarningSync Classic هو استراتيجية شبه آلية لـ ناسداك (USTEC)، الذهب، النفط الأمريكي، وUS30 ، باستخدام قواعد صارمة لإدارة المخاطر ورأس المال لتحقيق نتائج مستقرة ومستدامة. مصمم لاقتناص الزخم بأقل مخاطرة، وهو مثالي للمستثمرين الباحثين عن عوائد مستقرة.\nجميع الاستراتيجيات، بما في ذلك EarningSync Classic وEarningSync HR، تحمل احتمالية الربح والخسارة. النتائج السابقة لا تضمن الأداء المستقبلي. تداول فقط برأس مال يمكنك تحمل خسارته، ويفضل استشارة مختص مستقل عند الحاجة.\nباستخدامك EarningSync، فإنك تقر وتقبل هذه المخاطر."
   },
   "home": {
-    "heroTitle": "تكنلوجيا متطورة لنسخ الصفقات",
+    "heroTitle": "تكنلوجيا متطورة لنسخ <span class=\"text-[#a7ec4f]\">الصفقات</span>",
     "heroSubtitle": "عشرات المستثمرين ينسخون صفقاتنا و يثقون بنا",
     "heroDescription": "ابدا نسخ صفقاتنا و استمتع بنفس العوائد  التي نحصل عليها بادارة مخاطر صارمة.",
     "getStarted": "ابدأ الآن",
@@ -119,7 +119,7 @@
       "transparencyTitle": "نتائج تداول حقيقة 100%",
       "transparencyDesc": "يتم عرض النتائج بشكل فوري و يمكن الوصول لها في اي وقت دون قيود",
       "honestReporting": "تقارير صادقة",
-      "sustainableReturns": "عوائد منوازنة مع المخاطر",
+      "sustainableReturns": "عوائد متوازنة مع المخاطر",
       "communityTitle": "المجتمع والدعم",
       "communityDesc": "احصل على التحديثات في مجموعة الواتساب وتواصل مع فريقنا في أي وقت للاستفسارات أو المساعدة.",
       "whatsappGroup": "مجموعة واتساب",
@@ -184,7 +184,7 @@
       "startCopyingDesktop": "<b>كمبيوتر</b>",
       "startCopyingMobile": "<b>جوال</b>",
       "startCopyingSteps": [
-        "<a href=\"https://social-trading.exness.com/strategy/110356021/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110356021/&st_strategy=110356021&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br/><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync HR</a>",
+        "<a href=\"https://social-trading.exness.com/strategy/227750803/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/227750803/&st_strategy=227750803&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br/><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync HR</a>",
         "اضغط على <b>بدء النسخ</b>.",
         "تابع مع <b>نسخة الويب</b>.",
         "<b>سجّل الدخول</b>.",
@@ -259,10 +259,6 @@
           {
             "title": "رسوم الاشتراك",
             "desc": "<div><span class='font-semibold text-[#013024]'>100 دولار/شهر</span></div><div><span class='font-semibold text-[#013024]'>35 دولار/أسبوع</span></div><div class='mt-2 flex items-center gap-2'><span>قناة خاصة على التيلغرام و دعم فني دائم.</span></div>"
-          },
-          {
-            "title": "لماذا نحن؟",
-            "desc": "<ul class='list-disc list-inside text-right mx-auto max-w-lg text-base'><li>تنبيهات فورية وموثوقة</li><li>نسبة ربح عالية من توافق الاتجاه</li><li>لا تحتاج خبرة، فقط اتبع الإشارات</li></ul>"
           }
         ]
       }
