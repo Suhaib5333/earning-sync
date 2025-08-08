@@ -211,6 +211,48 @@
             "desc": "While the strategy is built with conservative exposure levels, it is <span class='font-semibold text-[#013024]'>not risk-free</span>. The main risk arises if the <span class='font-semibold text-[#013024]'>NASDAQ index</span> crashes more than <span class='font-semibold text-[#013024]'>50%</span> while all trades are fully allocated. Past performance is not a guarantee of future results, and market anomalies may still occur."
           }
         ]
+      },
+      {
+        "name": "EarningSync High Risk",
+        "slides": [
+          {
+            "title": "What is EarningSync High Risk?",
+            "desc": "<span class='font-semibold text-[#013024]'>EarningSync High Risk</span> uses an <span class='font-semibold text-[#013024]'>advanced trading strategy</span> based on a <span class='font-semibold text-[#013024]'>custom indicator developed in Pine Script</span>. This indicator generates <span class='font-semibold text-[#013024]'>precise trading signals</span> executed automatically on a dedicated trading account, with <span class='font-semibold text-[#013024]'>continuous monitoring and control by our expert team</span>."
+          },
+          {
+            "title": "Traded Instruments",
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li><span class='font-semibold text-[#013024]'>Gold (XAUUSD)</span></li><li><span class='font-semibold text-[#013024]'>Dow Jones (US30)</span></li><li><span class='font-semibold text-[#013024]'>Nasdaq (NAS100)</span></li><li><span class='font-semibold text-[#013024]'>Bitcoin (BTCUSD)</span></li></ul>The strategy focuses on these high-potential instruments to capture opportunities in volatile and diverse markets."
+          },
+          {
+            "title": "Position Scaling & Risk Approach",
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li>We use a <span class='font-semibold text-[#013024]'>scaling approach</span> to achieve a suitable average entry price.</li><li><span class='font-semibold text-[#013024]'>No stop loss levels are used</span> due to the nature of the strategy and risk control mechanisms.</li></ul>All trades are executed automatically and supervised by our expert team, with manual intervention when needed."
+          },
+          {
+            "title": "Risk Disclosure",
+            "desc": "This strategy is <span class='font-semibold text-[#013024]'>high risk</span> and intended for experienced investors seeking strong growth. The absence of stop loss and use of scaling may lead to significant drawdowns or capital loss. Only invest what you can afford to lose, and make sure you fully understand the risks."
+          }
+        ]
+      },
+      {
+        "name": "EarningSync Signals",
+        "slides": [
+          {
+            "title": "Overview",
+            "desc": "Get automated trading signals for Gold, Nasdaq, and Bitcoin. No guessing, just real analysis. Alerts are sent instantly via Telegram."
+          },
+          {
+            "title": "Features",
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li>100% automated signals via bot</li><li>Trend-following for higher accuracy</li><li>No emotions, just rules</li><li>Clear entry, take profit, and stop loss</li></ul>"
+          },
+          {
+            "title": "Subscription",
+            "desc": "<div><span class='font-semibold text-[#013024]'>$100/month</span></div><div><span class='font-semibold text-[#013024]'>$35/week</span></div><div class='mt-2 flex items-center gap-2'><span>Access to a private Telegram channel with exclusive signals.</span></div>"
+          },
+          {
+            "title": "Why Us?",
+            "desc": "<ul class='list-disc list-inside text-left mx-auto max-w-lg text-base'><li>Instant and reliable alerts</li><li>High win rate from trend alignment</li><li>No experience needed, just follow the signals</li></ul>"
+          }
+        ]
       }
     ],
     "ctaTitle": "Ready to Get Started?",
