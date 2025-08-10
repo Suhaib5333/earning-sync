@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import logo from "../assets/logo_transparent.png";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -261,19 +262,44 @@ const Calculator = () => {
       <div className="w-full max-w-6xl mx-auto bg-white/95 dark:bg-[#101c1c]/90 rounded-2xl shadow-2xl p-8 md:p-16 border border-[#e5e7eb]">
         <form onSubmit={handleCalculate} className="flex flex-col gap-6 mb-8">
           <div className="flex flex-col gap-4">
-            <div className="flex gap-2 justify-center">
+            {/* Product-style selector buttons, mobile and desktop */}
+            <div className="flex flex-row gap-4 px-0 mt-2 mb-2 w-full max-w-md mx-auto md:hidden">
               {plans.map((plan, idx) => (
                 <button
                   key={plan.name}
                   type="button"
-                  className={`px-4 py-2 rounded-lg font-bold border-2 transition-all duration-150 text-base md:text-lg ${
-                    planIdx === idx
-                      ? "bg-[#a7ec4f] border-[#a7ec4f] text-[#013024] shadow-lg"
-                      : "bg-white border-gray-300 text-gray-600 hover:border-[#a7ec4f]"
-                  }`}
+                  className={`flex-1 px-4 py-4 rounded-2xl shadow-lg font-bold text-lg transition-all duration-200 border-2 focus:outline-none flex flex-col items-center gap-2
+                    ${
+                      planIdx === idx
+                        ? "bg-[#013024] text-[#a7ec4f] border-[#a7ec4f] scale-105"
+                        : "bg-white text-[#013024] border-transparent hover:border-[#a7ec4f]/40"
+                    }
+                  `}
+                  onClick={() => setPlanIdx(idx)}
+                  aria-pressed={planIdx === idx}
+                  style={{ minWidth: 0, maxWidth: "100%" }}
+                >
+                  <img src={logo} alt="Logo" className="w-12 h-12 mx-auto mb-2" />
+                  {plan.name}
+                </button>
+              ))}
+            </div>
+            <div className="hidden md:flex flex-row gap-8 justify-center items-center mt-2 mb-2">
+              {plans.map((plan, idx) => (
+                <button
+                  key={plan.name}
+                  type="button"
+                  className={`px-8 py-4 rounded-2xl shadow-lg font-bold text-2xl transition-all duration-200 border-2 focus:outline-none flex flex-col items-center gap-2 w-72 md:w-96
+                    ${
+                      planIdx === idx
+                        ? "bg-[#013024] text-[#a7ec4f] border-[#a7ec4f] scale-105"
+                        : "bg-white text-[#013024] border-transparent hover:border-[#a7ec4f]/40"
+                    }
+                  `}
                   onClick={() => setPlanIdx(idx)}
                   aria-pressed={planIdx === idx}
                 >
+                  <img src={logo} alt="Logo" className="w-16 h-16 mx-auto mb-2" />
                   {plan.name}
                 </button>
               ))}
