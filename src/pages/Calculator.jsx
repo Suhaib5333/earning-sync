@@ -197,6 +197,7 @@ const Calculator = () => {
   const [initialInputValue, setInitialInputValue] = useState("1000");
   const [monthlyInputValue, setMonthlyInputValue] = useState("0");
   const [periodInputValue, setPeriodInputValue] = useState("12");
+  const [periodMode, setPeriodMode] = useState("months"); // "months" or "years"
 
   useEffect(() => {
     setInitialInputValue(initial === 0 ? "0" : String(initial));
@@ -205,8 +206,12 @@ const Calculator = () => {
     setMonthlyInputValue(monthly === 0 ? "0" : String(monthly));
   }, [monthly]);
   useEffect(() => {
-    setPeriodInputValue(months === 0 ? "0" : String(months));
-  }, [months]);
+    if (periodMode === "months") {
+      setPeriodInputValue(months === 0 ? "0" : String(months));
+    } else {
+      setPeriodInputValue(months === 0 ? "0" : String(Math.floor(months / 12)));
+    }
+  }, [months, periodMode]);
 
   const handleInitialChange = (e) => {
     let val = e.target.value;
@@ -239,9 +244,15 @@ const Calculator = () => {
       setPeriodInputValue("");
     } else {
       let num = Number(val);
-      if (num > 120) num = 120;
-      setMonths(num);
-      setPeriodInputValue(val.replace(/^0+(?=\d)/, ""));
+      if (periodMode === "months") {
+        if (num > 120) num = 120;
+        setMonths(num);
+        setPeriodInputValue(val.replace(/^0+(?=\d)/, ""));
+      } else {
+        if (num > 10) num = 10;
+        setMonths(num * 12);
+        setPeriodInputValue(val.replace(/^0+(?=\d)/, ""));
+      }
     }
   };
   return (
@@ -279,7 +290,11 @@ const Calculator = () => {
                   aria-pressed={planIdx === idx}
                   style={{ minWidth: 0, maxWidth: "100%" }}
                 >
-                  <img src={logo} alt="Logo" className="w-12 h-12 mx-auto mb-2" />
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-12 h-12 mx-auto mb-2"
+                  />
                   {plan.name}
                 </button>
               ))}
@@ -299,7 +314,11 @@ const Calculator = () => {
                   onClick={() => setPlanIdx(idx)}
                   aria-pressed={planIdx === idx}
                 >
-                  <img src={logo} alt="Logo" className="w-16 h-16 mx-auto mb-2" />
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-16 h-16 mx-auto mb-2"
+                  />
                   {plan.name}
                 </button>
               ))}
@@ -342,18 +361,66 @@ const Calculator = () => {
             </div>
             <div className="flex flex-col gap-2">
               <label className="text-[#013024] font-semibold text-base md:text-lg">
-                Period (months)
+                Period
               </label>
-              <input
-                type="number"
-                min="1"
-                max="120"
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a7ec4f] text-base md:text-lg font-bold placeholder-black placeholder-opacity-100"
-                value={periodInputValue}
-                onChange={handlePeriodChange}
-                required
-                placeholder="e.g. 12"
-              />
+              <div className="flex gap-2 items-center relative">
+                <input
+                  type="number"
+                  min="1"
+                  max={periodMode === "months" ? 120 : 10}
+                  className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#a7ec4f] text-base md:text-lg font-bold placeholder-black placeholder-opacity-100 pr-28"
+                  value={periodInputValue}
+                  onChange={handlePeriodChange}
+                  required
+                  placeholder={periodMode === "months" ? "e.g. 12" : "e.g. 2"}
+                  onInvalid={e => {
+                    if (periodMode === "months") {
+                      e.target.setCustomValidity("Value must be less than or equal to 120");
+                    } else {
+                      e.target.setCustomValidity("Value must be less than or equal to 10");
+                    }
+                  }}
+                  onInput={e => e.target.setCustomValidity("")}
+                />
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center pointer-events-none z-10">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 8L10 13L15 8"
+                      stroke="#013024"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+                <select
+                  className="absolute right-0 top-0 h-full border-none bg-transparent text-base font-bold text-[#013024] pr-7 pl-2 py-2 focus:outline-none cursor-pointer appearance-none z-20 min-w-[90px] max-w-[120px]"
+                  value={periodMode}
+                  onChange={e => {
+                    const newMode = e.target.value;
+                    setPeriodMode(newMode);
+                    // Convert value accordingly
+                    if (newMode === "months") {
+                      setMonths(Number(periodInputValue));
+                    } else {
+                      let years = Math.floor(Number(periodInputValue) / 12);
+                      if (years < 1) years = 1;
+                      if (years > 10) years = 10;
+                      setMonths(years * 12);
+                    }
+                  }}
+                  style={{ minWidth: "90px", maxWidth: "120px", background: "none" }}
+                >
+                  <option value="months">Months</option>
+                  <option value="years">Years</option>
+                </select>
+              </div>
             </div>
           </div>
           <div className="flex gap-4 justify-center mt-2">
