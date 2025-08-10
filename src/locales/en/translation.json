@@ -106,6 +106,17 @@
     "getStarted": "Get Started",
     "products": "Products",
     "faq": "FAQ",
+    "calculator": "Calculator",
+    "calculatorPage": {
+      "title": "Investment Calculator",
+      "desc": "Estimate your potential returns and plan your investments with our simple calculator.",
+      "amountLabel": "Investment Amount",
+      "periodLabel": "Period (months)",
+      "rateLabel": "Expected Monthly Return (%)",
+      "calculate": "Calculate",
+      "result": "Estimated Return",
+      "reset": "Reset"
+    },
     "contact": "Contact",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
