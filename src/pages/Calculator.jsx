@@ -279,7 +279,7 @@ const Calculator = () => {
           </p>
         </div>
       </section>
-      <div className="w-full max-w-6xl mx-auto bg-white/95 dark:bg-[#101c1c]/90 rounded-2xl shadow-2xl p-8 md:p-16 border border-[#e5e7eb]">
+  <div className="w-full max-w-6xl mx-auto bg-white/95 rounded-2xl shadow-2xl p-8 md:p-16 border border-[#e5e7eb]">
         <form onSubmit={handleCalculate} className="flex flex-col gap-6 mb-8">
           <div className="flex flex-col gap-4">
             {/* Product-style selector buttons, mobile and desktop */}
@@ -529,7 +529,7 @@ const Calculator = () => {
                   </div>
                 </div>
                 <div
-                  className="w-full"
+                  className="w-full bg-white rounded-xl"
                   style={{ maxWidth: "100vw", minWidth: 0 }}
                 >
                   <Line
