@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Calculator from "./pages/Calculator";
 import GetStarted from "./pages/GetStarted/GetStarted";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/get-started" element={<GetStarted />} />
             <Route path="/products" element={<Products />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/calculator" element={<Calculator />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
@@ -35,6 +37,7 @@ function App() {
             <Route path="/ar/get-started" element={<GetStarted />} />
             <Route path="/ar/products" element={<Products />} />
             <Route path="/ar/faq" element={<FAQ />} />
+            <Route path="/ar/calculator" element={<Calculator />} />
             <Route path="/ar/contact" element={<Contact />} />
             <Route path="/ar/privacy" element={<Privacy />} />
             <Route path="/ar/terms" element={<Terms />} />
