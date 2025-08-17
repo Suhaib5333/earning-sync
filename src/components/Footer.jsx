@@ -63,6 +63,13 @@ const Footer = () => {
             {t("navbar.products")}
           </Link>
           <Link
+            to={getPath("/calculator")}
+            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+            onClick={(e) => handleNavClick(getPath("/calculator"), e)}
+          >
+            {t("navbar.calculator")}
+          </Link>
+          <Link
             to={getPath("/faq")}
             className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
             onClick={(e) => handleNavClick(getPath("/faq"), e)}
