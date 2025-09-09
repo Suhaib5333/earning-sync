@@ -30,7 +30,7 @@
       },
       {
         "question": "هل يمكنني سحب أموالي في أي وقت؟",
-  "answer": "نعم، لديك سيطرة كاملة على أموالك في جميع الأوقات. يمكنك إيقاف نسخ الصفقات وسحب أموالك متى شئت. يمكن سحب المبلغ الأساسي كاسترداد باستخدام نفس وسيلة الدفع، ثم يمكن إجراء جميع عمليات السحب المستقبلية بوسائل أخرى."
+        "answer": "نعم، لديك سيطرة كاملة على أموالك في جميع الأوقات. يمكنك إيقاف نسخ الصفقات وسحب أموالك متى شئت. يمكن سحب المبلغ الأساسي كاسترداد باستخدام نفس وسيلة الدفع، ثم يمكن إجراء جميع عمليات السحب المستقبلية بوسائل أخرى."
       },
       {
         "question": "هل تحتفظون بأموالي لديكم؟",
@@ -65,7 +65,7 @@
     "heroTitle": "ما هو <span class=\"text-[#a7ec4f]\">EarningSync</span>",
     "heroDesc": "مزود نسخ الصفقات في الأسواق المالية العالمية بنتائج حقيقة",
     "missionTitle": "مهمتنا",
-  "missionDesc": "نعمل على تحقيق  إدارة أموالنا الخاصة في الأسواق و تقديم نتائج هذا الرصيد للجميع وتوفير تكنلوجيا تمكنهم من الحصول على  نفس النتائج في محافظهم المالية.",
+    "missionDesc": "نعمل على تحقيق  إدارة أموالنا الخاصة في الأسواق و تقديم نتائج هذا الرصيد للجميع وتوفير تكنلوجيا تمكنهم من الحصول على  نفس النتائج في محافظهم المالية.",
     "trustTitle": "الخبرة",
     "trustDesc": "لدينا فريق عمل متخصص تمتد خبرته في التداول بالأسواق العالمية لأكثر من 25 سنة.",
     "performanceTitle": "تقارير أداء محايدة",
@@ -126,7 +126,7 @@
       "directSupport": "دعم مباشر"
     },
     "packagesTitle": "باقات اشتراك تلبي  تخدم جميع الفئات",
-  "packagesDesc": "كلما زاد المبلغ قلت الرسوم. اختر الباقة التي تناسب أسلوبك وابدأ نسخ الصفقات معنا اليوم.",
+    "packagesDesc": "كلما زاد المبلغ قلت الرسوم. اختر الباقة التي تناسب أسلوبك وابدأ نسخ الصفقات معنا اليوم.",
     "starter": "مبتدئ",
     "starterPercent": "30%",
     "pro": "محترف",
@@ -205,7 +205,7 @@
     "finalBalanceLabel": "الرصيد النهائي",
     "growthProjectionTitle": "توقع النمو",
     "balanceLegend": "الرصيد",
-  "investedLegend": "إجمالي المبلغ"
+    "investedLegend": "إجمالي المبلغ"
   },
   "getStarted": {
     "heroTitle": "<span class=\"text-[#a7ec4f]\">EarningSync</span> ابدأ رحلتك مع",
@@ -224,14 +224,14 @@
       "startCopyingDesktop": "<b>كمبيوتر</b>",
       "startCopyingMobile": "<b>جوال</b>",
       "startCopyingSteps": [
-        "<a href=\"https://social-trading.exness.com/strategy/227750803/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/227750803/&st_strategy=227750803&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br/><a href=\"https://social-trading.exness.com/strategy/110321946/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/110321946/&st_strategy=110321946&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync HR</a>",
+        "<a href=\"https://social-trading.exness.com/strategy/227750803/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/227750803/&st_strategy=227750803&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync Classic</a><br/><a href=\"https://social-trading.exness.com/strategy/227775889/a/ake680s6t2/?platform=web&af_web_dp=https://social-trading.exness.com/strategy/227775889/&st_strategy=227775889&sharer=investor\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-[#013024] underline font-semibold hover:text-[#a7ec4f] transition\">EarningSync HR</a>",
         "اضغط على <b>بدء النسخ</b>.",
         "تابع مع <b>نسخة الويب</b>.",
         "<b>سجّل الدخول</b>.",
-  "اضغط على <b>إنشاء مبلغ</b>.",
-  "أودع أموال <i><b>محفظة المبلغ</b></i> الخاصة بك.",
-  "اضغط مرة أخرى على <b>إنشاء مبلغ</b>.",
-  "أدخل المبلغ المودع للرصيد."
+        "اضغط على <b>إنشاء مبلغ</b>.",
+        "أودع أموال <i><b>محفظة المبلغ</b></i> الخاصة بك.",
+        "اضغط مرة أخرى على <b>إنشاء مبلغ</b>.",
+        "أدخل المبلغ المودع للرصيد."
       ],
       "joinCommunityTitle": "<b>٣. انضم إلى المجتمع</b>",
       "joinCommunityDesc": "اضغط على الرابط أدناه أو امسح رمز QR للانضمام إلى مجموعة الواتساب والحصول على آخر التحديثات.",
