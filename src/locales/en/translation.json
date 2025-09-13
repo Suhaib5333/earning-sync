@@ -127,7 +127,8 @@
     "terms": "Terms of Service",
     "risk": "Risk Disclosure",
     "copyright": "© EarningSync. All rights reserved.",
-    "contactButton": "Contact Us"
+    "contactButton": "Contact Us",
+    "b2b": "For Business"
   },
   "calculator": {
     "heroTitle": "Investment <span class=\"text-[#a7ec4f]\">Calculator</span>",
@@ -295,6 +296,51 @@
     "ctaDesc": "Join our community and start your journey with EarningSync today.",
     "ctaButton": "Get Started Now",
     "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
+  },
+  "b2b": {
+    "heroTitle": "EarningSync <span class=\"text-[#a7ec4f]\">Partnership</span> Program",
+    "heroDesc": "Partner with us to grow your client base and share in the profits of our proven trading strategies.",
+    "programTitle": "How It Works",
+    "program": {
+      "setup": {
+        "title": "Simple Setup Process",
+        "desc": "Quick setup to start bringing investors to our trading strategies.",
+        "features": [
+          "Quick account setup",
+          "Professional trading team",
+          "Full trading transparency",
+          "No technical integration needed",
+          "Start immediately"
+        ]
+      },
+      "benefits": {
+        "title": "Partner Benefits",
+        "desc": "Build a successful business by connecting investors with our proven strategies.",
+        "features": [
+          "Split profits from client investments",
+          "Proven trading track record",
+          "Professional support",
+          "Regular performance reports",
+          "Full trading transparency"
+        ]
+      },
+      "support": {
+        "title": "Trading Management",
+        "desc": "We handle all trading operations.",
+        "features": [
+          "Professional trading execution",
+          "Comprehensive risk management",
+          "Live performance monitoring",
+          "Client support",
+          "Partner support"
+        ]
+      }
+    },
+    "contactTitle": "Start Your Partnership Today",
+    "contactDesc": "Get in touch with our team to discuss partnership opportunities.",
+    "contactButton": "Contact Us Now",
+    "emailDesc": "Send us an email",
+    "whatsappDesc": "Chat with us on WhatsApp"
   },
   "home": {
     "heroTitle": "Advanced Copy Trading<br><span class=\"text-[#a7ec4f]\">Technology</span>",

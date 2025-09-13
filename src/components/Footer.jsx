@@ -155,6 +155,13 @@ const Footer = () => {
           >
             {t("footer.risk")}
           </Link>
+          <Link
+            to={getPath("/b2b")}
+            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
+            onClick={(e) => handleNavClick(getPath("/b2b"), e)}
+          >
+            {t("footer.b2b")}
+          </Link>
         </div>
         <button
           onClick={scrollToTop}

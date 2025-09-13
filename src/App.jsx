@@ -12,6 +12,7 @@ import Products from "./pages/Products";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import RiskWarning from "./pages/RiskWarning";
+import B2B from "./pages/B2B";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/riskwarning" element={<RiskWarning />} />
+            <Route path="/b2b" element={<B2B />} />
             {/* Arabic routes (with /ar prefix) */}
             <Route path="/ar" element={<Home />} />
             <Route path="/ar/about" element={<About />} />
@@ -42,6 +44,7 @@ function App() {
             <Route path="/ar/privacy" element={<Privacy />} />
             <Route path="/ar/terms" element={<Terms />} />
             <Route path="/ar/riskwarning" element={<RiskWarning />} />
+            <Route path="/ar/b2b" element={<B2B />} />
           </Routes>
         </main>
         <Footer />
