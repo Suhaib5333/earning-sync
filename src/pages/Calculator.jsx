@@ -170,9 +170,15 @@ const Calculator = () => {
             const history = results.monthlyHistory[idx];
             if (!history) return "";
             return [
-              `${t('calculator.totalInvestedLabel')}: ${formatCurrency(history.invested)}`,
-              `${t('calculator.estimatedProfitLabel')}: ${formatCurrency(history.profit)}`,
-              `${t('calculator.finalBalanceLabel')}: ${formatCurrency(history.balance)}`,
+              `${t("calculator.totalInvestedLabel")}: ${formatCurrency(
+                history.invested
+              )}`,
+              `${t("calculator.estimatedProfitLabel")}: ${formatCurrency(
+                history.profit
+              )}`,
+              `${t("calculator.finalBalanceLabel")}: ${formatCurrency(
+                history.balance
+              )}`,
             ];
           },
         },
@@ -279,7 +285,7 @@ const Calculator = () => {
           </p>
         </div>
       </section>
-  <div className="w-full max-w-6xl mx-auto bg-white/95 rounded-2xl shadow-2xl p-8 md:p-16 border border-[#e5e7eb]">
+      <div className="w-full max-w-6xl mx-auto bg-white/95 rounded-2xl shadow-2xl p-8 md:p-16 border border-[#e5e7eb]">
         <form onSubmit={handleCalculate} className="flex flex-col gap-6 mb-8">
           <div className="flex flex-col gap-4">
             {/* Product-style selector buttons, mobile and desktop */}
