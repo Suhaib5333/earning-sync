@@ -298,49 +298,44 @@
     "ctaNote": "Start with just $100 • Stop copying & withdraw at anytime"
   },
   "b2b": {
-    "heroTitle": "EarningSync <span class=\"text-[#a7ec4f]\">Partnership</span> Program",
-    "heroDesc": "Partner with us to grow your client base and share in the profits of our proven trading strategies.",
-    "programTitle": "How It Works",
+    "heroTitle": "B2B Copy Trading Partnership - <span class=\"text-[#a7ec4f]\">White Label</span> Solution",
+    "heroDesc": "At EarningSync, we believe successful partnerships are built on value and independence.",
+    "programTitle": "Partnership Model",
     "program": {
       "setup": {
-        "title": "Simple Setup Process",
-        "desc": "Quick setup to start bringing investors to our trading strategies.",
+        "title": "The Concept",
+        "desc": "Instead of simply earning a share of profits, you can operate your own trading account under your brand name with mirrored trades.",
         "features": [
-          "Quick account setup",
-          "Professional trading team",
-          "Full trading transparency",
-          "No technical integration needed",
-          "Start immediately"
+          "Your clients see consistent results under your own brand",
+          "You maintain full control over your client relationships",
+          "We benefit only from a fair share of your profits"
         ]
       },
       "benefits": {
-        "title": "Partner Benefits",
-        "desc": "Build a successful business by connecting investors with our proven strategies.",
+        "title": "Key Benefits",
+        "desc": "Our partnership model empowers your business with high standards of service.",
         "features": [
-          "Split profits from client investments",
-          "Proven trading track record",
-          "Professional support",
-          "Regular performance reports",
-          "Full trading transparency"
+          "Independent Branding: A trading account under your own brand name",
+          "Identical Results: Every trade we take is replicated in your account",
+          "Full Control: You manage your clients and financial policies",
+          "Win-Win Partnership: Shared success through profit-sharing"
         ]
       },
       "support": {
-        "title": "Trading Management",
-        "desc": "We handle all trading operations.",
+        "title": "Why This Model Works",
+        "desc": "Focus on creating sustainable, long-term value for our partners.",
         "features": [
-          "Professional trading execution",
-          "Comprehensive risk management",
-          "Live performance monitoring",
-          "Client support",
-          "Partner support"
+          "Build long-term value under your own brand",
+          "Strengthen trust and loyalty with your clients",
+          "Move away from the limitations of commission-only models"
         ]
       }
     },
-    "contactTitle": "Start Your Partnership Today",
-    "contactDesc": "Get in touch with our team to discuss partnership opportunities.",
+    "contactTitle": "Ready to Start Your White Label Journey?",
+    "contactDesc": "Get in touch with our partnership team to discuss your business needs.",
     "contactButton": "Contact Us Now",
-    "emailDesc": "Send us an email",
-    "whatsappDesc": "Chat with us on WhatsApp"
+    "emailDesc": "Email Us",
+    "whatsappDesc": "Chat on WhatsApp"
   },
   "home": {
     "heroTitle": "Advanced Copy Trading<br><span class=\"text-[#a7ec4f]\">Technology</span>",
