@@ -203,6 +203,12 @@ const Home = () => {
               </div>
             </motion.div>
           </div>
+            {/* Trustpilot TrustBox Widget */}
+            <div className="flex justify-center mt-16">
+              <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="68cedd0fd5874afc949e1bfe" data-style-height="52px" data-style-width="100%" data-token="2b8d0d31-a39f-4ff4-b8f9-ea0049cbd8c9">
+                <a href="https://www.trustpilot.com/review/earningsync.com" target="_blank" rel="noopener">Trustpilot</a>
+              </div>
+            </div>
         </div>
       </section>
 
