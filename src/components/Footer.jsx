@@ -33,56 +33,34 @@ const Footer = () => {
     <footer className="pt-8 pb-8 mt-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
         {/* Links */}
-        <div className="w-full flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4">
-          <Link
-            to={getPath("/")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/"), e)}
-          >
-            {t("navbar.home")}
-          </Link>
-          <Link
-            to={getPath("/about")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/about"), e)}
-          >
-            {t("navbar.about")}
-          </Link>
-          <Link
-            to={getPath("/get-started")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/get-started"), e)}
-          >
-            {t("navbar.getStarted")}
-          </Link>
-          <Link
-            to={getPath("/products")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/products"), e)}
-          >
-            {t("navbar.products")}
-          </Link>
-          <Link
-            to={getPath("/calculator")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/calculator"), e)}
-          >
-            {t("navbar.calculator")}
-          </Link>
-          <Link
-            to={getPath("/faq")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/faq"), e)}
-          >
-            {t("navbar.faq")}
-          </Link>
-          <Link
-            to={getPath("/contact")}
-            className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
-            onClick={(e) => handleNavClick(getPath("/contact"), e)}
-          >
-            {t("navbar.contact")}
-          </Link>
+        <div
+          className={`w-full flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mb-4${
+            i18n.language === "ar" ? " flex-row-reverse" : ""
+          }`}
+        >
+          {(() => {
+            const links = [
+              { to: getPath("/"), label: t("navbar.home") },
+              { to: getPath("/about"), label: t("navbar.about") },
+              { to: getPath("/get-started"), label: t("navbar.getStarted") },
+              { to: getPath("/products"), label: t("navbar.products") },
+              { to: getPath("/calculator"), label: t("navbar.calculator") },
+              { to: getPath("/faq"), label: t("navbar.faq") },
+              { to: getPath("/contact"), label: t("navbar.contact") },
+            ];
+            // For Arabic, render in DOM order matching visual RTL (no reverse)
+            const ordered = i18n.language === "ar" ? links : links;
+            return ordered.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-[#013024] hover:text-[#a7ec4f] font-medium transition"
+                onClick={(e) => handleNavClick(link.to, e)}
+              >
+                {link.label}
+              </Link>
+            ));
+          })()}
         </div>
 
         {/* Socials */}
@@ -134,34 +112,26 @@ const Footer = () => {
           {t("footer.copyright")}
         </p>
         <div className="flex items-center gap-4 md:order-2 order-1">
-          <Link
-            to={getPath("/privacy")}
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
-            onClick={(e) => handleNavClick(getPath("/privacy"), e)}
-          >
-            {t("footer.privacy")}
-          </Link>
-          <Link
-            to={getPath("/terms")}
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
-            onClick={(e) => handleNavClick(getPath("/terms"), e)}
-          >
-            {t("footer.terms")}
-          </Link>
-          <Link
-            to={getPath("/riskwarning")}
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
-            onClick={(e) => handleNavClick(getPath("/riskwarning"), e)}
-          >
-            {t("footer.risk")}
-          </Link>
-          <Link
-            to={getPath("/b2b")}
-            className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
-            onClick={(e) => handleNavClick(getPath("/b2b"), e)}
-          >
-            {t("footer.b2b")}
-          </Link>
+          {(() => {
+            const links = [
+              { to: getPath("/privacy"), label: t("footer.privacy") },
+              { to: getPath("/terms"), label: t("footer.terms") },
+              { to: getPath("/riskwarning"), label: t("footer.risk") },
+              { to: getPath("/b2b"), label: t("footer.b2b") },
+            ];
+            const ordered =
+              i18n.language === "ar" ? [...links].reverse() : links;
+            return ordered.map((link) => (
+              <Link
+                key={link.to}
+                to={link.to}
+                className="text-xs text-gray-500 hover:text-[#a7ec4f] transition border-b-2 border-transparent hover:border-[#a7ec4f] pb-0.5"
+                onClick={(e) => handleNavClick(link.to, e)}
+              >
+                {link.label}
+              </Link>
+            ));
+          })()}
         </div>
         <button
           onClick={scrollToTop}
