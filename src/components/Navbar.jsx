@@ -190,7 +190,10 @@ const Navbar = () => {
             </div>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-2">
-              {navLinks.map((link, idx) => (
+              {(i18n.language === "ar"
+                ? [...navLinks].reverse()
+                : navLinks
+              ).map((link, idx) => (
                 <Link
                   key={link.path}
                   to={
