@@ -95,9 +95,11 @@ const B2B = () => {
 
         {/* Contact Cards Section */}
         <section className="bg-[#013024] rounded-2xl p-8 md:p-12 text-white">
-          <h2 className="text-3xl font-bold mb-4 text-center">{t("b2b.contactTitle")}</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">
+            {t("b2b.contactTitle")}
+          </h2>
           <p className="text-xl mb-8 text-center">{t("b2b.contactDesc")}</p>
-          
+
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {/* Email Card */}
             <motion.a
@@ -127,8 +129,14 @@ const B2B = () => {
               <div className="bg-white/20 rounded-full p-4 mb-4">
                 <FaWhatsapp className="w-8 h-8 text-[#a7ec4f]" />
               </div>
-              <h3 className="text-lg font-bold mb-2">{t("b2b.whatsappDesc")}</h3>
-              <span className="text-[#a7ec4f] group-hover:underline">
+              <h3 className="text-lg font-bold mb-2">
+                {t("b2b.whatsappDesc")}
+              </h3>
+              <span
+                className="text-[#a7ec4f] group-hover:underline"
+                dir="ltr"
+                style={{ unicodeBidi: "plaintext" }}
+              >
                 +973 6638 6602
               </span>
             </motion.a>
